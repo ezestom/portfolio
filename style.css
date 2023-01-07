@@ -52,7 +52,7 @@
      * spacing
      */
 
-	--section-padding: 90px;
+	--section-padding: 50px;
 
 	/**
      * box shadow
@@ -133,9 +133,14 @@ body {
 	font-size: 1.6rem;
 	font-family: var(--body-font);
 	color: white;
-	background-color: #0f0e17;
 }
-
+li{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 100%;
+}
 
 .line img{
 	background-color: #0f0e17;
@@ -163,7 +168,6 @@ body {
     #REUSED STYLE
   \*-----------------------------------*/
   .container{
-	padding: 0 20%;
   }
 
 .btn {
@@ -223,13 +227,17 @@ body {
 
 .section {
 	padding-block-start: var(--section-padding);
+	padding: 0 20% ;
+	height: auto;
+	
+
 }
 
 .title-wrapper {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-block-end: 50px;
+	/* margin-block-end: 50px; */
 }
 
 .btn-link {
@@ -252,8 +260,8 @@ body {
 
 .grid-list {
 	display: grid;
-	row-gap: 30px;
-	column-gap: 30px;
+	row-gap: 20px;
+	column-gap: 2%;
 }
 
 .card {
@@ -275,7 +283,7 @@ body {
 	object-fit: cover;
 }
 .container > li{
-	max-width: 250px;
+	/* max-width: 250px; */
 }
 
 /*-----------------------------------*\
@@ -286,11 +294,11 @@ body {
 .header {
 	width: 100%;
 	display: flex;
+	justify-content: center;
 	z-index: 4;
 	background:#0f0e17;
 	font-size: 1.5rem;
 	position: fixed;
-	left: 0;
 }
 
 
@@ -307,18 +315,17 @@ body {
 .navbar {
 	position: fixed;
 	top: -100%;
-	left: 0;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	width: 100%;
 	height: 50%;
-	background-color:#242424;
+	background-color:#202020;
 	z-index: 2;
 	transition: top 0.5s;
 	padding-block: 3.5rem;
 	transition: var(--transition-2);
-	
+	left: 0;
 }
 
 .navbar.active {
@@ -333,7 +340,7 @@ body {
 
 .navbar-top,
 .navbar-list {
-	padding: 25px;
+	/* padding: 25px; */
 }
 
 .navbar-top {
@@ -369,7 +376,7 @@ body {
 }
 
 .menu-open-btn {
-	background-color:#242424;
+	background-color:transparent;
 	position: fixed;
 	top: 25px;
 	right: 25px;
@@ -447,7 +454,7 @@ body {
 
 
 /*-----------------------------------*\
-    #PROYECTS
+    #PROJECTS
   \*-----------------------------------*/
 
 .explore{
@@ -471,7 +478,7 @@ body {
 	display: flex;
 	align-items: center;
 	gap: 10px;
-	margin-block: 10px;
+	/* margin-block: 10px; */
 }
 
 .explore-card .wrapper {
@@ -500,15 +507,17 @@ body {
 }
 
 .about-me {
-	background-color: red;
-	height: 100vh;
+	background-color: #202020;
+	height: auto
 	
 }
 
 .more {
 	display: grid;
 	column-gap: 5%;
-	row-gap: 5% ;
+	row-gap: 25px ;
+	height: 900px;
+	padding: 0 0 35% 0;
 }
 
 .cero {
@@ -530,7 +539,7 @@ body {
 	grid-row-start: 1;
 	grid-row-end: 3;
 	background-image: url(./images/auction-8.jpg);
-	
+	background-size:  cover;	
 	border-radius: var(--radius-8);
 	transition: all 0.25s;
 }
@@ -540,7 +549,7 @@ body {
 	grid-row-start: 1;
 	grid-row-end: 3;
 	background-image: url(./images/auction-3.jpg);
-	
+	background-size:  cover;	
 	border-radius: var(--radius-8);
 	transition: all 0.25s;
 }
@@ -550,7 +559,7 @@ body {
 	grid-row-start: 3;
 	grid-row-end: 4;
 	background-image: url(./images/auction-4.jpg);
-	
+	background-size:  cover;	
 	border-radius: var(--radius-8);
 	transition: all 0.25s;
 }
@@ -575,8 +584,8 @@ body {
 	align-items: center;
 	color: white;
 	text-shadow: 0 5px 10px black;
-	padding-inline: 15%;
-	opacity: 50%;
+	opacity: 60%;
+	padding-inline: 8%;
 }
 .text {
 	font-size: 2.5rem;
@@ -597,6 +606,7 @@ body {
 /*-----------------------------------*\
     #STUDIES
   \*-----------------------------------*/
+
   .line3 img{
 	background: #202020;	
 	max-width: 100%;
@@ -604,6 +614,7 @@ body {
 
   .studies{
 	background-color: #242424;
+	height: 75vh;
   }
   .study-grid{
 	display: flex;
@@ -614,12 +625,12 @@ body {
 	width: 100%;
   }
   .box1,
-  .box2,
-  .box3,
+  /* .box2, */
+  /* .box3, */
   .box4{
 	border: 1px solid red;
-	width: 250px;
-	height: 250px;	
+	width: 10rem;
+	height: 10rem;	
   }
   .box1{
 	grid-column-start: 1;
@@ -656,6 +667,7 @@ body {
 
 .instruction {
 	padding-block-end: var(--section-padding);
+	background-color: #0f0e17;
 }
 
 .instruction .section-title {
@@ -913,9 +925,9 @@ body {
      * REUSED STYLE
      */
 
-	.container {
+	/* .container {
 		margin-inline: auto;
-	}
+	} */
 
 	.grid-list {
 		grid-template-columns: repeat(4, 1fr);
@@ -935,20 +947,23 @@ body {
 	.navbar.active {
 		all: unset;
 		margin-inline: auto;
+		left: 0;
 	}
 
 	.navbar-list {
 		padding-block: 1rem;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: 40px;
 		font-size: 1.75rem;
+		left: 0;
 	}
 }
 @media (max-width:1300px){
 
 	.more{
-		row-gap: 5%;
+		row-gap: 3%;
 	}
 	.cero{
 		grid-column-start: 1;
@@ -974,6 +989,13 @@ body {
 		grid-column-end: 4;
 		grid-row-start: 4;
 		grid-row-end: 4;
+	}
+	.four{
+		background-size: cover;
+		grid-column-start: 1;
+		grid-column-end: 4;
+		grid-row-start: 5;
+		grid-row-end: 5;
 	}
 	.text{
 		font-size: 2rem;
