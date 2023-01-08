@@ -1,3 +1,14 @@
+// const play = document.querySelector('.play-btn')
+// const pause = document.querySelector('pause-btn')
+
+// const array = [play, pause]
+
+// for (let index = 0; index < array.length; index++) {
+//   array[index].addEventListener('click', function(){
+//     array.classList.toggle('array')
+//   })
+// }
+
 
 const overlay = document.querySelector("[data-overlay]");
 const navbar = document.querySelector("[data-navbar]");

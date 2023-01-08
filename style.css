@@ -167,8 +167,6 @@ li{
 /*-----------------------------------*\
     #REUSED STYLE
   \*-----------------------------------*/
-  .container{
-  }
 
 .btn {
 	color: var(--white);
@@ -282,9 +280,7 @@ li{
 	width: 100%;
 	object-fit: cover;
 }
-.container > li{
-	/* max-width: 250px; */
-}
+
 
 /*-----------------------------------*\
     #HEADER
@@ -357,8 +353,8 @@ li{
 .nav-close-btn {
 	border-radius: var(--radius-8);
 	position: fixed;
-	top: 25px;
-	right: 25px;
+	top: 13px;
+	right: 30px;
 }
 
 .nav-close-btn ion-icon {
@@ -369,17 +365,33 @@ li{
 
 .navbar-link {
 	color: var(--white);
+	position: relative;
+	display: inline-block;
 }
 
-.navbar-link:is(:hover, :focus) {
-	color:rgba(0, 221, 235, 1) ;
+.navbar-link::before{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #fff;
+	border-radius: 4px;
+	scale: 0 1;
+	transform-origin: right;
+	transition: scale 0.2s;
+}
+.navbar-link:hover::before{
+	scale: 1;
+	transform-origin: left;
 }
 
 .menu-open-btn {
 	background-color:transparent;
 	position: fixed;
-	top: 25px;
-	right: 25px;
+	top: 13px;
+	right: 30px;
 }
 .overlay {
 	position: fixed;
@@ -395,6 +407,17 @@ li{
 	opacity: 1;
 	pointer-events: all;
 }
+.play-btn,
+.pause-btn{
+	position: absolute;
+	top: 13px;
+	right: 35px;
+}
+.play-btn:hover,
+.pause-btn:hover{
+	color:rgba(0, 221, 235, 1);
+}
+
 
 /*-----------------------------------*\
     #HERO
@@ -508,29 +531,26 @@ li{
 
 .about-me {
 	background-color: #202020;
-	height: auto
-	
+	height: 900px;	
 }
 
 .more {
 	display: grid;
-	column-gap: 5%;
+	column-gap: 2%;
 	row-gap: 25px ;
-	height: 900px;
-	padding: 0 0 35% 0;
+	height: 650px;
 }
 
 .cero {
 	border-radius: var(--radius-8);
 	background-image: url(./images/auction-7.jpg);
-	background-size:  cover;
+	background-size: cover;
 	transition: all 0.25s;
 	text-shadow: 0 5px 10px black;
 	grid-column-start: 1;
 	grid-column-end: 2;
 	grid-row-start: 1;
-	grid-row-end: 4;
-	
+	grid-row-end: 4;	
 }
 
 .one {
@@ -554,6 +574,7 @@ li{
 	transition: all 0.25s;
 }
 .three {
+
 	grid-column-start: 2;
 	grid-column-end: 4;
 	grid-row-start: 3;
@@ -585,10 +606,11 @@ li{
 	color: white;
 	text-shadow: 0 5px 10px black;
 	opacity: 60%;
-	padding-inline: 8%;
+	padding-inline: 5%;
+	text-align: center;
 }
 .text {
-	font-size: 2.5rem;
+	font-size: 2.75rem;
 }
 .cero:hover,
 .one:hover,
@@ -826,10 +848,10 @@ li{
 	color: #4834d4;
 	border: 2px solid #4834d4;
 	position: fixed;
-	bottom: 20px;
-	right: 20px;
-	width: 35px;
-	height: 35px;
+	bottom: 13px;
+	right: 30px;
+	width: 30px;
+	height: 30px;
 	display: grid;
 	place-items: center;
 	border-radius: 50%;
@@ -837,10 +859,8 @@ li{
 	z-index: 4;
 }
 .back-to-top:hover {
-	color: black;
-	transition: var(--transition-1);
-	border: 2px solid rgba(0, 221, 235, 1);
-	color: rgba(0, 221, 235, 1);
+	border: 2px solid white;
+	color: white;
 }
 
 /*-----------------------------------*\
@@ -929,6 +949,7 @@ li{
 		margin-inline: auto;
 	} */
 
+
 	.grid-list {
 		grid-template-columns: repeat(4, 1fr);
 	}
@@ -961,6 +982,9 @@ li{
 	}
 }
 @media (max-width:1300px){
+	.play-btn{
+		right: 75px;	
+	}
 
 	.more{
 		row-gap: 3%;
