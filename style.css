@@ -572,12 +572,10 @@ li {
 .background-one img,
 .background-two img{
 	max-width: 75%;
-	/* max-height: 75%; */
 }
 .background-three img,
 .background-four img,
 .background-five img{
-	/* height: 25%; */
 	max-width: 25%;
 }
 .background-three,
@@ -682,9 +680,15 @@ li {
    transition: all 0.25s;
    box-shadow: 1px 1px 2px black, 0 0 1em white, 0 0 0.2em blue;
 }
+.article-about-me{
+   display: flex;
+   flex-direction: row-reverse;
+   gap: 5%;
+   justify-content: space-between;
+
+}
 .eze{
-   max-width: 30%;
-   transform: translate(230%,-120%);
+   max-width: 50%;
 }
 
 /*-----------------------------------*\
@@ -703,11 +707,11 @@ li {
 
 .study-grid {
    display: flex;
-   display: grid;
-   column-gap: 5%;
-   row-gap: 5%;
+   /* display: grid; */
    flex-wrap: wrap;
-   width: 100%;
+   justify-content: space-around;
+
+   
 }
 
 .box1,
@@ -719,8 +723,9 @@ li {
    flex-direction: column;
    justify-content: center;
    display: center;
-   padding: 30px;
-   max-width: 250px;
+   padding: 25px;
+   max-width: 225px;
+   margin: 2% 2%;
 }
 
 .box1 {
