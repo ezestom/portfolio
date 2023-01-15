@@ -434,8 +434,9 @@ li {
 
 .hero-text {
    font-size: 2rem;
-   margin-block-end: 25px;
+   margin-block-end: 25px;   
 }
+
 
 .hero-title {
    font-size: 1.75rem;
@@ -485,8 +486,15 @@ li {
 
 .explore {
    background-color: #242424;
-}
 
+}
+.explore-card{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   max-width: 250px;
+}
 .explore-card:is(:hover, :focus) {
    filter: drop-shadow(0 0 1em var(--han-purple)) brightness(115%);
 }
@@ -530,6 +538,7 @@ li {
 .section-title {
    display: flex;
    justify-content: space-between;
+   align-items: center;
    padding-bottom: 5%;
 }
 
@@ -545,7 +554,7 @@ li {
 
 .about-me-cards {
    display: grid;
-   column-gap: 2%;
+   column-gap: 3%;
    row-gap: 15px;
    height: auto;
    max-width: 50%;
@@ -673,6 +682,10 @@ li {
    transition: all 0.25s;
    box-shadow: 1px 1px 2px black, 0 0 1em white, 0 0 0.2em blue;
 }
+.eze{
+   max-width: 30%;
+   transform: translate(230%,-120%);
+}
 
 /*-----------------------------------*\
     #STUDIES
@@ -699,13 +712,15 @@ li {
 
 .box1,
 .box2,
-.box3 {
+.box3,
+.box4 {
    text-align: center;
    display: flex;
    flex-direction: column;
    justify-content: center;
    display: center;
    padding: 30px;
+   max-width: 250px;
 }
 
 .box1 {
@@ -732,6 +747,14 @@ li {
    border-radius: var(--radius-8);
    grid-column-start: 3;
    grid-column-end: 4;
+   grid-row-start: 1;
+   grid-row-end: 2;
+}
+.box4{
+   border: 8px solid #f9bc60;
+   border-radius: var(--radius-8);
+   grid-column-start: 4;
+   grid-column-end: 5;
    grid-row-start: 1;
    grid-row-end: 2;
 }
@@ -769,6 +792,9 @@ li {
 
 .btn-three {
    background-color: #05b7b9;
+}
+.btn-four{
+   background-color: #f9bc60;
 }
 
 .p-studies,
@@ -1043,10 +1069,6 @@ li {
    /**
      * REUSED STYLE
      */
-
-   /* .container {
-		margin-inline: auto;
-	} */
 
 
    .grid-list {
