@@ -1,14 +1,16 @@
-// const play = document.querySelector('.play-btn')
-// const pause = document.querySelector('pause-btn')
+const sound = new Audio(
+	"./music/Coldplay X BTS - My Universe (Official Lyric Video).mp3"
+);
+const play = document.querySelector(".play-btn");
+const pause = document.querySelector(".pause-btn");
 
-// const array = [play, pause]
+play.addEventListener("click", () => {
+	sound.play();
+});
 
-// for (let index = 0; index < array.length; index++) {
-//   array[index].addEventListener('click', function(){
-//     array.classList.toggle('array')
-//   })
-// }
-
+pause.addEventListener("click", () => {
+	sound.pause();
+});
 
 const overlay = document.querySelector("[data-overlay]");
 const navbar = document.querySelector("[data-navbar]");
@@ -18,10 +20,10 @@ const menuOpenBtn = document.querySelector("[data-nav-open-btn]");
 const elemArr = [overlay, menuCloseBtn, menuOpenBtn];
 
 for (let i = 0; i < elemArr.length; i++) {
-  elemArr[i].addEventListener("click", function () {
-    navbar.classList.toggle("active");
-    overlay.classList.toggle("active");
-  });
+	elemArr[i].addEventListener("click", function () {
+		navbar.classList.toggle("active");
+		overlay.classList.toggle("active");
+	});
 }
 
 /**
@@ -31,8 +33,8 @@ for (let i = 0; i < elemArr.length; i++) {
 const navbarLinks = document.querySelectorAll("[data-navlink]");
 
 for (let i = 0; i < navbarLinks.length; i++) {
-  navbarLinks[i].addEventListener("click", function () {
-    navbar.classList.toggle("active");
-    overlay.classList.toggle("active");
-  });
+	navbarLinks[i].addEventListener("click", function () {
+		navbar.classList.toggle("active");
+		overlay.classList.toggle("active");
+	});
 }

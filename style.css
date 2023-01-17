@@ -403,11 +403,23 @@ li {
    pointer-events: all;
 }
 
-.play-btn,
+.play-btn{
+   position: absolute;
+   top: 13px;
+   right: 50px;
+}
 .pause-btn {
    position: absolute;
    top: 13px;
    right: 35px;
+}
+
+.play-btn-disabled{
+   display: none;
+}
+.pause-btn-disabled{
+   display: none;
+
 }
 
 .play-btn:hover,
@@ -615,7 +627,7 @@ li {
    grid-row-end: 3;   
    background-size: cover;
    transition: all 0.25s;
-   background-color: #a786df;
+   background-color: #05b7b9;
 	border-radius: var(--radius-8);
 }
 
@@ -660,7 +672,7 @@ li {
    justify-content: space-evenly;
    align-items: center;
    color: white;
-   opacity: 60%;
+   opacity: 50%;
    text-align: center;
 	text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
 }
@@ -709,7 +721,7 @@ li {
    display: flex;
    /* display: grid; */
    flex-wrap: wrap;
-   justify-content: space-around;
+   justify-content: space-between;
 
    
 }
@@ -721,11 +733,12 @@ li {
    text-align: center;
    display: flex;
    flex-direction: column;
-   justify-content: center;
+   justify-content: space-between;
    display: center;
    padding: 25px;
    max-width: 225px;
-   margin: 2% 2%;
+   min-width: 225px;
+   margin-block: 1rem;
 }
 
 .box1 {
@@ -777,10 +790,10 @@ li {
    align-items: center;
    justify-content: center;
    border-radius: var(--radius-8);
-   color: white;
-   padding: 3% 0;
    border: none;
    font-weight: 500;
+   width: 160px;
+   height: 40px;
 }
 
 .btn-studies:hover {
@@ -1117,28 +1130,28 @@ li {
       row-gap: 3%;
    }
 
-   .cero {
+   .card-cero{
       grid-column-start: 1;
       grid-column-end: 4;
       grid-row-start: 1;
       grid-row-end: 1;
    }
 
-   .one {
+   .card-one {
       grid-column-start: 1;
       grid-column-end: 4;
       grid-row-start: 2;
       grid-row-end: 2;
    }
 
-   .two {
+   .card-two {
       grid-column-start: 1;
       grid-column-end: 4;
       grid-row-start: 3;
       grid-row-end: 3;
    }
 
-   .three {
+   .card-three {
       background-size: cover;
       grid-column-start: 1;
       grid-column-end: 4;
@@ -1146,15 +1159,36 @@ li {
       grid-row-end: 4;
    }
 
-   .four {
+   .card-four {
       background-size: cover;
       grid-column-start: 1;
       grid-column-end: 4;
       grid-row-start: 5;
       grid-row-end: 5;
    }
+   .card-five{
+      background-size:cover;
+      grid-column-start: 1;
+      grid-column-end: 4 ;
+      grid-row-start: 6;
+      grid-row-end: 6;
+   }
+   .about-me-cards{
+      max-width: 100%;
+   }
+   .eze{
+      display: none;
+   }
+   .background-cero img,
+   .background-one img,
+   .background-two img,
+   .background-three img,
+   .background-four img,
+   .background-five img{
+	   max-width: 25%;
+   }
 
    .text {
-      font-size: 2rem;
+      font-size: 1.5rem;
    }
 }
