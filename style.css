@@ -227,7 +227,7 @@ li {
 
 .section {
    padding-block-start: var(--section-padding);
-   padding: 0 10%;
+   padding: 0 15%;
    height: auto;
 }
 
@@ -260,7 +260,7 @@ li {
    border-radius: var(--radius-8);
    transition: var(--transition-2);
    border-bottom: 1px solid var(--han-purple);
-   max-width: 250px;
+
 }
 
 .card-banner {
@@ -500,7 +500,7 @@ li {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   max-width: 250px;
+   max-width: 200px;
 }
 
 .explore-card:is(:hover, :focus) {
@@ -508,7 +508,7 @@ li {
 }
 
 .explore-card .card-banner {
-   margin-block-end: 35px;
+   margin-block-end: 1rem;
 }
 
 .explore-card .card-title>a:is(:hover, :focus) {
@@ -518,7 +518,7 @@ li {
 .explore-card .card-author {
    display: flex;
    align-items: center;
-   gap: 10px;
+   gap: 5px;
 }
 
 .explore-card .wrapper {
@@ -551,7 +551,7 @@ li {
 
 .section-title>a>span {
    display: flex;
-   gap: 3%;
+   gap: 1%;
    align-items: center;
 }
 
@@ -559,6 +559,11 @@ li {
    background-color: #202020;
    padding-bottom: 5%;
 }
+
+/* .article-about-me{
+   max-width: 50%;
+} */
+
 
 .about-me-cards{
    display: grid;
@@ -580,14 +585,14 @@ li {
    text-align: center;
    /* filter: brightness(60%); */
    border-bottom: 2px solid var(--han-purple);
-   height: 300px;
+   height: 275px;
    background-color: #242424;
    border-radius: var(--radius-8);
    transition: all .3s;
 }
 
 .background img{
-   max-width: 175px;
+   max-width: 150px;
 }
 .background p{
    font-size: 1.5rem;
@@ -599,50 +604,41 @@ li {
    transform: scale(1.04) rotate(1.5deg);
    transition: all 0.3s;
 }
-.background-cero{
-   border-radius: 79% 21% 93% 7% / 2% 92% 8% 98%   ;
-}
+
 .background-cero:hover{
    background-color: #05b7b9;
    color: #242424;
 }
-.background-one{
-   border-radius:9% 91% 20% 80% / 85% 11% 89% 15% ;
-}
+
 .background-one:hover{
    background-color: #eebbc3;
    color: #242424;
 }
-.background-two{
-   border-radius: 91% 9% 86% 14% / 29% 89% 11% 71%  ;
-}
+
 .background-two:hover{
    background-color: #5fd3fa;
    color: #242424;
 }
-.background-three{
-   border-radius: 20% 80% 11% 89% / 89% 11% 89% 11% ;
-}
+
 .background-three:hover{
    background-color: #b8c1ec;
    color: #242424;
 }
-.background-four{
-   border-radius: 4% 96% 10% 90% / 80% 16% 84% 20% ;
-}
+
 .background-four:hover{
    background-color: #c3f0ca;
    color: #242424;
 }
-.background-five{
-   border-radius: 12% 88% 10% 90% / 91% 33% 67% 9% ;
-}
+
 .background-five:hover{
    background-color: #fbdd74;
    color: #242424;
 }
 
-
+.eze{
+   width: 600px;
+   filter: drop-shadow(0 0 1em var(--han-purple)) brightness(115%);
+}
 /*-----------------------------------*\
     #STUDIES
   \*-----------------------------------*/
