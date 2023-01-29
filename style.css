@@ -227,7 +227,7 @@ li {
 
 .section {
    padding-block-start: var(--section-padding);
-   padding: 0 15%;
+   padding: 0 10%;
    height: auto;
 }
 
@@ -636,7 +636,8 @@ li {
 }
 
 .eze{
-   width: 600px;
+
+   width: 50%;
    filter: drop-shadow(0 0 1em var(--han-purple)) brightness(115%);
 }
 /*-----------------------------------*\
