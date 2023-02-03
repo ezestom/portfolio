@@ -227,7 +227,7 @@ li {
 
 .section {
    padding-block-start: var(--section-padding);
-   padding: 0 10%;
+   padding: 0 20%;
    height: auto;
 }
 
@@ -251,7 +251,7 @@ li {
 .grid-list {
    display: grid;
    row-gap: 20px;
-   column-gap: 2%;
+   column-gap: 5%;
 }
 
 .card {
@@ -492,7 +492,6 @@ li {
 
 .explore {
    background-color: #242424;
-
 }
 
 .explore-card {
@@ -500,7 +499,7 @@ li {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   max-width: 200px;
+   max-width: 225px;
 }
 
 .explore-card:is(:hover, :focus) {
@@ -565,18 +564,15 @@ li {
 } */
 
 
-.about-me-cards{
+.about-me-cards {
    display: grid;
-   grid-template-columns: repeat(
-      auto-fit,
-      minmax(
-         175px,
-         1fr
-      )
-   );
-   gap:2rem;
+   grid-template-columns: repeat(auto-fit,
+         minmax(175px,
+            1fr));
+   gap: 2rem;
 }
-.background{
+
+.background {
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -591,55 +587,58 @@ li {
    transition: all .3s;
 }
 
-.background img{
+.background img {
    max-width: 150px;
 }
-.background p{
+
+.background p {
    font-size: 1.5rem;
    padding: 3%;
-   
+
 }
-.background:hover{
+
+.background:hover {
    filter: brightness(110%);
    transform: scale(1.04) rotate(1.5deg);
    transition: all 0.3s;
 }
 
-.background-cero:hover{
+.background-cero:hover {
    background-color: #05b7b9;
    color: #242424;
 }
 
-.background-one:hover{
+.background-one:hover {
    background-color: #eebbc3;
    color: #242424;
 }
 
-.background-two:hover{
+.background-two:hover {
    background-color: #5fd3fa;
    color: #242424;
 }
 
-.background-three:hover{
+.background-three:hover {
    background-color: #b8c1ec;
    color: #242424;
 }
 
-.background-four:hover{
+.background-four:hover {
    background-color: #c3f0ca;
    color: #242424;
 }
 
-.background-five:hover{
+.background-five:hover {
    background-color: #fbdd74;
    color: #242424;
 }
 
-.eze{
+.eze {
 
    width: 50%;
    filter: drop-shadow(0 0 1em var(--han-purple)) brightness(115%);
 }
+
 /*-----------------------------------*\
     #STUDIES
   \*-----------------------------------*/
@@ -1047,7 +1046,7 @@ li {
       all: unset;
       margin-inline: auto;
       left: 0;
-     
+
    }
 
    .navbar-list {
