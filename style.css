@@ -202,6 +202,7 @@ li {
 }
 
 .section-subtitle {
+   padding-top: 2rem;
    font-size: 4rem;
    background-image: var(--gradient-1);
    background-clip: text;
@@ -292,9 +293,11 @@ li {
 
 
 .menu-open-btn {
-   margin-inline-start: auto;
    font-size: 2.6rem;
    border-radius: var(--radius-8);
+   left: 30px;
+   max-width: 28px;
+   border: 1px solid white;
 }
 
 .header ion-icon {
@@ -339,13 +342,13 @@ li {
    border-radius: var(--radius-8);
    position: fixed;
    top: 13px;
-   right: 30px;
+   left: 30px;
+   border: 1px white solid;
 }
 
 .nav-close-btn ion-icon {
-   color: var(--spanish-gray);
+   color:white;
    font-size: 2.7rem;
-   --ionicon-stroke-width: 40px;
 }
 
 .navbar-link {
@@ -398,26 +401,23 @@ li {
 .play-btn {
    position: absolute;
    top: 13px;
-   right: 50px;
+   right: 65px;
 }
 
+.forward-btn{
+   position: absolute;
+   top: 13px;
+   right: 50px;
+}
 .pause-btn {
    position: absolute;
    top: 13px;
    right: 35px;
 }
 
-.play-btn-disabled {
-   display: none;
-}
-
-.pause-btn-disabled {
-   display: none;
-
-}
-
 .play-btn:hover,
-.pause-btn:hover {
+.pause-btn:hover,
+.forward-btn:hover {
    color: rgba(0, 221, 235, 1);
 }
 
@@ -557,11 +557,21 @@ li {
 .about-me {
    background-color: #202020;
    padding-bottom: 5%;
-}
 
-/* .article-about-me{
-   max-width: 50%;
-} */
+}
+.article-about-me{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+}
+.photo{
+   max-width: 35%;
+   background-color: #242424;
+   border-radius: var(--radius-8);
+   border-bottom: #4834d4 2px solid;
+   transition: all 0.3s;
+}
 
 
 .about-me-cards {
@@ -570,6 +580,7 @@ li {
          minmax(175px,
             1fr));
    gap: 2rem;
+   max-width: 50%;
 }
 
 .background {
@@ -633,17 +644,39 @@ li {
    color: #242424;
 }
 
-.eze {
 
-   width: 50%;
-   filter: drop-shadow(0 0 1em var(--han-purple)) brightness(115%);
+
+
+/*-----------------------------------*\
+    #INSTRUCTION
+  \*-----------------------------------*/
+
+
+.instruction {
+   /* padding-block-end: var(--section-padding); */
+   background-color: #0f0e17;
 }
+
+.instruction-icon ion-icon {
+   font-size: 5rem;
+   color: var(--han-purple);
+   --ionicon-stroke-width: 25px;
+}
+
+.instruction-title {
+   color: var(--white);
+   font-family: var(--ff-jost);
+   font-size: var(--fs-3);
+   font-weight: var(--fw-600);
+   margin-block: 15px;
+}
+
 
 /*-----------------------------------*\
     #STUDIES
   \*-----------------------------------*/
 
-.line3 img {
+  .line3 img {
    background: #202020;
    max-width: 100%;
 }
@@ -761,35 +794,6 @@ li {
 
 
 
-
-
-
-/*-----------------------------------*\
-    #INSTRUCTION
-  \*-----------------------------------*/
-
-.instruction {
-   padding-block-end: var(--section-padding);
-   background-color: #0f0e17;
-}
-
-.instruction .section-title {
-   margin-block-end: 50px;
-}
-
-.instruction-icon ion-icon {
-   font-size: 5rem;
-   color: var(--han-purple);
-   --ionicon-stroke-width: 25px;
-}
-
-.instruction-title {
-   color: var(--white);
-   font-family: var(--ff-jost);
-   font-size: var(--fs-3);
-   font-weight: var(--fw-600);
-   margin-block: 15px;
-}
 
 /*-----------------------------------*\
     #FOOTER
@@ -912,37 +916,36 @@ li {
     #BACK TO TOP
   \*-----------------------------------*/
 
-.back-top-btn.active {
+/* .back-top-btn.active {
    visibility: visible;
    opacity: 1;
    transform: translateY(-10px);
    color: white;
-}
+} */
 
-.back-top-btn:is(:hover, :focus-visible) {
+/* .back-top-btn:is(:hover, :focus-visible) {
    background-color: #4834d4;
    opacity: 10%;
-}
+} */
 
 .back-to-top {
+   display: none;
    background-color: transparent;
-   color: #4834d4;
-   border: 2px solid #4834d4;
-   position: fixed;
+   color: white;
+   border: 2px solid white;
    bottom: 13px;
    right: 30px;
    width: 30px;
    height: 30px;
    display: grid;
    place-items: center;
-   border-radius: 50%;
-   visibility: visible;
+   border-radius: var(--radius-8);
    z-index: 4;
 }
 
 .back-to-top:hover {
-   border: 2px solid white;
-   color: white;
+   border: 2px solid #05b7b9;
+   color: #05b7b9;
 }
 
 /*-----------------------------------*\

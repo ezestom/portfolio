@@ -3,6 +3,7 @@ const sound = new Audio(
 );
 const play = document.querySelector(".play-btn");
 const pause = document.querySelector(".pause-btn");
+const forward = document.querySelector(".forward-btn");
 
 play.addEventListener("click", () => {
 	sound.play();
@@ -11,6 +12,9 @@ play.addEventListener("click", () => {
 pause.addEventListener("click", () => {
 	sound.pause();
 });
+
+// forward.addEventListener('click', (){
+// })
 
 const overlay = document.querySelector("[data-overlay]");
 const navbar = document.querySelector("[data-navbar]");
@@ -37,4 +41,10 @@ for (let i = 0; i < navbarLinks.length; i++) {
 		navbar.classList.toggle("active");
 		overlay.classList.toggle("active");
 	});
-}
+};
+
+const backBtn = document.querySelector('.back-to-top')
+
+window.addEventListener('scroll', () => {
+	backBtn.style.display = 'fixed'
+})
