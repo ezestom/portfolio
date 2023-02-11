@@ -578,14 +578,32 @@ li {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   flex-wrap: wrap;
 }
-.photo{
+.about-eze{
    max-width: 30%;
    background-color: #242424;
    border-radius: var(--radius-8);
    border-bottom: #4834d4 2px solid;
    transition: all 0.3s;
+   position: relative;
+}
+.iconify{
+   width: 20%;
+   height: 20%;
+   opacity: 20%;
+   position: absolute;
+   top: 5%;
+   right: 5%;
+   transition: all .5s;
+}
+.iconify:hover{
+   transform: scale(1.1);
+   opacity: 100%;
+   transition: all .5s;
+   filter: drop-shadow(0 0 1em var(--han-purple)) brightness(115%);
+}
+.photo{
+   width: 100%;
 }
 
 
@@ -619,7 +637,6 @@ li {
 
 .background p {
    font-size: 1.75rem;
-   padding: 1%;
 }
 
 .background:hover {
@@ -658,6 +675,13 @@ li {
    background-color: #fbdd74;
    color: #242424;
 }
+
+.text > p{
+   padding: 2% 5%;
+}
+
+
+
 
 
 
