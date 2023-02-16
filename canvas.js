@@ -2,6 +2,7 @@ import * as THREE from "three";
 import "./style.css";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import gsap from "gsap";
+import { Loader } from "three";
 
 
 //Scene
@@ -12,8 +13,9 @@ const geometry = new THREE.SphereGeometry(3, 64, 64);
 const material = new THREE.MeshStandardMaterial({
 	color: "#4834d4",
 	roughness: 0.4,	
-
 });
+
+
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
@@ -43,9 +45,10 @@ scene.add(camera);
 const canvas = document.querySelector(".webgl");
 const renderer = new THREE.WebGLRenderer({ canvas });
 renderer.setSize(sizes.width, sizes.height);
-renderer.setPixelRatio(2);
+renderer.setPixelRatio(1);
 renderer.render(scene, camera);
 renderer.setClearColor('#0f0e17');
+renderer
 
 //Controls
 const controls = new OrbitControls(camera, canvas);
@@ -78,3 +81,4 @@ const t1 = gsap.timeline({ defaults: { duration: 0 } });
 t1.fromTo(mesh.scale, { z: 0, x: 0, y: 0 }, { z: 1, x: 1, y: 1 });
 t1.fromTo("nav", { y: "0%" }, { y: "0%" });
 t1.fromTo(".title", { opacity: 0 }, { opacity: 1 });
+

@@ -7,9 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist",
-    "build": "echo This is a static template, there is no bundler or bundling involved!",
-    "start": "serve"
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "vite": "^4.0.0"
@@ -17,10 +15,7 @@
   "dependencies": {
     "gh-pages": "^4.0.0",
     "gsap": "^3.11.4",
-    "three": "^0.148.0",    
-    "serve": "^11.2.0"
-  },
-  "tags": [
-    "swiper"
-  ]
+    "three": "^0.148.0"
+  }
+
 }
