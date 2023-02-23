@@ -44,11 +44,7 @@
      */
    --radius-8: 8px;
 
-   /**
 
-
-     
-     */
 
    
 }
@@ -666,8 +662,9 @@ body {
 
 .reviews {
    background-color: #242424;
-   height: 90vh;
+   height: 90vh;   
 }
+
 
 .reviews  .box {
    text-align: center;
@@ -675,8 +672,10 @@ body {
    border: none;
    background-color: #242424;
    justify-content: start;
+   height: auto;
    min-width: 30%;
 }
+
 
 
 .reviews .box img {
@@ -723,10 +722,6 @@ body {
    height: 100vh;
 }
 
-.swiper {
-   width: 100%;
-   height: 100%;
-}
 
 .swiper-wrapper {
    padding-bottom: 5rem;
