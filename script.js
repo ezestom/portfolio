@@ -1,22 +1,8 @@
-// const sound = new Audio(
-// 	"./music/Coldplay X BTS - My Universe (Official Lyric Video).mp3"
-// );
-// const play = document.querySelector(".play-btn");
-// const pause = document.querySelector(".pause-btn");
-// const forward = document.querySelector(".forward-btn");
+// const rocket = document.querySelector('.rocket')
 
-// play.addEventListener("click", () => {
-// 	sound.play();
-// });
-
-// pause.addEventListener("click", () => {
-// 	sound.pause();
-// });
-
-// forward.addEventListener('click', (){
+// rocket.addEventListener('scroll', () =>{
+// 	rocket.classList.add('.rocketPush')
 // })
-
-// change the mode tab
 
 let previousTitle = document.title;
 

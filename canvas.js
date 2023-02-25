@@ -47,7 +47,7 @@ const renderer = new THREE.WebGLRenderer({ canvas });
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(1);
 renderer.render(scene, camera);
-renderer.setClearColor('#0f0e17');
+renderer.setClearColor('#0c0e10');
 renderer
 
 //Controls
