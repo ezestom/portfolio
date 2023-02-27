@@ -300,7 +300,7 @@ body {
    z-index: 2;
    transition: top 0.5s;
    padding-block: 3.5rem;
-   transition: var(--transition-2);
+   transition: all .5s;
    left: 0;
 }
 
@@ -415,7 +415,7 @@ body {
    display: flex;
    flex-direction: column;
    align-items: center;
-   padding-top: 5rem;
+   padding-block: 5rem  ;
 }
 
 .btn-group > .btn {
@@ -526,7 +526,7 @@ body {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   padding-bottom: 10%;
+   padding-bottom: 5%;
    font-weight: var(--fw-600);
 }
 
@@ -648,46 +648,67 @@ body {
 
 .reviews {
    background-color: #242424;
-   height: 90vh;   
 }
 
+.about-me-reviews{
+   display: grid;
+   grid-template-columns: repeat(auto-fit,
+         minmax(275px,
+            1fr));
+   gap: 10rem;
+   padding: 0 5%;
+}
+.quote{
+   display: flex;
+   justify-content: flex-end;
+   padding-bottom: 5rem;
+}
+.fa-solid {
+   font-size: 5rem;
+}
+.review-header{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
 
-.reviews  .box {
+ .pic-review > img{
+   border-radius: 41% 59% 35% 65% / 49% 41% 59% 51% ;
+   padding-bottom: 3rem;
+
+}
+
+.me-reviews{
+   display: flex;
    text-align: center;
-   padding: 0 1rem;
-   border: none;
-   background-color: #242424;
-   justify-content: start;
-   height: auto;
-   min-width: 30%;
+   flex-direction: column;
+   justify-content: center;
+   align-items: justify;
+   
 }
-
-
-
-.reviews .box img {
-   height: 7rem;
-   width: 7rem;
-   border-radius: 50%;
-   border: 2px solid #4834d4;
-}
-
-.reviews .box span {
-   font-size: 2rem;
-   color: white;
-}
-.reviews  .box .date{
-   font-style: italic;
-   font-size: 1.25rem;
-}
-.reviews  .box  .skills{
-   font-weight: 700;
-   font-size: 1.25rem;
-   color: var(--spanish-gray);
-}  
-
-.reviews  .box  .description{
+.review-p{
+   color:white;
    font-size: 1.5rem;
-   padding: 1% 0;
+}
+.review-name{
+   border-bottom: 1px solid gray;
+   color: white;
+   font-size: 2.5rem;
+   font-weight: var(--fw-600);
+   padding-top: 2rem;
+}
+.review-job{
+   font-weight: 600;
+}
+.review-linkedin{
+   color: #0e76a8;
+   font-weight: 700;
+   display: flex;
+   justify-content: center;
+}
+
+.review-linkedin:hover{
+   color: #4bb5e6;
 }
 
 
@@ -721,7 +742,7 @@ body {
    align-items: center;
    display: center;
    padding: 4rem 2rem;
-   /* min-width: 250px; */
+   min-width: 200px;
    height: 450px;
    max-width: 225px;
    margin-block: 1rem;
