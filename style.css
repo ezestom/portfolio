@@ -114,13 +114,7 @@ body {
    color: white;
 }
 
-/* li {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   max-width: 100%;
-} */
+
 
 .line img {
    background-color: #0f0e17;
@@ -188,7 +182,6 @@ body {
 
 .section-subtitle {
    padding-top: 2%;
-   /* padding-left: 5%; */
    font-size: 5rem;
    background-image: var(--gradient-1);
    background-clip: text;
@@ -235,10 +228,6 @@ body {
    color: inherit;
 }
 
-.grid-list {
-   display: grid;
-   row-gap: 20px;
-}
 
 .card {
    background-color: var(--eerie-black-1);
@@ -269,6 +258,7 @@ body {
    width: 100%;
    display: flex;
    justify-content: center;
+   align-items: center;
    z-index: 4;
    background: #0c0e10;
    font-size: 1.5rem;
@@ -402,11 +392,6 @@ body {
    padding-top: 20%;
    transition: all 10s;
 }
-.rocket:active{
-   transform: translate(25% , -25%);
-   transition: all 10s;
-}
-
 .hero-title {
    font-size: 5rem;
 }
@@ -437,6 +422,7 @@ body {
 
 .webgl {
    z-index: 1;
+   max-width: 100%;
 }
 
 .containerHero1 {
@@ -469,9 +455,9 @@ body {
 .grid-list {
    display: grid;
    grid-template-columns: repeat(auto-fit,
-         minmax(220px,
+         minmax(200px,
             1fr));
-   gap: 3rem;
+   gap: 2rem;
 }
 
 .explore-card {
@@ -479,12 +465,12 @@ body {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   max-width: 220px;
    padding: 2rem;
 }
 
 .explore-card:is(:hover, :focus) {
    filter: drop-shadow(0 0 1em var(--han-purple)) brightness(115%);
+   cursor: crosshair;
 }
 
 .explore-card .card-banner {
@@ -552,23 +538,25 @@ body {
    transition: all 0.3s;
    position: absolute;
    bottom: 0;
-   left: 0;
-   max-width: 50%;
+   left: 8%;
+   max-width: 40%;
 }
 
 .photo {
-   max-width: 90%;
+   max-width: 100%;
+   filter: grayscale(1);
+   opacity: 75%;
 }
 
 
 .about-me-cards {
    display: grid;
    grid-template-columns: repeat(auto-fit,
-         minmax(175px,
+         minmax(150px,
             1fr));
-   gap: 3rem;
+   gap: 2rem;
    max-width: 50%;
-   padding-bottom: 1%;
+   padding-bottom: 5%;
 }
 
 .background {
@@ -583,15 +571,11 @@ body {
    background-color: #242424;
    border-radius: var(--radius-8);
    transition: all .3s;
+   cursor: crosshair;
 }
 
 .background img {
-   max-width: 85%;
-}
-
-.photo {
-   filter: grayscale(1);
-   opacity: 75%;
+   max-width: 100%;
 }
 
 .background p {
@@ -970,76 +954,22 @@ border: 8px solid #f9bc60;
     #MEDIA QUERIES
   \*-----------------------------------*/
 
-/**
-   * responsive for larger than 575px screen
-   */
-
-@media (min-width: 575px) {
-   /**
-     * REUSED STYLE, FOOTER
-     */
-
-   /* .grid-list,
-   .footer-top {
-      grid-template-columns: 1fr 1fr;
-   } */
-}
-
-/**
-   * responsive for larger than 768px screen
-   */
-
-@media (min-width: 768px) {
-
-   /**
-     * HERO
-     */
-
-   /* .hero {
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-   } */
-}
 
 /**
 
    */
 
 @media screen and (max-width: 1480px) {
-
+   .about-me-cards{
+      max-width: 100%;     
+   }
+   .section{
+      padding: 0 3%;
+   }
    img.photo {
       display: none;
    }
-
-   .about-me-cards {
-      max-width: 100%;
-      padding-bottom: 10%;
-   }
-
-   /**
-
-
-   /**
-
-
-   /**
-     * FOOTER
-     */
-
-   .footer-top {
-      grid-template-columns: 1fr 0.6fr 0.6fr 1fr;
-   }
-
-   .footer-brand {
-      padding-inline-end: 60px;
-   }
 }
-
-/**
-      */
-@media screen and (max-width: 1300px) {}
 
 @media (min-width: 1200px) {
    /**
@@ -1058,19 +988,15 @@ border: 8px solid #f9bc60;
    .navbar,
    .navbar.active {
       all: unset;
-      margin-inline: auto;
       left: 0;
-
    }
    .header-container{
       width: 50%;
    }
-
-
    .navbar-list {
       padding-block: 1rem;   
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       font-size: 2rem;
       font-weight: var(--fw-600);
    }
