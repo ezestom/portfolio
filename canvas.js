@@ -8,10 +8,10 @@ import { Loader } from "three";
 const scene = new THREE.Scene();
 
 //Create our sphere
-const geometry = new THREE.SphereGeometry(3, 64, 64);
+const geometry = new THREE.SphereGeometry( 5, 64, 64);
 const material = new THREE.MeshStandardMaterial({
 	color: "#4834d4",
-	roughness: 0.4,
+	roughness: 0.5,
 });
 
 const mesh = new THREE.Mesh(geometry, material);
@@ -36,7 +36,7 @@ const camera = new THREE.PerspectiveCamera(
 	0.1,
 	100
 );
-camera.position.z = 20;
+camera.position.z = 25;
 scene.add(camera);
 
 //Renderer
@@ -46,15 +46,17 @@ renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(1);
 renderer.render(scene, camera);
 renderer.setClearColor("#0c0e10");
-renderer;
 
 //Controls
 const controls = new OrbitControls(camera, canvas);
-// controls.enableDamping = true;
+controls.enableDamping = false;
 controls.enablePan = false;
 controls.enableZoom = false;
 controls.autoRotate = true;
-controls.autoRotateSpeed = 5;
+controls.autoRotateSpeed = 2;
+controls.enableRotate = false;
+
+
 
 //Resize
 window.addEventListener("resize", () => {
@@ -75,8 +77,8 @@ const loop = () => {
 loop();
 
 //Timeline Magic
-const t1 = gsap.timeline({ defaults: { duration: 0 } });
-t1.fromTo(mesh.scale, { z: 0, x: 0, y: 0 }, { z: 1, x: 1, y: 1 });
-t1.fromTo("nav", { y: "0%" }, { y: "0%" });
-t1.fromTo(".title", { opacity: 0 }, { opacity: 1 });
+// const t1 = gsap.timeline({ defaults: { duration: 0 } });
+// t1.fromTo(mesh.scale, { z: 0, x: 0, y: 0 }, { z: 1, x: 1, y: 1 });
+// t1.fromTo("nav", { y: "0%" }, { y: "0%" });
+// t1.fromTo(".title", { opacity: 0 }, { opacity: 1 });
 
