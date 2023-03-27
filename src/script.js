@@ -1,7 +1,12 @@
-// const rocket = document.querySelector('.rocket')
+// const favicon = document.querySelector('link[rel="icon"]')
 
-// rocket.addEventListener('scroll', () =>{
-// 	rocket.classList.add('.rocketPush')
+// document.addEventListener("visibilitychange", () => {
+//     const hidden = document.hidden
+
+//     favicon.setAttribute(
+//         "href", 
+//         `/favicon${hidden ? "-hidden" : ""}.ico`
+//     )
 // })
 
 let previousTitle = document.title;
