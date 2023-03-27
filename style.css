@@ -121,7 +121,7 @@ body {
    max-width: 100%;
 }
 
-/* 
+
 ::-webkit-scrollbar {
    width: 15px;
 }
@@ -136,7 +136,7 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
    background-color: hsl(0, 0%, 70%);
-} */
+}
 
 /*-----------------------------------*\
     #REUSED STYLE
@@ -386,14 +386,21 @@ body {
    display: flex;
    flex-direction: column;
    align-items: center;
+   height: 100vh;
 }
 .rocket{
-   max-width: 100%;
-   padding-top: 20%;
-   transition: all 10s;
+   max-width: 80%;
+   transform: translate(-20%, -15%)
+
 }
 .hero-title {
-   font-size: 5rem;
+   font-size: 4rem;
+   padding-top: 15%;
+   font-weight: var(--fw-900);
+}
+.title-dev{
+   font-size: 6rem;
+   font-weight: 700;
 }
 
 .btn-group{
@@ -408,7 +415,7 @@ body {
    margin-bottom: 1rem;
    font-size: 2rem;
    width: 300px;
-   font-weight: var(--fw-500);
+   font-weight: var(--fw-600);
 }
 .btn-group > .btn:hover {
    background-image: var(--gradient-1);
