@@ -706,7 +706,7 @@ body {
    background-color: #202020;
    border-radius: 8px;
    padding: 8px 16px;
-   border: 1px solid #202020;
+   border: 1px solid #0A66C2;
    display: flex;
    align-items: center; 
 }
@@ -898,7 +898,7 @@ border: 8px solid #f9bc60;
    border: 3px solid #4834d4;
    border-radius: 8px;
    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-   width:auto;
+   width:375px;
  }
  
  .chat-header {
@@ -912,12 +912,18 @@ border: 8px solid #f9bc60;
    font-size: 18px;
  }
  .ri-mail-send-line{
-   padding-right: 1%;
+   padding-right: 0 1%;
  }
  
  .chat-window {
-   height: 220px;
+   padding-top: 2% ;
+   height: 300px;
    overflow-y: scroll;
+   overflow-x: hidden;
+   word-wrap: break-word;
+ }
+ .chat-window li {
+   padding: 0 2%;
  }
  
  .message-list {
@@ -974,6 +980,15 @@ border: 8px solid #f9bc60;
    background-color: #242424;
    padding: 8px 16px;
    border-radius: 8px;
+   border: 1px solid #242424;
+   font-weight: 600;
+
+ }
+ .copyright-link:hover{
+   color: #f2eb0f; ;
+   transition: all 0.2s;
+   background-color: hsla(217, 15%, 70%, 0.3);
+   border: 1px solid #f2eb0f;;
 
  }
 
