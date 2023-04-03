@@ -833,6 +833,7 @@ border: 8px solid #f9bc60;
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
+   z-index: 1;
 }
 
 .footer-container{
