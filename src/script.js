@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 455c7f03ae5d629a3af10e9fdfb78f0a1a1b5766
 let previousTitle = document.title;
 
 window.addEventListener("blur", () => {
