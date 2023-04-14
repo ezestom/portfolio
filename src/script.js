@@ -57,3 +57,8 @@ botonEnviar.addEventListener("click", function () {
 		encodeURIComponent(mensaje);
 	window.location.href = correo;
 });
+
+// primera posicion de cursor en textarea
+const textarea = document.querySelector('textarea');
+textarea.value = '';
+textarea.selectionStart = 0; // Establecer la posición inicial

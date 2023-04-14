@@ -159,9 +159,6 @@ body {
 }
 
 
-.hydrated:hover {
-   color: #4834d4;
-}
 
 .btn:hover {
    color: #4834d4;
@@ -909,7 +906,7 @@ border: 8px solid #f9bc60;
    font-size: 18px;
  }
  .ri-mail-send-line{
-   padding-right: 0 1%;
+   padding-right: 1%;
  }
  
  .chat-window {
