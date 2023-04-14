@@ -1,14 +1,3 @@
-// const favicon = document.querySelector('link[rel="icon"]')
-
-// document.addEventListener("visibilitychange", () => {
-//     const hidden = document.hidden
-
-//     favicon.setAttribute(
-//         "href", 
-//         `/favicon${hidden ? "-hidden" : ""}.ico`
-//     )
-// })
-
 let previousTitle = document.title;
 
 window.addEventListener("blur", () => {
@@ -19,7 +8,7 @@ window.addEventListener("focus", () => {
 	document.title = previousTitle;
 });
 
-// 
+//
 
 const overlay = document.querySelector("[data-overlay]");
 const navbar = document.querySelector("[data-navbar]");
@@ -54,7 +43,17 @@ window.addEventListener("scroll", () => {
 	backBtn.style.display = "fixed";
 });
 
+// effect button click
 
 
 
+// send me a message
 
+let botonEnviar = document.getElementById("send-button");
+botonEnviar.addEventListener("click", function () {
+	let mensaje = document.querySelector(".message-input").value;
+	let correo =
+		"mailto:ezequielstom@gmail.com?subject=Mensaje desde el chat&body=" +
+		encodeURIComponent(mensaje);
+	window.location.href = correo;
+});
