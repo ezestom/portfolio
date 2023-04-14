@@ -142,7 +142,6 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-   gap: 5px;
    width: 160px;
    font-weight: 600;
    font-size: 1.75rem;
@@ -153,9 +152,12 @@ body {
    font-weight: 100;
 }
 
-.btn ion-icon {
+.btn ion-icon,
+ .ri-briefcase-line {
    font-size: 2rem;
+   padding-right: 2%;
 }
+
 
 .hydrated:hover {
    color: #4834d4;
