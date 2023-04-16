@@ -776,8 +776,8 @@ body {
 
 
 .btn-card {
-   color: var(--white);
-   border: 3px solid var(--white);
+   color:white;
+   border: 3px solid white;
    padding: 8px 16px;
    width: 160px;
    border-radius: var(--radius-8);
@@ -799,6 +799,8 @@ body {
 .swiper-pagination-bullet-active {
    background-color: #4834d4;
 }
+
+ 
 
 
 /* 
@@ -993,8 +995,6 @@ border: 8px solid #f9bc60;
    border: 1px solid #f2eb0f;;
 
  }
-
-
 
 
 /*-----------------------------------*\

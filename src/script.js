@@ -44,9 +44,33 @@ window.addEventListener("scroll", () => {
 });
 
 // effect button click
+function agregarEfectoClic() {
+	const links = document.querySelectorAll('a');
+ 
+	for (let i = 0; i < links.length; i++) {
+	  let timeoutID;
+	  links[i].addEventListener('mousedown', function() {
+		 clearTimeout(timeoutID);
+		 this.style.transform = 'scale(0.98)';
+	  });
+	  links[i].addEventListener('mouseup', function() {
+		 this.style.transform = 'none';
+	  });
+	  links[i].addEventListener('mouseout', function() {
+		 timeoutID = setTimeout(() => {
+			this.style.transform = 'none';
+		 }, 100);
+	  });
+	}
+ }
+ 
+ agregarEfectoClic();
 
+ const links2 = document.querySelectorAll('.send-btn');
 
-
+ agregarEfectoClic(links2);
+ 
+ 
 // send me a message
 
 let botonEnviar = document.getElementById("send-button");
@@ -59,6 +83,6 @@ botonEnviar.addEventListener("click", function () {
 });
 
 // primera posicion de cursor en textarea
-const textarea = document.querySelector('textarea');
-textarea.value = '';
+const textarea = document.querySelector("textarea");
+textarea.value = "";
 textarea.selectionStart = 0; // Establecer la posición inicial
