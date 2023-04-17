@@ -343,6 +343,7 @@ body {
 .navbar-link:hover::before {
    scale: 1;
    transform-origin: left;
+   
 }
 
 .menu-open-btn {
@@ -794,6 +795,7 @@ body {
 .btn-card:hover {
    color: #4834d4;
    border: 3px solid var(--han-purple);
+
 }
 
 .swiper-pagination-bullet-active {
@@ -851,7 +853,7 @@ border: 8px solid #f9bc60;
    background-color: #242424;
    font-size: 3rem;
    border-radius: var(--radius-8);
-   border: 1px solid #242424;
+   border: 2px solid #242424;
 }
 
 .social-link i {
@@ -865,28 +867,28 @@ border: 8px solid #f9bc60;
    color: #25D366;
    transition: all 0.2s;
    background-color: hsla(217, 15%, 70%, 0.3);   
-   border: 1px solid #25D366;
+   border: 2px solid #25D366;
 }
 
 .linkedin:hover{
    color: #0A66C2 ;
    transition: all 0.2s;
    background-color: hsla(217, 15%, 70%, 0.3);
-   border: 1px solid #0A66C2;
+   border: 2px solid #0A66C2;
 
 }
 .github:hover{
    color:#171515;
    transition: all 0.2s;
    background-color: hsla(217, 15%, 70%, 0.3);
-   border: 1px solid #171515;
+   border: 2px solid #171515;
 
 }
 .discord:hover{
    color: #5865F2 ;
    transition: all 0.2s;
    background-color: hsla(217, 15%, 70%, 0.3);
-   border: 1px solid #5865F2;
+   border: 2px solid #5865F2;
 }
 
 .chat-card {
@@ -894,7 +896,7 @@ border: 8px solid #f9bc60;
    border: 3px solid #4834d4;
    border-radius: 8px;
    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-   width:400px;
+   width:350px;
  }
  
  .chat-header {
@@ -984,15 +986,14 @@ border: 8px solid #f9bc60;
    background-color: #242424;
    padding: 8px 16px;
    border-radius: 8px;
-   border: 1px solid #242424;
+   border: 2px solid #242424;
    font-weight: 600;
-
  }
  .copyright-link:hover{
    color: #f2eb0f; ;
    transition: all 0.2s;
    background-color: hsla(217, 15%, 70%, 0.3);
-   border: 1px solid #f2eb0f;;
+   border: 2px solid #f2eb0f;;
 
  }
 

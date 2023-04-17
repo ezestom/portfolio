@@ -43,7 +43,7 @@ window.addEventListener("scroll", () => {
 	backBtn.style.display = "fixed";
 });
 
-// effect button click
+// effect page's anchors  click
 function agregarEfectoClic() {
 	const links = document.querySelectorAll('a');
  
@@ -51,25 +51,19 @@ function agregarEfectoClic() {
 	  let timeoutID;
 	  links[i].addEventListener('mousedown', function() {
 		 clearTimeout(timeoutID);
-		 this.style.transform = 'scale(0.98)';
+		 this.style.filter = "drop-shadow(0 0 0.75em #4834d4)";
 	  });
 	  links[i].addEventListener('mouseup', function() {
-		 this.style.transform = 'none';
+		 this.style.filter = 'none';
 	  });
 	  links[i].addEventListener('mouseout', function() {
 		 timeoutID = setTimeout(() => {
-			this.style.transform = 'none';
+			this.style.filter = 'none';
 		 }, 100);
 	  });
 	}
- }
- 
+ } 
  agregarEfectoClic();
-
- const links2 = document.querySelectorAll('.send-btn');
-
- agregarEfectoClic(links2);
- 
  
 // send me a message
 
