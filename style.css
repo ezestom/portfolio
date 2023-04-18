@@ -896,7 +896,7 @@ border: 8px solid #f9bc60;
    border: 3px solid #4834d4;
    border-radius: 8px;
    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-   width:350px;
+   width:400px;
  }
  
  .chat-header {
@@ -914,25 +914,24 @@ border: 8px solid #f9bc60;
  }
  
  .chat-window {
-
-   font-size: 1.5rem;
+   font-size: 1.4rem;
    padding: 2% ;
    height: 300px;
    overflow-y: scroll;
    overflow-x: hidden;
    word-wrap: break-word;
  }
- .chat-window li {
+ /* .chat-window li {
    padding: 0 2%;
  }
- 
+  */
  .message-list {
    list-style: none;
    margin: 0;
    padding: 0;
  }
  .message-list > li {
-   background-color: #202020;
+   background-color: #242424;
    border-radius: 8px;
    display: inline-block;
    padding: 5px;
@@ -973,7 +972,7 @@ border: 8px solid #f9bc60;
    border-radius: 8px;
    color: #fff;
    font-size: 2rem;
-   padding: 8px 16px;
+   padding: 4px 8px;
    cursor: pointer;
    font-weight: 600;
  }
