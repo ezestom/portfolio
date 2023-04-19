@@ -267,7 +267,7 @@ body {
 }
 
 .header ion-icon {
-   color: var(--white);
+   color: white;
 }
 
 .navbar {
@@ -345,6 +345,9 @@ body {
    transform-origin: left;
    
 }
+.nav-open-btn.hidden {
+   display: none;
+ }
 
 .menu-open-btn {
    background-color: transparent;

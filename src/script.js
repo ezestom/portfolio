@@ -37,11 +37,11 @@ for (let i = 0; i < navbarLinks.length; i++) {
 	});
 }
 
-const backBtn = document.querySelector(".back-to-top");
+// const backBtn = document.querySelector(".back-to-top");
 
-window.addEventListener("scroll", () => {
-	backBtn.style.display = "fixed";
-});
+// window.addEventListener("scroll", () => {
+// 	backBtn.style.display = "fixed";
+// });
 
 // effect page's anchors  click
 function agregarEfectoClic() {
