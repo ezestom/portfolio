@@ -135,8 +135,8 @@ body {
 
 
 .btn {
-   color: var(--white);
-   border: 3px solid var(--white);
+   color: white;
+   border: 3px solid white;
    padding: 8px 16px;
    border-radius: var(--radius-8);
    display: flex;
@@ -166,8 +166,8 @@ body {
 }
 
 .btn2:hover {
-   color: var(--han-purple);
-   border: 3px solid var(--han-purple);
+   color: #4834d4;
+   border: 3px solid #4834d4;
 }
 
 .section-subtitle {
@@ -186,7 +186,7 @@ body {
    background-clip: text;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
-   font-weight: var(--fw-700);
+   font-weight: 700;
    font-size: 8rem;
 }
 
@@ -198,7 +198,6 @@ body {
 }
 
 .section {
-   padding-block-start: var(--section-padding);
    padding: 0 10%;
    height: auto;
 }
@@ -206,8 +205,8 @@ body {
 
 .btn-link {
    gap: 5px;
-   color: var(--white);
-   font-weight: var(--fw-500);
+   color: white;
+   font-weight: 500;
    font-size: 2rem;
 }
 
@@ -224,7 +223,7 @@ body {
    background-color: var(--eerie-black-1);
    padding: 25px;
    border-radius: var(--radius-8);
-   transition: var(--transition-2);
+   transition: all .2s ease-in-out;
    border-bottom: 1px solid var(--han-purple);
 
 }
@@ -301,7 +300,7 @@ body {
 }
 
 .navbar-title {
-   font-weight: var(--fw-600);
+   font-weight: 600;
    font-size: 3rem;
 }
 
@@ -319,11 +318,11 @@ body {
 }
 
 .navbar-link {
-   color: var(--white);
+   color: white;
    position: relative;
    display: inline-block;
    font-size: 2rem;
-   font-weight: var(--fw-500);
+   font-weight: 500;
 }
 
 .navbar-link::before {
@@ -360,7 +359,7 @@ body {
    position: fixed;
    inset: 0;
    background-color: hsla(0, 0%, 0%, 1);
-   transition: var(--transition-1);
+   transition: all .2s;
    opacity: 0;
    pointer-events: none;
    z-index: 1;
@@ -391,11 +390,11 @@ body {
 .hero-title {
    font-size: 4rem;
    padding-top: 15%;
-   font-weight: var(--fw-900);
+   font-weight: 700;
 }
 .title-dev{
    font-size: 6rem;
-   font-weight: 700;
+   font-weight: 800;
 }
 
 .btn-group{
@@ -410,7 +409,7 @@ body {
    margin-bottom: 1rem;
    font-size: 2rem;
    width: 300px;
-   font-weight: var(--fw-600);
+   font-weight: 600
 }
 .btn-group > .btn:hover {
    background-image: var(--gradient-1);
@@ -684,7 +683,7 @@ body {
    border-bottom: 1px solid gray;
    color: white;
    font-size: 2rem;
-   font-weight: var(--fw-600);
+   font-weight: 600;
    padding-top: 1.5rem;
 }
 .review-job{
