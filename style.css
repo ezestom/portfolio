@@ -797,7 +797,6 @@ body {
 .btn-card:hover {
    color: #4834d4;
    border: 3px solid var(--han-purple);
-
 }
 
 .swiper-pagination-bullet-active {

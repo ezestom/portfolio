@@ -51,7 +51,7 @@ function agregarEfectoClic() {
 	  let timeoutID;
 	  links[i].addEventListener('mousedown', function() {
 		 clearTimeout(timeoutID);
-		 this.style.filter = "drop-shadow(0 0 0.75em #4834d4)";
+		 this.style.filter = "drop-shadow(0 0 0.75em #9656a1)";
 	  });
 	  links[i].addEventListener('mouseup', function() {
 		 this.style.filter = 'none';
