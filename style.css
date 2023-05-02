@@ -127,6 +127,15 @@ body {
    background-color: hsl(0, 0%, 70%);
 }
 
+/* checkear funcionalidad */
+
+
+/* body{
+   background-color: Canvas;
+   color: CanvasText;
+   color-scheme: light dark;
+}
+ */
 
 /*-----------------------------------*\
     #REUSED STYLE
@@ -255,6 +264,7 @@ body {
    position: fixed;
    opacity: 0.9;
 }
+
 
 
 .menu-open-btn {
