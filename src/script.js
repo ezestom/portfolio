@@ -44,26 +44,26 @@ for (let i = 0; i < navbarLinks.length; i++) {
 // });
 
 // effect page's anchors  click
-function agregarEfectoClic() {
-	const links = document.querySelectorAll('a');
+// function agregarEfectoClic() {
+// 	const links = document.querySelectorAll('a');
  
-	for (let i = 0; i < links.length; i++) {
-	  let timeoutID;
-	  links[i].addEventListener('mousedown', function() {
-		 clearTimeout(timeoutID);
-		 this.style.filter = "drop-shadow(0 0 0.75em #9656a1)";
-	  });
-	  links[i].addEventListener('mouseup', function() {
-		 this.style.filter = 'none';
-	  });
-	  links[i].addEventListener('mouseout', function() {
-		 timeoutID = setTimeout(() => {
-			this.style.filter = 'none';
-		 }, 100);
-	  });
-	}
- } 
- agregarEfectoClic();
+// 	for (let i = 0; i < links.length; i++) {
+// 	  let timeoutID;
+// 	  links[i].addEventListener('mousedown', function() {
+// 		 clearTimeout(timeoutID);
+// 		 this.style.filter = "drop-shadow(0 0 0.75em #9656a1)";
+// 	  });
+// 	  links[i].addEventListener('mouseup', function() {
+// 		 this.style.filter = 'none';
+// 	  });
+// 	  links[i].addEventListener('mouseout', function() {
+// 		 timeoutID = setTimeout(() => {
+// 			this.style.filter = 'none';
+// 		 }, 100);
+// 	  });
+// 	}
+//  } 
+//  agregarEfectoClic();
  
 // send me a message
 

@@ -87,6 +87,10 @@ button,
 a {
    cursor: pointer;
 }
+a:active,
+button:active {
+   filter: grayscale(1);
+}
 
 ion-icon {
    pointer-events: none;
