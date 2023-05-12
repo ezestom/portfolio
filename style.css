@@ -997,7 +997,7 @@ border: 8px solid #f9bc60;
 		height: auto;
 		z-index: 2;
 		transition: top 1s;
-		padding-block: 3rem;
+		padding-block: 4rem;
 		transition: all 1s;
 		left: 0;
 	}
