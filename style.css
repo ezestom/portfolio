@@ -401,15 +401,11 @@ body {
 }
 
 .btn-group {
-   position: absolute;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding-block: 5rem;
-   bottom: 0;
-   left: 0;
-   right: 0;
-   z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 5rem;
+
 }
 
 .btn-group > .btn {
@@ -996,9 +992,8 @@ border: 8px solid #f9bc60;
 		width: 100%;
 		height: auto;
 		z-index: 2;
-		transition: top 1s;
+		transition: top .5s ease-in-out;
 		padding-block: 4rem;
-		transition: all 1s;
 		left: 0;
 	}
    .navbar-list li:hover{
