@@ -332,7 +332,7 @@ body {
 	justify-content: space-around;
 	font-size: 2rem;
 	font-weight: var(--fw-600);
-	transition: all 0.5s;
+	transition: all 0.5s;	
 }
 
 .navbar-link {
