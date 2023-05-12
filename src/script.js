@@ -8,64 +8,37 @@ window.addEventListener("focus", () => {
 	document.title = previousTitle;
 });
 
-//
+window.addEventListener("load", function () {
+	const check = document.querySelector("#checkbox");
+	const main = document.querySelector("main");
+	const navbar = document.querySelector(".navbar");
+	const navbarLinks = document.querySelectorAll(".navbar-link");
 
-const overlay = document.querySelector("[data-overlay]");
-const navbar = document.querySelector("[data-navbar]");
-const menuCloseBtn = document.querySelector("[data-nav-close-btn]");
-const menuOpenBtn = document.querySelector("[data-nav-open-btn]");
+	function hideNavbar() {
+		navbarLinks.forEach((link) => {
+			link.addEventListener("click", function () {
+				main.style.filter = "blur(0)";
+				navbar.style.top = "-500%";
+				check.checked = false;
+			});
+		});
+	}
 
-const elemArr = [overlay, menuCloseBtn, menuOpenBtn];
+	check.addEventListener("change", function () {
+		if (check.checked) {
+			console.log("checked");
+			navbar.style.top = "0";
+			main.style.filter = "blur(5px)";			
 
-for (let i = 0; i < elemArr.length; i++) {
-	elemArr[i].addEventListener("click", function () {
-		navbar.classList.toggle("active");
-		overlay.classList.toggle("active");
+			hideNavbar(); 
+		} else if (!check.checked) {
+			console.log("unchecked");
+			main.style.filter = "blur(0)";
+			navbar.style.top = "-500%";
+			hideNavbar(); 
+		}
 	});
-}
-
-/**
- * toggle navbar when any navbar link will be clicked
- */
-
-const navbarLinks = document.querySelectorAll("[data-navlink]");
-
-for (let i = 0; i < navbarLinks.length; i++) {
-	navbarLinks[i].addEventListener("click", function () {
-		navbar.classList.toggle("active");
-		overlay.classList.toggle("active");
-	});
-}
-
-// const backBtn = document.querySelector(".back-to-top");
-
-// window.addEventListener("scroll", () => {
-// 	backBtn.style.display = "fixed";
-// });
-
-// effect page's anchors  click
-// function agregarEfectoClic() {
-// 	const links = document.querySelectorAll('a');
- 
-// 	for (let i = 0; i < links.length; i++) {
-// 	  let timeoutID;
-// 	  links[i].addEventListener('mousedown', function() {
-// 		 clearTimeout(timeoutID);
-// 		 this.style.filter = "drop-shadow(0 0 0.75em #9656a1)";
-// 	  });
-// 	  links[i].addEventListener('mouseup', function() {
-// 		 this.style.filter = 'none';
-// 	  });
-// 	  links[i].addEventListener('mouseout', function() {
-// 		 timeoutID = setTimeout(() => {
-// 			this.style.filter = 'none';
-// 		 }, 100);
-// 	  });
-// 	}
-//  } 
-//  agregarEfectoClic();
- 
-// send me a message
+});
 
 let botonEnviar = document.getElementById("send-button");
 botonEnviar.addEventListener("click", function () {
