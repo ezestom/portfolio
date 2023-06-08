@@ -18,7 +18,8 @@ window.addEventListener("load", function () {
 	function hideNavbar() {
 		navbarLinks.forEach((link) => {
 			link.addEventListener("click", function () {
-				main.style.filter = "blur(0)";
+				main.style.filter = "none";
+				footer.style.filter = "none";
 				navbar.style.top = "-500%";
 				check.checked = false;
 			});
@@ -27,14 +28,11 @@ window.addEventListener("load", function () {
 
 	check.addEventListener("change", function () {
 		if (check.checked) {
-			console.log("checked");
 			navbar.style.top = "0";
-			main.style.filter = " brightness(0.2) ";
-			footer.style.filter = " brightness(0.2) ";
+			main.style.filter = " brightness(0.3) ";
+			footer.style.filter = " brightness(0.3) ";
 			hideNavbar();
-			
 		} else if (!check.checked) {
-			console.log("unchecked");
 			main.style.filter = "none";
 			navbar.style.top = "-500%";
 			footer.style.filter = "none";

@@ -580,8 +580,8 @@ body {
 }
 
 .text > p {
-	padding: 0 5% 5% 5%;
-	font-weight: 600;
+	padding: 0% 3% 3% 3%;
+	font-weight: 500;
 }
 
 .background:hover {
@@ -913,6 +913,7 @@ border: 8px solid #f9bc60;
 .chat-input > ::placeholder {
 	color: #fff;
 	font-size: 1.5rem;
+	font-family: 'Poppins', sans-serif;
 }
 
 .message-input {
@@ -925,6 +926,7 @@ border: 8px solid #f9bc60;
 	outline: none;
 	padding: 5px;
 	font-size: 1.5rem;
+	font-family: 'Poppins', sans-serif;
 }
 
 .send-button {
