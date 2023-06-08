@@ -335,6 +335,7 @@ body {
 	transition: all 0.5s;	
 }
 
+
 .navbar-link {
 	color: white;
 	position: relative;
@@ -793,10 +794,7 @@ border: 8px solid #f9bc60;
     #FOOTER
   \*-----------------------------------*/
 
-/* .line4 img {
-   background-color: #202020;
-   width: 100%;
-} */
+
 
 .footer {
 	background-color: #202020;
@@ -986,7 +984,8 @@ border: 8px solid #f9bc60;
 
 	.navbar {
 		background-color: #0c0e10;
-		filter: drop-shadow(0px 1px 4px white);
+		border-bottom: 2px solid #303030;
+		
 		position: fixed;
 		top: 0;
 		top: -500px;

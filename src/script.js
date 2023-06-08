@@ -13,6 +13,7 @@ window.addEventListener("load", function () {
 	const main = document.querySelector("main");
 	const navbar = document.querySelector(".navbar");
 	const navbarLinks = document.querySelectorAll(".navbar-link");
+	const footer = document.querySelector(".footer");
 
 	function hideNavbar() {
 		navbarLinks.forEach((link) => {
@@ -28,14 +29,16 @@ window.addEventListener("load", function () {
 		if (check.checked) {
 			console.log("checked");
 			navbar.style.top = "0";
-			main.style.filter = "blur(5px)";			
-
-			hideNavbar(); 
+			main.style.filter = " brightness(0.2) ";
+			footer.style.filter = " brightness(0.2) ";
+			hideNavbar();
+			
 		} else if (!check.checked) {
 			console.log("unchecked");
-			main.style.filter = "blur(0)";
+			main.style.filter = "none";
 			navbar.style.top = "-500%";
-			hideNavbar(); 
+			footer.style.filter = "none";
+			hideNavbar();
 		}
 	});
 });
