@@ -381,7 +381,7 @@ body {
 }
 .hero-title {
 	font-size: 1.75rem;
-	padding-top: 15%;
+	padding-top: 10%;
 	font-weight: 400;
 }
 .hero-title > h2 {
@@ -393,7 +393,7 @@ body {
 .title-dev {
 	font-size: 7rem;
 	font-weight: 800;
-	filter: drop-shadow(0 0 0.75rem #0c0e10);
+	filter: drop-shadow(0 0 0.5rem #0c0e10);
 }
 .containerHero2 {
 	position: absolute;
@@ -406,7 +406,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-block: 1rem;
+	padding-block: 2rem;
 }
 .btn-group > h4 > code {
 	padding-bottom: 3rem;
@@ -710,18 +710,21 @@ h4 > code {
 	display: flex;
 }
 .review-linkedin > a {
-	background-color: #202020;
 	font-size: 1.25rem;
-	border-radius: 8px;
-	padding: 4px 8px;
-	border: 1px solid #202020;
 	display: flex;
 	align-items: center;
 }
+.review-linkedin > a > i{
+	padding: 0 0 0 .2rem;
+	color: #242424;
+	font-size: 1.5rem;
+}
 
-.review-linkedin a:hover {
+.review-linkedin > a:hover {
 	color: #4bb5e6;
-	filter: drop-shadow(0 0 0.25rem #303030);
+}
+.review-linkedin> a:hover  > i{
+	color: #4bb5e6;
 }
 
 /*-----------------------------------*\
@@ -1071,6 +1074,6 @@ border: 8px solid #f9bc60;
 		font-size: 5rem;
 	}
 	.btn-group > h4 > code {
-		padding-bottom: 1rem;
+		padding-bottom: 3rem;
 	}
 }
