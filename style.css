@@ -309,8 +309,7 @@ body {
 	position: fixed;
 	/* opacity: .9; */
 	backdrop-filter: saturate(180%) blur(20px);
-	height: 50px;
-	border-bottom: 1px solid #0c0e10;
+	border: 1px solid #0c0e10;
 }
 
 .menu-open-btn {
@@ -1010,6 +1009,9 @@ border: 8px solid #f9bc60;
   \*-----------------------------------*/
 
 @media screen and (max-width: 1480px) {
+	.header {
+		backdrop-filter: none;
+	}
 	.about-me-cards {
 		max-width: 100%;
 	}
@@ -1026,8 +1028,9 @@ border: 8px solid #f9bc60;
 	}
 
 	.navbar {
-		background-color: #0c0e10;
-		border-bottom: 2px solid #303030;
+		backdrop-filter: saturate(180%) blur(20px);
+		/* background-color: #0c0e10; */
+		border-bottom: 1px solid #0c0e10;
 		position: fixed;
 		top: 0;
 		top: -500px;
@@ -1037,9 +1040,10 @@ border: 8px solid #f9bc60;
 		transition: top 0.5s ease-in-out;
 		padding-block: 4rem;
 		left: 0;
+		background-color: rgba(98, 72, 255, 0.1);
 	}
 	.navbar-list li:hover {
-		background-color: #202020;
+		background-color: rgba(191, 102, 255, .1)
 	}
 	.navbar-list {
 		display: flex;

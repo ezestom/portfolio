@@ -9,6 +9,7 @@ window.addEventListener("focus", () => {
 });
 
 window.addEventListener("load", function () {
+	const header = document.querySelector(".header");
 	const check = document.querySelector("#checkbox");
 	const main = document.querySelector("main");
 	const navbar = document.querySelector(".navbar");
@@ -36,6 +37,7 @@ window.addEventListener("load", function () {
 			main.style.filter = "none";
 			navbar.style.top = "-500%";
 			footer.style.filter = "none";
+
 			hideNavbar();
 		}
 	});
