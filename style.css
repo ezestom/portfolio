@@ -377,15 +377,15 @@ body {
 }
 .rocket {
 	max-width: 80%;
-	transform: translate(-5%, -15%);
+	transform: translate(-10%, -5%);
 }
 .hero-title {
 	font-size: 1.75rem;
-	padding-top: 8%;
+	padding-top: 15%;
 	font-weight: 400;
-	line-height: 6rem;
 }
 .hero-title > h2 {
+	padding-top: 1rem;
 	font-size: 5rem;
 	font-weight: 600;
 }
@@ -393,6 +393,7 @@ body {
 .title-dev {
 	font-size: 7rem;
 	font-weight: 800;
+	filter: drop-shadow(0 0 0.75rem #0c0e10);
 }
 .containerHero2 {
 	position: absolute;
@@ -414,15 +415,15 @@ h4 > code {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	filter: blur(1px);
-	font-size: 2rem;
+	color: rgba(255, 255, 255, 0.3);
+	font-size: 1.5rem;
 }
 
 .btn-group > .btn {
 	width: auto;
 	margin-bottom: 1rem;
 	font-size: 1.75rem;
-	width: 300px;
+	width: 275px;
 	font-weight: 500;
 }
 .btn-group > .btn:hover {
@@ -899,10 +900,10 @@ border: 8px solid #f9bc60;
 
 .chat-card {
 	background-color: #242424;
-	border: 3px solid #4834d4;
+	border: 2px solid #4834d4;
 	border-radius: 8px;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-	width: 400px;
+	width: 375px;
 }
 
 .chat-header {
@@ -975,8 +976,8 @@ border: 8px solid #f9bc60;
 	border: 2px solid #fff;
 	border-radius: 8px;
 	color: #fff;
-	font-size: 2rem;
-	padding: 4px 8px;
+	font-size: 1.25rem;
+	padding: 8px 16px;
 	cursor: pointer;
 	font-weight: 600;
 }
@@ -1060,7 +1061,7 @@ border: 8px solid #f9bc60;
 
 @media (max-width: 1200px) {
 	.hero-title {
-		padding-top: 5%;
+		padding-top: 25%;
 		line-height: 4rem;
 	}
 	.hero-title > h2 {
@@ -1070,6 +1071,6 @@ border: 8px solid #f9bc60;
 		font-size: 5rem;
 	}
 	.btn-group > h4 > code {
-	padding-bottom: 1rem;
-}
+		padding-bottom: 1rem;
+	}
 }
