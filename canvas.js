@@ -46,6 +46,7 @@ renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(1);
 renderer.render(scene, camera);
 renderer.setClearColor("#0c0e10");
+renderer.set
 
 //Controls
 const controls = new OrbitControls(camera, canvas);
