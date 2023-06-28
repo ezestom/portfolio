@@ -72,7 +72,6 @@ img {
 
 input,
 button {
-	background: none;
 	font: inherit;
 }
 
@@ -225,15 +224,12 @@ body {
 .btn:hover {
 	color: #4834d4;
 	border: 2px solid #4834d4;
+	background-color: rgba(98, 72, 255, 0.1);
 }
+
 .btn2 > span,
 .btn2 > i {
 	font-size: 1.25rem;
-}
-
-.btn2:hover {
-	color: #4834d4;
-	border: 2px solid #4834d4;
 }
 
 .section-subtitle {
@@ -803,6 +799,7 @@ h4 > code {
 .btn-card:hover {
 	color: #4834d4;
 	border: 2px solid var(--han-purple);
+	background-color: rgba(98, 72, 255, 0.1);
 }
 
 .swiper-pagination-bullet-active {
@@ -873,32 +870,32 @@ border: 8px solid #f9bc60;
 .whatsapp:hover {
 	color: #25d366;
 	transition: all 0.2s;
-	background-color: hsla(217, 15%, 70%, 0.3);
+	background-color: hsla(217, 15%, 70%, 0.2);
 	border: 2px solid #25d366;
 }
 
 .linkedin:hover {
 	color: #0a66c2;
 	transition: all 0.2s;
-	background-color: hsla(217, 15%, 70%, 0.3);
+	background-color: hsla(217, 15%, 70%, 0.2);
 	border: 2px solid #0a66c2;
 }
 .github:hover {
 	color: #171515;
 	transition: all 0.2s;
-	background-color: hsla(217, 15%, 70%, 0.3);
+	background-color: hsla(217, 15%, 70%, 0.2);
 	border: 2px solid #171515;
 }
 .codesandbox:hover {
 	color: #000000;
 	transition: all 0.2s;
-	background-color: hsla(217, 15%, 70%, 0.3);
+	background-color: hsla(217, 15%, 70%, 0.2);
 	border: 2px solid #171515;
 }
 .discord:hover {
 	color: #5865f2;
 	transition: all 0.2s;
-	background-color: hsla(217, 15%, 70%, 0.3);
+	background-color: hsla(217, 15%, 70%, 0.2);
 	border: 2px solid #5865f2;
 }
 
@@ -989,6 +986,7 @@ border: 8px solid #f9bc60;
 .send-button:hover {
 	color: #4834d4;
 	border: 2px solid #4834d4;
+	background-color: rgba(98, 72, 255, 0.1);
 }
 .copyright-link {
 	background-color: #242424;
@@ -1000,7 +998,7 @@ border: 8px solid #f9bc60;
 .copyright-link:hover {
 	color: #f2eb0f;
 	transition: all 0.2s;
-	background-color: hsla(217, 15%, 70%, 0.3);
+	background-color: hsla(217, 15%, 70%, 0.2);
 	border: 2px solid #f2eb0f;
 }
 
@@ -1040,10 +1038,10 @@ border: 8px solid #f9bc60;
 		transition: top 0.5s ease-in-out;
 		padding-block: 4rem;
 		left: 0;
-		background-color: rgba(98, 72, 255, 0.1);
+		background-color: rgba(98, 72, 255, 0.3);
 	}
 	.navbar-list li:hover {
-		background-color: rgba(191, 102, 255, .1)
+		background-color: rgba(191, 102, 255, 0.1);
 	}
 	.navbar-list {
 		display: flex;
@@ -1069,8 +1067,11 @@ border: 8px solid #f9bc60;
 }
 
 @media (max-width: 1200px) {
+	.btn-group {
+		padding-block: 0rem;
+	}
 	.hero-title {
-		padding-top: 25%;
+		padding-top: 15%;
 		line-height: 4rem;
 	}
 	.hero-title > h2 {
