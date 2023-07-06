@@ -296,16 +296,21 @@ body {
   \*-----------------------------------*/
 
 .header {
-	width: 100%;
+	width: 60%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	z-index: 4;
 	font-size: 1.5rem;
 	position: fixed;
+	left: 20%;
 	/* opacity: .9; */
 	backdrop-filter: saturate(180%) blur(20px);
-	border: 1px solid #0c0e10;
+	height: 5em;
+	margin: 1% 0%;
+	border-radius: 100px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	margin-right: 10%;
 }
 
 .menu-open-btn {
@@ -320,11 +325,11 @@ body {
 	color: white;
 }
 .navbar-list {
-	padding-block: 1rem;
 	display: flex;
 	justify-content: space-around;
 	font-weight: var(--fw-600);
 	transition: all 0.5s;
+	gap: 10%;
 }
 
 .navbar-link {
@@ -380,6 +385,9 @@ body {
 	font-size: 1.75rem;
 	padding-top: 10%;
 	font-weight: 400;
+}
+.hero-title > h4 {
+	padding-top: 2rem;
 }
 .hero-title > h2 {
 	padding-top: 1rem;
