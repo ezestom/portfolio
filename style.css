@@ -306,7 +306,7 @@ body {
 	left: 20%;
 	/* opacity: .9; */
 	backdrop-filter: saturate(180%) blur(20px);
-	height: 5em;
+	height: 4em;
 	margin: 1% 0%;
 	border-radius: 100px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
