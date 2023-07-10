@@ -296,14 +296,14 @@ body {
   \*-----------------------------------*/
 
 .header {
-	width: 60%;
+	width: 40%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	z-index: 4;
 	font-size: 1.5rem;
 	position: fixed;
-	left: 20%;
+	left: 30%;
 	/* opacity: .9; */
 	backdrop-filter: saturate(180%) blur(20px);
 	height: 4em;
@@ -329,7 +329,7 @@ body {
 	justify-content: space-around;
 	font-weight: var(--fw-600);
 	transition: all 0.5s;
-	gap: 10%;
+	gap: 15%;
 }
 
 .navbar-link {
@@ -430,6 +430,7 @@ h4 > code {
 	font-size: 1.75rem;
 	width: 275px;
 	font-weight: 500;
+	background-color: rgba(98, 72, 255, 0.1);
 }
 .btn-group > .btn:hover {
 	background-image: var(--gradient-1);
@@ -466,7 +467,7 @@ h4 > code {
 }
 .explore {
 	background-color: #242424;
-	background-image: url(./images/footer-bg.png);
+	background-image: url(images/footer-bg.png);
 }
 
 .grid-list {

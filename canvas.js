@@ -79,7 +79,9 @@ const loop = () => {
 loop();
 
 //Timeline Magic
-// const t1 = gsap.timeline({ defaults: { duration: 0 } });
-// t1.fromTo(mesh.scale, { z: 0, x: 0, y: 0 }, { z: 1, x: 1, y: 1 });
-// t1.fromTo("nav", { y: "0%" }, { y: "0%" });
-// t1.fromTo(".title", { opacity: 0 }, { opacity: 1 });
+const t1 = gsap.timeline();
+
+t1.fromTo(mesh.scale, { z: 0, x: 0, y: 0 }, { z: 1, x: 1, y: 1 });
+t1.fromTo("nav", { y: "-300%" }, { y: "00%" });
+t1.fromTo("h2", { opacity: 0 }, { opacity: 1 });
+t1.fromTo(".title", { opacity: 0 }, { opacity: 1 });
