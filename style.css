@@ -296,14 +296,14 @@ body {
   \*-----------------------------------*/
 
 .header {
-	width: 40%;
+	width: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	z-index: 4;
 	font-size: 1.5rem;
 	position: fixed;
-	left: 30%;
+	left: 25%;
 	/* opacity: .9; */
 	backdrop-filter: saturate(180%) blur(20px);
 	height: 4em;
@@ -688,20 +688,20 @@ h4 > code {
 	display: flex;
 	text-align: center;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: start;
 	line-height: 3rem;
 }
 .review-p {
 	color: white;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	max-width: 60ch;
+	line-height: 2rem;
 }
 .review-name {
 	border-bottom: 1px solid gray;
 	color: white;
 	font-size: 1.5rem;
 	font-weight: 600;
-	padding-top: 1.5rem;
 }
 .review-job {
 	font-size: 1.25rem;
@@ -1018,6 +1018,7 @@ border: 8px solid #f9bc60;
 @media screen and (max-width: 1480px) {
 	.header {
 		backdrop-filter: none;
+		box-shadow: none;
 	}
 	.about-me-cards {
 		max-width: 100%;
