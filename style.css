@@ -296,21 +296,20 @@ body {
   \*-----------------------------------*/
 
 .header {
-	width: 50%;
+	width: 60%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	z-index: 4;
 	font-size: 1.5rem;
 	position: fixed;
-	left: 25%;
+	left: 20%;
 	/* opacity: .9; */
 	backdrop-filter: saturate(180%) blur(20px);
-	height: 4em;
+	height: 3em;
 	margin: 1% 0%;
 	border-radius: 100px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-	margin-right: 10%;
 }
 
 .menu-open-btn {
@@ -327,8 +326,7 @@ body {
 .navbar-list {
 	display: flex;
 	justify-content: space-around;
-	font-weight: var(--fw-600);
-	transition: all 0.5s;
+	font-weight: 700;
 	gap: 15%;
 }
 
@@ -337,10 +335,19 @@ body {
 	position: relative;
 	display: inline-block;
 	font-size: 1.75rem;
-	font-weight: 500;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
 }
-
-.navbar-link::before {
+.navbar-link > i {
+	padding-right: 3%;
+	font-size: medium;
+}
+.navbar-link:hover {
+	color: rgba(191, 102, 255, 1);
+	transition: color 0.1s;
+}
+/* .navbar-link::before {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -352,12 +359,12 @@ body {
 	scale: 0 1;
 	transform-origin: right;
 	transition: scale 0.2s;
-}
+} */
 
-.navbar-link:hover::before {
+/* .navbar-link:hover::before {
 	scale: 1;
 	transform-origin: left;
-}
+} */
 .menu-open-btn {
 	background-color: transparent;
 	position: fixed;
@@ -376,7 +383,9 @@ body {
 	height: 100vh;
 	width: 100%;
 	position: relative;
+	background-color: #0c0e10;
 }
+
 .rocket {
 	max-width: 80%;
 	transform: translate(-10%, -5%);
@@ -443,6 +452,9 @@ h4 > code {
 .webgl {
 	z-index: 1;
 	max-width: 100%;
+	background-color: #0c0e10;
+	width: 100vw;
+	height: 100vh;
 }
 
 .containerHero1 {
@@ -672,17 +684,6 @@ h4 > code {
 .fa-solid {
 	font-size: 5rem;
 }
-.review-header {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.pic-review > img {
-	border-radius: 41% 59% 35% 65% / 49% 41% 59% 51%;
-	padding-bottom: 3rem;
-	max-width: 80px;
-}
 
 .me-reviews {
 	display: flex;
@@ -694,8 +695,9 @@ h4 > code {
 .review-p {
 	color: white;
 	font-size: 1.25rem;
-	max-width: 60ch;
+	max-width: 50ch;
 	line-height: 2rem;
+	text-wrap: balance;
 }
 .review-name {
 	border-bottom: 1px solid gray;
@@ -1092,5 +1094,11 @@ border: 8px solid #f9bc60;
 	}
 	.btn-group > h4 > code {
 		padding-bottom: 3rem;
+	}
+	.navbar-link {
+		justify-content: center;
+	}
+	.navbar-link > i {
+		padding-right: 1%;
 	}
 }
