@@ -56,3 +56,50 @@ botonEnviar.addEventListener("click", function () {
 const textarea = document.querySelector("textarea");
 textarea.value = "";
 textarea.selectionStart = 0; // Establecer la posición inicial
+
+// card explore move
+const gridList = document.querySelector(".grid-list");
+const cardExplore = document.querySelector(".explore-card");
+const addBtn = document.querySelector(".btn-box");
+const sectionExplore = document.querySelectorAll("section");
+const cardBanner = document.querySelector(".card-banner");
+const cardBannerImg = document.querySelector(".img-cover");
+const cardTitle = document.querySelector(".card-title");
+const cardAuthor = document.querySelector(".card-author");
+const cardWrapper = document.querySelector(".wrapper");
+const closeBtn = document.querySelector(".ri-close-line");
+const plusBtn = document.querySelector(".ri-add-line");
+
+const shouldDisableScroll = () => {
+	if (cardExplore.classList.contains("card-explore-active")) {
+		return true;
+	}
+};
+
+cardExplore.addEventListener("click", function () {
+	cardExplore.classList.toggle("card-explore-active");
+	gridList.classList.toggle("grid-list-active");
+	addBtn.classList.toggle("btn-box-active");
+	cardBannerImg.classList.toggle("img-cover-active");
+	cardBanner.classList.toggle("card-banner-active");
+	cardTitle.classList.toggle("card-title-active");
+	cardAuthor.classList.toggle("card-author-active");
+	cardWrapper.classList.toggle("wrapper-active");
+	closeBtn.classList.toggle("ri-close-line-active");
+	plusBtn.classList.toggle("ri-add-line-active");
+
+	if (cardExplore.classList.contains("card-explore-active")) {
+		// Desactivar el scroll solo si se cumple la regla
+		if (shouldDisableScroll()) {
+			const scrollBarWidth =
+				window.innerWidth - document.documentElement.clientWidth;
+			document.body.style.overflow = "hidden";
+			document.body.style.paddingRight = `${scrollBarWidth}px`;
+		}
+	} else {
+		// Reactivar el scroll y restablecer el padding-right
+		document.body.style.overflow = "auto";
+		document.body.style.paddingRight = "0";
+	}
+});
+
