@@ -58,36 +58,73 @@ textarea.value = "";
 textarea.selectionStart = 0; // Establecer la posición inicial
 
 // card explore move
-const cardExploreElements = document.querySelectorAll(".explore-card");
-const gridList = document.querySelector(".grid-list");
 const sectionExplore = document.querySelectorAll("section");
-const addBtn = document.querySelector(".btn-box");
-const cardBanner = document.querySelector(".card-banner");
-const cardBannerImg = document.querySelector(".img-cover");
-const cardTitle = document.querySelector(".card-title");
-const cardAuthor = document.querySelector(".card-author");
-const cardWrapper = document.querySelector(".wrapper");
-const closeBtn = document.querySelector(".ri-close-line");
-const plusBtn = document.querySelector(".ri-add-line");
+const cardExploreElements = document.querySelectorAll(".explore-card");
+const gridList = document.querySelectorAll(".grid-list");
+const addBtn = document.querySelectorAll(".btn-box");
+const cardBanner = document.querySelectorAll(".card-banner");
+const cardBannerImg = document.querySelectorAll(".img-cover");
+const cardTitle = document.querySelectorAll(".card-title");
+const cardAuthor = document.querySelectorAll(".card-author");
+const cardWrapper = document.querySelectorAll(".wrapper");
+const closeBtn = document.querySelectorAll(".ri-close-line");
+const plusBtn = document.querySelectorAll(".ri-add-line");
 
 const shouldDisableScroll = () => {
 	return Array.from(cardExploreElements).some((cardExplore) =>
 		cardExplore.classList.contains("card-explore-active")
 	);
 };
+const stylesCardIterator = {
+	gridList: "grid-list-active",
+	addBtn: "btn-box-active",
+	cardBannerImg: "img-cover-active",
+	cardBanner: "card-banner-active",
+	cardTitle: "card-title-active",
+	cardAuthor: "card-author-active",
+	cardWrapper: "wrapper-active",
+	closeBtn: "ri-close-line-active",
+	plusBtn: "ri-add-line-active",
+};
+
+function stylesCardIteratorFn() {
+	// Agregar estilos a los elementos
+	gridList.forEach((grid) => {
+		grid.classList.toggle(stylesCardIterator.gridList);
+	});
+	addBtn.forEach((btn) => {
+		btn.classList.toggle(stylesCardIterator.addBtn);
+	});
+	cardBannerImg.forEach((img) => {
+		img.classList.toggle(stylesCardIterator.cardBannerImg);
+	});
+	cardBanner.forEach((banner) => {
+		banner.classList.toggle(stylesCardIterator.cardBanner);
+	});
+	cardTitle.forEach((title) => {
+		title.classList.toggle(stylesCardIterator.cardTitle);
+	});
+	cardAuthor.forEach((author) => {
+		author.classList.toggle(stylesCardIterator.cardAuthor);
+	});
+	cardWrapper.forEach((wrapper) => {
+		wrapper.classList.toggle(stylesCardIterator.cardWrapper);
+	});
+	closeBtn.forEach((close) => {
+		close.classList.toggle(stylesCardIterator.closeBtn);
+	});
+	plusBtn.forEach((plus) => {
+		plus.classList.toggle(stylesCardIterator.plusBtn);
+	});
+}
+
+// Agregar estilos a los elementos
 
 cardExploreElements.forEach((cardExplore) => {
 	cardExplore.addEventListener("click", function () {
 		cardExplore.classList.toggle("card-explore-active");
-		gridList.classList.toggle("grid-list-active");
-		addBtn.classList.toggle("btn-box-active");
-		cardBannerImg.classList.toggle("img-cover-active");
-		cardBanner.classList.toggle("card-banner-active");
-		cardTitle.classList.toggle("card-title-active");
-		cardAuthor.classList.toggle("card-author-active");
-		cardWrapper.classList.toggle("wrapper-active");
-		closeBtn.classList.toggle("ri-close-line-active");
-		plusBtn.classList.toggle("ri-add-line-active");
+
+		// Agregar estilos a los elementos
 
 		if (cardExplore.classList.contains("card-explore-active")) {
 			// Desactivar el scroll solo si se cumple la regla

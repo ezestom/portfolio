@@ -299,9 +299,8 @@ body {
 	font-size: 1.5rem;
 	position: fixed;
 	left: 20%;
-	/* opacity: .9; */
 	backdrop-filter: saturate(180%) blur(20px);
-	height: 3em;
+	height: 4em;
 	margin: 1% 0%;
 	border-radius: 100px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -471,7 +470,8 @@ h4 > code {
 	align-items: center;
 	border: 2px solid #202020;
 	padding-bottom: 1rem;
-	backdrop-filter: saturate(180%) blur(10px);
+	backdrop-filter: saturate(180%) blur(3px);
+
 	z-index: 2;
 }
 
@@ -537,7 +537,7 @@ h4 > code {
 }
 .btn-box-active {
 	display: flex;
-	padding: 1rem 0;
+	padding: 0.5rem 0 1rem 0;
 	width: 375px;
 	background-color: var(--eerie-black-1);
 	border-radius: 0 0 8px 8px;
@@ -545,16 +545,16 @@ h4 > code {
 .btn-box > a {
 	color: white;
 	border: 1px solid #262626;
-	padding: 8px 16px;
+	padding: 6px 12px;
 	border-radius: var(--radius-8);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-weight: 600;
-	width: 140px;
+	width: 120px;
 }
 .card-title-active {
-	font-size: 2.25rem;
+	font-size: 2rem;
 	background-color: var(--eerie-black-1);
 	width: 375px;
 }
@@ -571,7 +571,7 @@ h4 > code {
 .btn-box > a > i {
 	display: flex;
 	align-items: center;
-	font-size: 2rem;
+	font-size: 1.75rem;
 }
 .btn-box > a:hover {
 	color: #4834d4;
@@ -587,7 +587,7 @@ h4 > code {
 .ri-close-line-active {
 	display: block;
 	z-index: 20;
-	font-size: 4rem;
+	font-size: 3rem;
 	cursor: pointer;
 	background-color: var(--eerie-black-1);
 	width: 375px;
@@ -615,9 +615,6 @@ h4 > code {
 }
 .section-active {
 	backdrop-filter: saturate(180%) blur(20px);
-}
-.card-explore-transition {
-	transition: all 0.3s ease;
 }
 
 /*-----------------------------------*\
@@ -681,6 +678,8 @@ h4 > code {
 
 .background img {
 	max-width: 8rem;
+	max-height: 8rem;
+	padding-left: 1%;
 }
 
 .background p {
@@ -740,68 +739,81 @@ h4 > code {
 	height: 75vh;
 }
 
-.about-me-reviews {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-	gap: 10rem;
-	padding: 0 5%;
-}
-.quote {
+.swiper-container-testimonials {
 	display: flex;
-	justify-content: flex-end;
-}
-.fa-solid {
-	font-size: 5rem;
-}
-
-.me-reviews {
-	display: flex;
-	text-align: center;
 	flex-direction: column;
-	justify-content: start;
-	line-height: 3rem;
-}
-.review-p {
-	color: white;
-	font-size: 1.25rem;
-	max-width: 50ch;
-	line-height: 2rem;
-	text-wrap: balance;
-}
-.review-name {
-	border-bottom: 1px solid gray;
-	color: white;
-	font-size: 1.5rem;
-	font-weight: 600;
-}
-.review-job {
-	font-size: 1.25rem;
-	font-weight: 600;
-}
-.review-linkedin {
-	color: #0a66c2;
-	font-weight: 700;
-	display: flex;
 	justify-content: center;
-	padding-top: 3%;
-	display: flex;
-}
-.review-linkedin > a {
-	font-size: 1.25rem;
-	display: flex;
 	align-items: center;
 }
-.review-linkedin > a > i {
-	padding: 0 0 0 0.2rem;
-	color: #242424;
-	font-size: 1.5rem;
+swiper-container {
+	max-width: 375px;
 }
 
-.review-linkedin > a:hover {
-	color: #4bb5e6;
+swiper-slide {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.35rem;
+	color: #fff;
+	text-align: center;
+	min-height: 375px;
+	min-width: 375px;
+	border-radius: 8px;
 }
-.review-linkedin > a:hover > i {
-	color: #4bb5e6;
+.ri-arrow-right-s-line,
+.ri-arrow-left-s-line {
+	font-size: 2rem;
+	color: #fff;
+	padding: 0 1rem;
+}
+.swipe-arrow-container {
+	margin-top: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 12rem;
+	padding: 8px 16px;
+	font-weight: 500;
+	background-color: var(--eerie-black-1);
+	border-radius: 1000px;
+	border-bottom: 1px solid #4834d4;
+}
+/* 
+border: 8px solid #5fd3fa;
+border: 8px solid #bebee5;
+border: 8px solid #05b7b9;
+border: 8px solid #f9bc60;
+
+ */
+
+swiper-slide:nth-child(1) {
+	border-bottom: 15px solid #5fd3fa;
+	background-image: url(./images/sandri-linkedinCard.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+swiper-slide:nth-child(2) {
+	border-bottom: 15px solid #bebee5;
+	background-image: url(./images/vicent-linkedinCard.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+swiper-slide:nth-child(3) {
+	border-bottom: 15px solid #05b7b9;
+	background-image: url(./images/none-linkedinCard.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+swiper-slide:nth-child(4) {
+	border-bottom: 15px solid #f9bc60;
+	background-image: url(./images/none-linkedinCard.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 /*-----------------------------------*\
@@ -880,18 +892,6 @@ h4 > code {
 	border: 2px solid var(--han-purple);
 	background-color: rgba(98, 72, 255, 0.1);
 }
-
-.swiper-pagination-bullet-active {
-	background-color: #4834d4;
-}
-
-/* 
-border: 8px solid #5fd3fa;
-border: 8px solid #bebee5;
-border: 8px solid #05b7b9;
-border: 8px solid #f9bc60;
-
- */
 
 /*-----------------------------------*\
     #FOOTER
