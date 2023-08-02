@@ -475,13 +475,13 @@ h4 > code {
 	border: 2px solid #202020;
 	padding-bottom: 1rem;
 	backdrop-filter: blur(3px);
-
+	min-width: 140px;
 	z-index: 2;
 }
 
 .explore-card:is(:hover, :focus) {
 	filter: drop-shadow(0 0 1em var(--han-purple)) brightness(115%);
-	cursor: crosshair;
+	cursor: pointer;
 }
 .article-card-title {
 	background-color: rgba(98, 72, 255, 0.2);
@@ -510,6 +510,7 @@ h4 > code {
 	justify-content: center;
 	align-items: center;
 	gap: 5px;
+	text-align: center;
 }
 .explore-card .card-author > i {
 	font-size: 2rem;
@@ -929,7 +930,7 @@ swiper-slide:nth-child(4) {
 	flex-wrap: wrap;
 }
 .map {
-	margin-top: 1%;
+	margin-top: 1rem;
 	border-radius: 8px;
 }
 
@@ -956,6 +957,7 @@ swiper-slide:nth-child(4) {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	transition: all 0.2s ease-in-out;
 }
 
 .social-list > li > p {
@@ -966,36 +968,54 @@ swiper-slide:nth-child(4) {
 }
 
 .whatsapp:hover {
+	rotate: -10deg;
 	color: #25d366;
 	transition: all 0.2s;
-
 	border: 2px solid #25d366;
 }
 
-.linkedin:hover {
-	color: #0a66c2;
-	transition: all 0.2s;
-
-	border: 2px solid #0a66c2;
-}
 .github:hover {
+	rotate: 10deg;
 	color: white;
 	transition: all 0.2s;
-
 	border: 2px solid white;
 }
+.linkedin:hover {
+	color: #0a66c2;
+	rotate: -10deg;
+	transition: all 0.2s;
+	border: 2px solid #0a66c2;
+}
 .codesandbox:hover {
+	rotate: 10deg;
 	color: white;
 	transition: all 0.2s;
-
 	border: 2px solid white;
 }
 .discord:hover {
+	rotate: -10deg;
 	color: #5865f2;
 	transition: all 0.2s;
-
 	border: 2px solid #5865f2;
 }
+
+.copyright-link {
+	background-color: #0c0e10;
+	padding: 8px 16px;
+	border-radius: 8px;
+	border: 2px solid #262626;
+	font-weight: 600;
+	margin-bottom: 1rem;
+	transition: all 0.2s ease-in-out;
+}
+.copyright-link:hover {
+	transform: scale(1.04);
+	color: #f2eb0f;
+	transition: all 0.2s;
+
+	border: 2px solid #f2eb0f;
+}
+
 
 .chat-card {
 	background-color: var(--eerie-black-1);
@@ -1084,20 +1104,6 @@ swiper-slide:nth-child(4) {
 	color: #4834d4;
 	border: 1px solid #4834d4;
 	background-color: rgba(98, 72, 255, 0.1);
-}
-.copyright-link {
-	background-color: #0c0e10;
-	padding: 8px 16px;
-	border-radius: 8px;
-	border: 2px solid #262626;
-	font-weight: 600;
-	margin-bottom: 1rem;
-}
-.copyright-link:hover {
-	color: #f2eb0f;
-	transition: all 0.2s;
-
-	border: 2px solid #f2eb0f;
 }
 
 /*-----------------------------------*\
