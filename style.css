@@ -228,7 +228,7 @@ body {
 }
 
 .section-subtitle {
-	padding-top: 5%;
+	padding-top: 8%;
 	font-size: 5rem;
 	background-image: var(--gradient-1);
 	background-clip: text;
@@ -304,7 +304,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	z-index: 4;
-	font-size: 1.5rem;
 	position: fixed;
 	left: 10%;
 	backdrop-filter: saturate(180%) blur(20px);
@@ -328,12 +327,12 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 18%;
+	gap: 16%;
 }
 
 .navbar-link {
 	color: white;
-	font-size: 1.5rem;
+	font-size: 1.75rem;
 	font-weight: 600;
 	display: flex;
 	align-items: center;
@@ -364,7 +363,7 @@ body {
 	height: 100vh;
 	width: 100%;
 	position: relative;
-	background-color: #0c0e10;
+
 }
 
 .rocket {
