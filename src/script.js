@@ -51,6 +51,24 @@ botonEnviar.addEventListener("click", function () {
 		encodeURIComponent(mensaje);
 	window.location.href = correo;
 });
+// change color theme
+const navbarList = document.querySelector(".navbar-list");
+const themeBtn = document.querySelector(".theme-switch__checkbox");
+const canvas = document.querySelector(".webgl");
+
+themeBtn.addEventListener("click", function () {
+	if (!this.checked) {
+		sectionExplore.forEach((section) => {
+			section.classList.toggle("light-theme");
+
+		});
+	} else {
+		sectionExplore.forEach((section) => {
+			section.classList.toggle("light-theme");
+
+		});
+	}
+});
 
 // primera posicion de cursor en textarea
 const textarea = document.querySelector("textarea");
@@ -87,53 +105,63 @@ const stylesCardIterator = {
 	plusBtn: "ri-add-line-active",
 };
 
-function stylesCardIteratorFn() {
-	// Agregar estilos a los elementos
-	gridList.forEach((grid) => {
-		grid.classList.toggle(stylesCardIterator.gridList);
-	});
-	addBtn.forEach((btn) => {
-		btn.classList.toggle(stylesCardIterator.addBtn);
-	});
-	cardBannerImg.forEach((img) => {
-		img.classList.toggle(stylesCardIterator.cardBannerImg);
-	});
-	cardBanner.forEach((banner) => {
-		banner.classList.toggle(stylesCardIterator.cardBanner);
-	});
-	cardTitle.forEach((title) => {
-		title.classList.toggle(stylesCardIterator.cardTitle);
-	});
-	cardAuthor.forEach((author) => {
-		author.classList.toggle(stylesCardIterator.cardAuthor);
-	});
-	cardWrapper.forEach((wrapper) => {
-		wrapper.classList.toggle(stylesCardIterator.cardWrapper);
-	});
-	closeBtn.forEach((close) => {
-		close.classList.toggle(stylesCardIterator.closeBtn);
-	});
-	plusBtn.forEach((plus) => {
-		plus.classList.toggle(stylesCardIterator.plusBtn);
-	});
-}
-
 // Agregar estilos a los elementos
 
 cardExploreElements.forEach((cardExplore) => {
 	cardExplore.addEventListener("click", function () {
+		// Agregar estilos a los elementos
 		cardExplore.classList.toggle("card-explore-active");
 
-		// Agregar estilos a los elementos
+		// Obtener el índice de la carta clickeada
+		const clickedCardIndex =
+			Array.from(cardExploreElements).indexOf(cardExplore);
 
-		if (cardExplore.classList.contains("card-explore-active")) {
-			// Desactivar el scroll solo si se cumple la regla
-			if (shouldDisableScroll()) {
-				const scrollBarWidth =
-					window.innerWidth - document.documentElement.clientWidth;
-				document.body.style.overflow = "hidden";
-				document.body.style.paddingRight = `${scrollBarWidth}px`;
+		// Agregar unicamente estilos del styleCardIterator a la car clickeada
+
+		addBtn[clickedCardIndex].classList.toggle(stylesCardIterator.addBtn);
+		cardBanner[clickedCardIndex].classList.toggle(
+			stylesCardIterator.cardBanner
+		);
+		cardBannerImg[clickedCardIndex].classList.toggle(
+			stylesCardIterator.cardBannerImg
+		);
+		cardTitle[clickedCardIndex].classList.toggle(
+			stylesCardIterator.cardTitle
+		);
+		cardAuthor[clickedCardIndex].classList.toggle(
+			stylesCardIterator.cardAuthor
+		);
+		cardWrapper[clickedCardIndex].classList.toggle(
+			stylesCardIterator.cardWrapper
+		);
+		closeBtn[clickedCardIndex].classList.toggle(
+			stylesCardIterator.closeBtn
+		);
+		plusBtn[clickedCardIndex].classList.toggle(stylesCardIterator.plusBtn);
+
+		// Restablecer los estilos para las demás cartas
+		for (let i = 0; i < cardExploreElements.length; i++) {
+			if (i !== clickedCardIndex) {
+				cardExploreElements[i].classList.remove("card-explore-active");
+				addBtn[i].classList.remove(stylesCardIterator.addBtn);
+				cardBanner[i].classList.remove(stylesCardIterator.cardBanner);
+				cardBannerImg[i].classList.remove(
+					stylesCardIterator.cardBannerImg
+				);
+				cardTitle[i].classList.remove(stylesCardIterator.cardTitle);
+				cardAuthor[i].classList.remove(stylesCardIterator.cardAuthor);
+				cardWrapper[i].classList.remove(stylesCardIterator.cardWrapper);
+				closeBtn[i].classList.remove(stylesCardIterator.closeBtn);
+				plusBtn[i].classList.remove(stylesCardIterator.plusBtn);
 			}
+		}
+
+		// Desactivar el scroll solo si se cumple la regla
+		if (shouldDisableScroll()) {
+			const scrollBarWidth =
+				window.innerWidth - document.documentElement.clientWidth;
+			document.body.style.overflow = "hidden";
+			document.body.style.paddingRight = `${scrollBarWidth}px`;
 		} else {
 			// Reactivar el scroll y restablecer el padding-right
 			document.body.style.overflow = "auto";

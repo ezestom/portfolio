@@ -48,6 +48,17 @@ renderer.render(scene, camera);
 renderer.setClearColor("#0c0e10");
 renderer.set;
 
+// Theme color
+const themeBtn = document.querySelector(".theme-switch__checkbox");
+
+themeBtn.addEventListener("click", function () {
+	if (!this.checked) {
+		renderer.setClearColor("#1a1335");
+	} else {
+		renderer.setClearColor("#0c0e10");
+	}
+});
+
 //110725
 //1a1335 blue colors
 

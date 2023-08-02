@@ -214,7 +214,7 @@ body {
 	font-size: 1.75rem;
 	font-weight: 100;
 }
-
+/* estilos icons botones inicio */
 .btn ion-icon,
 .ri-briefcase-line {
 	font-size: 2rem;
@@ -235,6 +235,7 @@ body {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	font-weight: 600;
+	border-bottom: 3px double rebeccapurple;
 }
 
 .title {
@@ -256,6 +257,10 @@ body {
 .section {
 	padding: 0 10%;
 	height: auto;
+	background-color: #0c0e10;
+}
+.light-theme {
+	background-color: #1a1335;
 }
 
 .btn-link {
@@ -289,20 +294,22 @@ body {
 /*-----------------------------------*\
     #HEADER
   \*-----------------------------------*/
+.header-container {
+	background-color: transparent;
+}
 
 .header {
-	width: 60%;
+	width: 80%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	z-index: 4;
 	font-size: 1.5rem;
 	position: fixed;
-	left: 20%;
+	left: 10%;
 	backdrop-filter: saturate(180%) blur(20px);
-	height: 4em;
-	margin: 1% 0%;
-	border-radius: 100px;
+	height: 3em;
+	border-radius: 0 0 8px 8px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -319,16 +326,14 @@ body {
 }
 .navbar-list {
 	display: flex;
-	justify-content: space-around;
-	font-weight: 700;
-	gap: 15%;
+	justify-content: center;
+	align-items: center;
+	gap: 18%;
 }
 
 .navbar-link {
 	color: white;
-	position: relative;
-	display: inline-block;
-	font-size: 1.75rem;
+	font-size: 1.5rem;
 	font-weight: 600;
 	display: flex;
 	align-items: center;
@@ -339,7 +344,6 @@ body {
 }
 .navbar-link:hover {
 	color: rgba(191, 102, 255, 1);
-	transition: color 0.1s;
 }
 
 .menu-open-btn {
@@ -453,7 +457,6 @@ h4 > code {
   \*-----------------------------------*/
 
 .explore {
-	background-color: #0c0e10;
 	position: relative;
 }
 
@@ -461,6 +464,7 @@ h4 > code {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
 	gap: 2rem;
+	position: relative;
 }
 
 .explore-card {
@@ -470,7 +474,7 @@ h4 > code {
 	align-items: center;
 	border: 2px solid #202020;
 	padding-bottom: 1rem;
-	backdrop-filter: saturate(180%) blur(3px);
+	backdrop-filter: blur(3px);
 
 	z-index: 2;
 }
@@ -545,12 +549,11 @@ h4 > code {
 .btn-box > a {
 	color: white;
 	border: 1px solid #262626;
-	padding: 6px 12px;
+	padding: 6px 8px;
 	border-radius: var(--radius-8);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-weight: 600;
 	width: 120px;
 }
 .card-title-active {
@@ -571,7 +574,7 @@ h4 > code {
 .btn-box > a > i {
 	display: flex;
 	align-items: center;
-	font-size: 1.75rem;
+	font-size: 2rem;
 }
 .btn-box > a:hover {
 	color: #4834d4;
@@ -602,19 +605,15 @@ h4 > code {
 }
 
 .card-explore-active {
-	filter: brightness(110%);
 	z-index: 10;
-	width: 100vw;
 	position: fixed;
-	left: 0;
+	width: auto;
+	height: 100%;
 	top: 0;
-	height: 100vh;
+	left: 0;
+	right: 0;
 	background-color: transparent;
-	overflow: hidden;
 	filter: drop-shadow(0 0 1em var(--han-purple)) brightness(110%);
-}
-.section-active {
-	backdrop-filter: saturate(180%) blur(20px);
 }
 
 /*-----------------------------------*\
@@ -625,6 +624,7 @@ h4 > code {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	padding-top: 1%;
 	padding-bottom: 5%;
 	font-weight: 500;
 }
@@ -633,10 +633,6 @@ h4 > code {
 	display: flex;
 	gap: 1%;
 	align-items: center;
-}
-
-.about-me {
-	background-color: #0c0e10;
 }
 
 .article-about-me {
@@ -734,16 +730,23 @@ h4 > code {
     #INSTRUCTION
   \*-----------------------------------*/
 
-.reviews {
-	background-color: #0c0e10;
-	height: 75vh;
-}
-
 .swiper-container-testimonials {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
+	background-color: var(--eerie-black-1);
+	border-radius: var(--radius-8);
+	border: 2px double rebeccapurple;
+	flex-wrap: wrap;
+	padding: 3% 0%;
+}
+.astronaut {
+	display: grid;
+	place-items: center;
+}
+.astronaut > img {
+	width: 90%;
+	margin-bottom: 1rem;
 }
 swiper-container {
 	max-width: 375px;
@@ -772,12 +775,15 @@ swiper-slide {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 12rem;
+	width: 375px;
 	padding: 8px 16px;
 	font-weight: 500;
 	background-color: var(--eerie-black-1);
 	border-radius: 1000px;
-	border-bottom: 1px solid #4834d4;
+	border-bottom: 1px solid rebeccapurple;
+}
+.swipe-arrow-container > p {
+	padding-right: 1%;
 }
 /* 
 border: 8px solid #5fd3fa;
@@ -788,28 +794,28 @@ border: 8px solid #f9bc60;
  */
 
 swiper-slide:nth-child(1) {
-	border-bottom: 15px solid #5fd3fa;
+	border-bottom: 2rem solid #5fd3fa;
 	background-image: url(./images/sandri-linkedinCard.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 swiper-slide:nth-child(2) {
-	border-bottom: 15px solid #bebee5;
+	border-bottom: 2rem solid #bebee5;
 	background-image: url(./images/vicent-linkedinCard.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 swiper-slide:nth-child(3) {
-	border-bottom: 15px solid #05b7b9;
+	border-bottom: 2rem solid #05b7b9;
 	background-image: url(./images/none-linkedinCard.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 swiper-slide:nth-child(4) {
-	border-bottom: 15px solid #f9bc60;
+	border-bottom: 2rem solid #f9bc60;
 	background-image: url(./images/none-linkedinCard.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -821,7 +827,6 @@ swiper-slide:nth-child(4) {
   \*-----------------------------------*/
 
 .studies {
-	background-color: #0c0e10;
 	position: relative;
 	height: 75vh;
 }
@@ -897,16 +902,12 @@ swiper-slide:nth-child(4) {
     #FOOTER
   \*-----------------------------------*/
 
-.footer {
-	background-image: url(./images/footer-bg.png);
-	background-color: #0c0e10;
+.footer-container {
+	/* background-image: url(./images/footer-bg.png); */
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	z-index: 10;
-}
-
-.footer-container {
+	z-index: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -915,10 +916,21 @@ swiper-slide:nth-child(4) {
 
 .footer-container > h4 {
 	width: 100%;
-	padding-top: 10%;
 }
 .footer-container > p {
 	width: 100%;
+}
+.content-footer {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+	padding: 2% 0;
+	flex-wrap: wrap;
+}
+.map {
+	margin-top: 1%;
+	border-radius: 8px;
 }
 
 .social-list {
@@ -990,7 +1002,8 @@ swiper-slide:nth-child(4) {
 	border: 2px solid #262626;
 	border-radius: 8px;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-	width: 375px;
+	width: 350px;
+	height: 350px;
 }
 
 .chat-header {
@@ -1043,14 +1056,12 @@ swiper-slide:nth-child(4) {
 
 .message-input {
 	color: #fff;
-	min-height: 100px;
-	max-height: 100px;
 	background-color: var(--eerie-black-1);
 	flex: 1;
 	border: none;
 	outline: none;
 	padding: 5px;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	font-family: "Poppins", sans-serif;
 }
 
@@ -1124,16 +1135,23 @@ swiper-slide:nth-child(4) {
 		left: 0;
 		background-color: rgba(98, 72, 255, 0.3);
 	}
-	.navbar-list li:hover {
-		background-color: rgba(191, 102, 255, 0.1);
-	}
+
 	.navbar-list {
 		display: flex;
 		flex-direction: column;
 	}
+
 	.navbar-list li {
+		display: grid;
+		place-items: center;
+		width: 100%;
 		text-align: center;
 		padding-block: 1rem;
+	}
+	.navbar-list li:hover {
+		background-color: rgba(191, 102, 255, 0.1);
+		width: 100%;
+		text-align: center;
 	}
 	.navbar-list li a {
 		font-size: 2rem;
