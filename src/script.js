@@ -56,16 +56,29 @@ const navbarList = document.querySelector(".navbar-list");
 const themeBtn = document.querySelector(".theme-switch__checkbox");
 const canvas = document.querySelector(".webgl");
 
+const allCardTheme = document.querySelectorAll(".card");
+const allCardTheme2 = document.querySelectorAll(".swiper-slide");
+
 themeBtn.addEventListener("click", function () {
 	if (!this.checked) {
 		sectionExplore.forEach((section) => {
 			section.classList.toggle("light-theme");
-
+			allCardTheme.forEach((card) => {
+				card.classList.toggle("explore-card-theme");
+			});
+			allCardTheme2.forEach((card) => {
+				card.classList.toggle("swiper-slide-theme");
+			});
 		});
 	} else {
 		sectionExplore.forEach((section) => {
 			section.classList.toggle("light-theme");
-
+			allCardTheme.forEach((card) => {
+				card.classList.toggle("explore-card-theme");
+			});
+			allCardTheme2.forEach((card) => {
+				card.classList.toggle("swiper-slide-theme");
+			});
 		});
 	}
 });
