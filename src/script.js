@@ -66,6 +66,7 @@ themeBtn.addEventListener("click", function () {
 			allCardTheme.forEach((card) => {
 				card.classList.toggle("explore-card-theme");
 			});
+
 			allCardTheme2.forEach((card) => {
 				card.classList.toggle("swiper-slide-theme");
 			});

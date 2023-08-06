@@ -827,17 +827,22 @@
 
 			</p>
 			<article class="content-footer">
-				<div class="chat-card">
-					<div class="chat-header"><i class="ri-mail-send-line"></i>Send me your Message </div>
-					<div class="chat-window">
-						<ul class="message-list"></ul>
-					</div>
-					<div class="chat-input">
-						<textarea type="text" class="message-input" placeholder="Type your message here...">
-														</textarea>
-						<a id="send-button" class="send-button ">Send<i class="ri-arrow-right-line"></i></a>
-					</div>
-				</div>
+
+				<form id="message-form">
+
+					<legend class="send-message">Send me your message.</legend>
+
+
+					<label for="name-input">Name:</label>
+					<input type="text" id="name-input" placeholder="Steve Jobs" required>
+					<label for="email-input">Email:</label>
+					<input type="email" id="email-input" placeholder="steve_jobs@microsoft.com" required>
+					<label for="message-input">Message:</label>
+					<textarea id="message-input"
+						placeholder="I want to hire you for my company, contact me please!" required></textarea>
+					<button type="submit" id="send-button">Send <i class="ri-arrow-right-line"></i></button>
+				</form>
+
 				<iframe class="map"
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3287.0046739683494!2d-58.51519356613681!3d-34.5281095547811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb0d0d0c74833%3A0xc2faaf264e23998d!2sManuel%20Belzu%203979%2C%20B1605ATI%20Munro%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1690899055348!5m2!1ses-419!2sar"
 					width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy"
@@ -899,7 +904,7 @@
 	<!-- 
     - #BACK TO TOP
   -->
-
+	<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 

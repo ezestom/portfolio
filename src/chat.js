@@ -1,39 +1,26 @@
+emailjs.init("cmbu9tVx0xBzhilTM");
 
+document
+	.getElementById("message-form")
+	.addEventListener("submit", function (event) {
+		event.preventDefault();
 
-// Selecciona los elementos del DOM
-const messageList = document.querySelector('.message-list');
-const messageInput = document.querySelector('.message-input');
-const sendButton = document.querySelector('.send-button');
+		const name = document.getElementById("name-input").value;
+		const email = document.getElementById("email-input").value;
+		const message = document.getElementById("message-input").value;
 
-// Crea una función para agregar un mensaje a la lista
-function addMessage() {
-  // Obtiene el texto del mensaje y lo limpia
-  const messageText = messageInput.value.trim();
-
-  // Verifica que el mensaje no esté vacío
-  if (messageText === '') {
-    return;
-  }
-
-  // Crea un elemento para el nuevo mensaje y lo agrega a la lista
-  const newMessage = document.createElement('li');
-  newMessage.textContent = messageText;
-  messageList.appendChild(newMessage);
-
-  // Limpia el input del mensaje
-  messageInput.value = '';
-}
-
-// Agrega un controlador de eventos al botón de enviar
-sendButton.addEventListener('click', addMessage);
-
-// Agrega un controlador de eventos al input de mensaje para que el usuario pueda presionar Enter para enviar
-messageInput.addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') {
-    event.preventDefault();
-    addMessage();
-  }
-});
-
-
-
+		const templateParams = {
+			from_name: name,
+			from_email: email,
+			message: message,
+		};
+		emailjs
+			.send("service_fnc8jal", "template_htwlbzx", templateParams)
+			.then((response) => {
+				alert("Mensaje enviado con éxito.");
+			})
+			.catch((error) => {
+				console.error("Error al enviar el mensaje:", error);
+				alert("Hubo un error al enviar el mensaje.");
+			});
+	});
