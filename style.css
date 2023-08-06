@@ -478,7 +478,7 @@ h4 > code {
 .explore-card-theme {
 	background-color: #f1f6f5;
 	border: 2px solid #262626;
-	color: #262626;
+	color: var(--han-purple);
 }
 
 .explore-card:is(:hover, :focus) {
@@ -1091,7 +1091,7 @@ swiper-slide:nth-child(4) {
 	height: 350px;
 	display: flex;
 	flex-direction: column;
-	padding: 0.5%;
+	padding: 0.5% .25%;
 	font-size: 1.25rem;
 }
 .send-message {
