@@ -974,7 +974,7 @@ swiper-slide:nth-child(4) {
 	background-image: url(./images/footer-bg.png);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
+	background-size: contain;
 	z-index: 1;
 	display: flex;
 	justify-content: center;
