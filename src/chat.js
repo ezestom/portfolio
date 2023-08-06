@@ -1,3 +1,5 @@
+import Toastify from "toastify-js";
+
 emailjs.init("cmbu9tVx0xBzhilTM");
 
 document
@@ -17,10 +19,41 @@ document
 		emailjs
 			.send("service_fnc8jal", "template_htwlbzx", templateParams)
 			.then((response) => {
-				alert("Mensaje enviado con éxito.");
+				Toastify({
+					text: "Message sent successfully!",
+					duration: 3000,
+					destination: "https://github.com/apvarun/toastify-js",
+					newWindow: true,
+					close: true,
+					gravity: "top", // `top` or `bottom`
+					position: "center", // `left`, `center` or `right`
+					stopOnFocus: true, // Prevents dismissing of toast on hover
+					style: {
+						background:
+							"linear-gradient(to right, #00b09b, #96c93d)",
+					},
+					onClick: function () {}, // Callback after click
+				}).showToast();
+				if (response.status === 200) {
+					document.getElementById("message-form").reset();
+				}
 			})
 			.catch((error) => {
-				console.error("Error al enviar el mensaje:", error);
-				alert("Hubo un error al enviar el mensaje.");
+				Toastify({
+					text: "Something went wrong!",
+					duration: 3000,
+					destination: "https://github.com/apvarun/toastify-js",
+					newWindow: true,
+					close: true,
+					gravity: "top", // `top` or `bottom`
+					position: "center", // `left`, `center` or `right`
+					stopOnFocus: true, // Prevents dismissing of toast on hover
+					style: {
+						background:
+							//linear gradient rojo
+							"linear-gradient(to right, #f85032, #e73827)",
+					},
+					onClick: function () {}, // Callback after click
+				}).showToast();
 			});
 	});

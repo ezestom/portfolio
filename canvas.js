@@ -2,7 +2,6 @@ import * as THREE from "three";
 import "./style.css";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import gsap from "gsap";
-import { Loader } from "three";
 
 //Scene
 const scene = new THREE.Scene();

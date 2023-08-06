@@ -51,6 +51,7 @@ botonEnviar.addEventListener("click", function () {
 		encodeURIComponent(mensaje);
 	window.location.href = correo;
 });
+
 // change color theme
 const navbarList = document.querySelector(".navbar-list");
 const themeBtn = document.querySelector(".theme-switch__checkbox");
@@ -59,6 +60,14 @@ const canvas = document.querySelector(".webgl");
 const allCardTheme = document.querySelectorAll(".card");
 const allCardTheme2 = document.querySelectorAll(".swiper-slide");
 
+const messageForm = document.querySelector(".message-form");
+const nameInput = document.querySelector(".name-input");
+const emailInput = document.querySelector(".email-input");
+const messageInput = document.querySelector(".message-input");
+const sendButton = document.querySelector(".send-button");
+const legend = document.querySelector(".send-message-legend");
+const labels = document.querySelectorAll(".label");
+
 themeBtn.addEventListener("click", function () {
 	if (!this.checked) {
 		sectionExplore.forEach((section) => {
@@ -66,9 +75,17 @@ themeBtn.addEventListener("click", function () {
 			allCardTheme.forEach((card) => {
 				card.classList.toggle("explore-card-theme");
 			});
-
 			allCardTheme2.forEach((card) => {
 				card.classList.toggle("swiper-slide-theme");
+			});
+			messageForm.classList.toggle("message-theme");
+			nameInput.classList.toggle("message-theme");
+			emailInput.classList.toggle("message-theme");
+			messageInput.classList.toggle("message-theme");
+			sendButton.classList.toggle("message-theme");
+			legend.classList.add("message-theme");
+			labels.forEach((label) => {
+				label.classList.add("message-theme");
 			});
 		});
 	} else {
@@ -79,6 +96,15 @@ themeBtn.addEventListener("click", function () {
 			});
 			allCardTheme2.forEach((card) => {
 				card.classList.toggle("swiper-slide-theme");
+			});
+			messageForm.classList.toggle("message-theme");
+			nameInput.classList.toggle("message-theme");
+			emailInput.classList.toggle("message-theme");
+			messageInput.classList.toggle("message-theme");
+			sendButton.classList.toggle("message-theme");
+			legend.classList.remove("message-theme");
+			labels.forEach((label) => {
+				label.classList.remove("message-theme");
 			});
 		});
 	}
@@ -125,6 +151,7 @@ cardExploreElements.forEach((cardExplore) => {
 	cardExplore.addEventListener("click", function () {
 		// Agregar estilos a los elementos
 		cardExplore.classList.toggle("card-explore-active");
+		cardExplore.classList.toggle("blur-in");
 
 		// Obtener el índice de la carta clickeada
 		const clickedCardIndex =
@@ -156,6 +183,7 @@ cardExploreElements.forEach((cardExplore) => {
 		// Restablecer los estilos para las demás cartas
 		for (let i = 0; i < cardExploreElements.length; i++) {
 			if (i !== clickedCardIndex) {
+				cardExploreElements[i].classList.toggle("blur-out");
 				cardExploreElements[i].classList.remove("card-explore-active");
 				addBtn[i].classList.remove(stylesCardIterator.addBtn);
 				cardBanner[i].classList.remove(stylesCardIterator.cardBanner);
