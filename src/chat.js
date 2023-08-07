@@ -1,15 +1,18 @@
 import Toastify from "toastify-js";
 
 emailjs.init("cmbu9tVx0xBzhilTM");
+const btn = document.getElementById(".send-button");
 
 document
-	.getElementById("message-form")
+	.querySelector("#message-form")
 	.addEventListener("submit", function (event) {
 		event.preventDefault();
 
-		const name = document.getElementById("name-input").value;
-		const email = document.getElementById("email-input").value;
-		const message = document.getElementById("message-input").value;
+		const name = document.querySelector(".name-input").value;
+		const email = document.querySelector(".email-input").value;
+		const message = document.querySelector(".message-input").value;
+
+		btn.value = "Sending...";
 
 		const templateParams = {
 			from_name: name,
@@ -35,10 +38,11 @@ document
 					onClick: function () {}, // Callback after click
 				}).showToast();
 				if (response.status === 200) {
-					document.getElementById("message-form").reset();
+					document.querySelector(".message-form").reset();
 				}
 			})
 			.catch((error) => {
+				btn.value = "Send Message";
 				Toastify({
 					text: "Something went wrong!",
 					duration: 3000,
