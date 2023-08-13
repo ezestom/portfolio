@@ -1,0 +1,36 @@
+.swiper-container-testimonials {
+	position: relative;
+}
+
+.cursor-tracker {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 50px;
+	height: 50px;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.25s;
+}
+
+.ovni {
+	width: 100%;
+}
+
+/* animar astronauta */
+
+@keyframes astronaut {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-25px);
+	}
+	100% {
+		transform: translateY(25);
+	}
+}
+.astronaut-img {
+	animation: astronaut 10s infinite;
+}
