@@ -798,8 +798,7 @@ h4 > code {
 	border: 2px double rebeccapurple;
 	flex-wrap: wrap;
 	height: 100%;
-	background-image: url("./images/background-space.jpg");
-
+	background-image: url("../../images/background-space.jpg");
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
@@ -823,7 +822,6 @@ swiper-container {
 .astronaut-img {
 	width: 50%;
 }
-
 
 swiper-slide {
 	display: flex;
@@ -932,7 +930,7 @@ swiper-slide:nth-child(4) {
 	border: 1px solid white;
 }
 .swiper-slide:hover {
-	border: 1px solid rebeccapurple
+	border: 1px solid rebeccapurple;
 }
 
 .swiper-slide img {
@@ -961,7 +959,6 @@ swiper-slide:nth-child(4) {
 	font-weight: 500;
 }
 
-
 .btn-card {
 	border: 1px solid #262626;
 	padding: 8px 16px;
@@ -977,7 +974,7 @@ swiper-slide:nth-child(4) {
 
 .btn-card:hover {
 	border: 1px solid rebeccapurple;
-	background-color: rgba(191, 102, 255, .1);
+	background-color: rgba(191, 102, 255, 0.1);
 }
 
 /*-----------------------------------*\

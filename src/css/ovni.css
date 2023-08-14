@@ -16,6 +16,19 @@
 
 .ovni {
 	width: 100%;
+	filter: drop-shadow(0 0 1em white);
+	animation: ovni 8s infinite;
+}
+@keyframes ovni {
+	0% {
+		transform: translateX(0) rotate(0deg);
+	}
+	50% {
+		transform: translateX(-15px) rotate(-10deg);
+	}
+	100% {
+		transform: translateX(15) rotate(10deg);
+	}
 }
 
 /* animar astronauta */
