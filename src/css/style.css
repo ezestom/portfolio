@@ -469,14 +469,14 @@ h4 > code {
 	justify-content: center;
 	align-items: center;
 	border: 2px solid #262626;
-	border-bottom: 2px solid rebeccapurple;
 	padding-bottom: 1rem;
 	min-width: 140px;
 	z-index: 2;
 }
 .explore-card-theme {
-	background-color: #110725;
+	background-color: #29034c;
 	border-bottom: 2px solid white;
+	border: 2px solid rebeccapurple;
 }
 
 .explore-card:is(:hover, :focus) {
@@ -866,14 +866,14 @@ border: 8px solid #f9bc60;
 
 swiper-slide:nth-child(1) {
 	border-bottom: 2rem solid #5fd3fa;
-	background-image: url(./images/sandri-linkedinCard.jpg);
+	background-image: url("../../images/sandri-linkedinCard.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 swiper-slide:nth-child(2) {
 	border-bottom: 2rem solid #bebee5;
-	background-image: url(./images/vicent-linkedinCard.jpg);
+	background-image: url("../../images/vicent-linkedinCard.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -920,17 +920,17 @@ swiper-slide:nth-child(4) {
 	margin-block: 1rem;
 	color: white;
 	background-color: var(--eerie-black-1);
-	border: 1px solid #262626;
+	border: 2px solid #262626;
 	border-radius: var(--radius-8);
 	font-size: 2rem;
 	cursor: grab;
 }
 .swiper-slide-theme {
-	background-color: #110725;
-	border: 1px solid white;
+	background-color: #29034c;
+	border: 2px solid rebeccapurple;
 }
 .swiper-slide:hover {
-	border: 1px solid rebeccapurple;
+	border: 2px solid white;
 }
 
 .swiper-slide img {
@@ -1133,8 +1133,7 @@ swiper-slide:nth-child(4) {
 	padding: 2%;
 	font-size: 1.25rem;
 	border-radius: 8px;
-	background-color: var(--eerie-black-1);
-	margin: 1px;
+	margin: 2px;
 }
 
 .message-input {
@@ -1148,7 +1147,7 @@ swiper-slide:nth-child(4) {
 	background-color: var(--eerie-black-1);
 	display: inline-block;
 	width: 100%;
-	border: 1px solid #262626;
+	border: #262626 1px solid;
 	border-radius: 8px;
 }
 .name-input:focus,
@@ -1160,6 +1159,7 @@ swiper-slide:nth-child(4) {
 .message-input::-webkit-scrollbar {
 	width: 100%;
 }
+
 
 .send-button {
 	background-color: var(--eerie-black-1);
@@ -1183,11 +1183,11 @@ swiper-slide:nth-child(4) {
 	background-color: rgba(98, 72, 255, 0.1);
 }
 .message-theme {
-	background: #f1f6f5;
-	color: #262626;
+	background: #29034c;
+	color: white;
 }
 .message-theme:focus {
-	outline: #007aff 2px solid;
+	outline: #007aff 1px solid;
 }
 /*-----------------------------------*\
     #MEDIA QUERIES
