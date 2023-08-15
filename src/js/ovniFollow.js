@@ -6,8 +6,8 @@ let trackerX = 0;
 let trackerY = 0;
 let mouseX = 0;
 let mouseY = 0;
-const speed = 0.00001; // Ajusta la velocidad de seguimiento según sea necesario
-const offset = 10; // Ajusta el desplazamiento del cursor-tracker respecto al puntero
+const speed = 0.00003; // Ajusta la velocidad de seguimiento según sea necesario
+const offset = 1; // Ajusta el desplazamiento del cursor-tracker respecto al puntero
 
 // Agregar evento mousemove al contenedor
 container.addEventListener("mousemove", (e) => {

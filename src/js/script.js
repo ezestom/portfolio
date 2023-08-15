@@ -82,11 +82,15 @@ themeBtn.addEventListener("click", function () {
 			nameInput.classList.toggle("message-theme");
 			emailInput.classList.toggle("message-theme");
 			messageInput.classList.toggle("message-theme");
-			sendButton.classList.toggle("message-theme");
 			legend.classList.add("message-theme");
 			labels.forEach((label) => {
 				label.classList.add("message-theme");
 			});
+			nameInput.classList.toggle("message-input-theme");
+			emailInput.classList.toggle("name-input-theme");
+			messageInput.classList.toggle("email-input-theme");
+			sendButton.classList.toggle("send-button-theme");
+			legend.classList.toggle("send-message-legend-theme");
 		});
 	} else {
 		sectionExplore.forEach((section) => {
@@ -101,11 +105,15 @@ themeBtn.addEventListener("click", function () {
 			nameInput.classList.toggle("message-theme");
 			emailInput.classList.toggle("message-theme");
 			messageInput.classList.toggle("message-theme");
-			sendButton.classList.toggle("message-theme");
 			legend.classList.remove("message-theme");
 			labels.forEach((label) => {
 				label.classList.remove("message-theme");
 			});
+			nameInput.classList.toggle("message-input-theme");
+			emailInput.classList.toggle("name-input-theme");
+			messageInput.classList.toggle("email-input-theme");
+			sendButton.classList.toggle("send-button-theme");
+			legend.classList.toggle("send-message-legend-theme");
 		});
 	}
 });

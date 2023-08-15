@@ -973,8 +973,8 @@ swiper-slide:nth-child(4) {
 }
 
 .btn-card:hover {
-	border: 1px solid rebeccapurple;
-	background-color: rgba(191, 102, 255, 0.1);
+	border: 1px solid white;
+	background-color: rgba(255, 255, 255, 0.1);
 }
 
 /*-----------------------------------*\
@@ -982,7 +982,7 @@ swiper-slide:nth-child(4) {
   \*-----------------------------------*/
 
 .footer-container {
-	background-image: url(./images/footer-bg.png);
+	background-image: url("../../images/footer-bg.png");
 	background-repeat: no-repeat;
 	background-size: contain;
 	z-index: 1;
@@ -1150,6 +1150,14 @@ swiper-slide:nth-child(4) {
 	border: #262626 1px solid;
 	border-radius: 8px;
 }
+
+.send-message-legend-theme,
+.message-input-theme,
+.name-input-theme,
+.email-input-theme {
+	border: 1px solid rebeccapurple;
+}
+
 .name-input:focus,
 .email-input:focus,
 .message-input:focus {
@@ -1159,7 +1167,6 @@ swiper-slide:nth-child(4) {
 .message-input::-webkit-scrollbar {
 	width: 100%;
 }
-
 
 .send-button {
 	background-color: var(--eerie-black-1);
@@ -1175,6 +1182,10 @@ swiper-slide:nth-child(4) {
 	justify-content: center;
 	align-items: center;
 	gap: 1%;
+}
+.send-button-theme {
+	border: 1px solid rebeccapurple;
+	background-color: #29034c;
 }
 
 .send-button:hover {
