@@ -998,6 +998,7 @@ swiper-slide:nth-child(4) {
 .footer-container > p {
 	width: 100%;
 }
+
 .content-footer {
 	display: flex;
 	justify-content: space-evenly;
@@ -1199,6 +1200,14 @@ swiper-slide:nth-child(4) {
 }
 .message-theme:focus {
 	outline: #007aff 1px solid;
+}
+
+#map {
+	margin-top: 2rem;
+	height: 350px;
+	width: 350px;
+	z-index: 100;
+	border-radius: 8px;
 }
 /*-----------------------------------*\
     #MEDIA QUERIES

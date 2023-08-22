@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="./src/css/toggle.css">
 	<link rel="stylesheet" href="./src/css/ovni.css">
 
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
 		integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,6 +23,12 @@
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+
+	<!-- maps -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+		integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+	<!--  -->
 
 	<title>Powered by Eze</title>
 </head>
@@ -851,11 +858,12 @@
 					<input type="submit" id="send-button" class="send-button" value="Send"> </input>
 				</form>
 
-				<iframe class="map"
+				<!-- <iframe class="map"
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3287.0046739683494!2d-58.51519356613681!3d-34.5281095547811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb0d0d0c74833%3A0xc2faaf264e23998d!2sManuel%20Belzu%203979%2C%20B1605ATI%20Munro%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1690899055348!5m2!1ses-419!2sar"
 					width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade">
-				</iframe>
+				</iframe> -->
+				<div id="map"></div>
 			</article>
 
 
@@ -917,6 +925,7 @@
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
+	<script type="module" src="./src/js/ovniFollow.js"></script>
 	<script type="module" src="./canvas.js"></script>
 	<script type="module" src="./src/js/script.js"> </script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -924,7 +933,11 @@
 	<script type="module" src="./src/js/chat.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.min.js'></script>
-	<script src="./src/js/ovniFollow.js"></script>
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+		integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+	<script src="./src/js/leaflet.js"></script>
+
 
 </body>
 

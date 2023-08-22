@@ -24,9 +24,6 @@ container.addEventListener("mousemove", (e) => {
 		// El ratón está dentro del contenedor
 		tracker.style.opacity = "1";
 		updatePosition();
-	} else {
-		// El ratón está fuera del contenedor
-		tracker.style.opacity = "0";
 	}
 });
 
@@ -44,4 +41,6 @@ const updatePosition = () => {
 };
 
 // Iniciar la animación al cargar la página
-updatePosition();
+window.onload = () => {
+	updatePosition();
+};
