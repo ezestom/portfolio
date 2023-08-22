@@ -1,7 +1,7 @@
 import Toastify from "toastify-js";
 
 emailjs.init("cmbu9tVx0xBzhilTM");
-const btn = document.getElementById(".send-button");
+const btn = document.querySelector(".send-button");
 
 document
 	.querySelector("#message-form")
