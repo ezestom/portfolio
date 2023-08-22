@@ -1,1 +1,2 @@
-![image](https://github.com/ezestom/portfolio/assets/100095709/a4adf285-9ad1-4fb1-b378-ea1e9e4e65b3)
+![image](https://github.com/ezestom/portfolio/assets/100095709/e1b1e73b-3e6b-4437-b88c-88e3b48f86f8)
+
