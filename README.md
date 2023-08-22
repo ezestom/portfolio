@@ -1,3 +1,2 @@
-# portfolio
-![image](https://user-images.githubusercontent.com/100095709/228930408-1f98643c-79bd-495b-991f-b99792e29739.png)
+![image](https://github.com/ezestom/portfolio/assets/100095709/e1b1e73b-3e6b-4437-b88c-88e3b48f86f8)
 
