@@ -736,6 +736,11 @@ h4 > code {
 
 .text > p {
 	font-weight: 500;
+	text-wrap: balance;
+}
+.background {
+	background-color: #262626;
+	color: white;
 }
 
 .background-cero:hover,
@@ -759,32 +764,32 @@ h4 > code {
 	border-bottom: 2px solid var(--han-purple);
 }
 
-.background-cero {
+.background-cero:hover {
 	background-color: #05b7b9;
 	color: #242424;
 }
 
-.background-one {
+.background-one:hover {
 	background-color: #eebbc3;
 	color: #242424;
 }
 
-.background-two {
+.background-two:hover {
 	background-color: #fbdd74;
 	color: #242424;
 }
 
-.background-three {
+.background-three:hover {
 	background-color: #b8c1ec;
 	color: #242424;
 }
 
-.background-four {
+.background-four:hover {
 	background-color: #c3f0ca;
 	color: #242424;
 }
 
-.background-five {
+.background-five:hover {
 	background-color: #5fd3fa;
 	color: #242424;
 }
@@ -1316,11 +1321,11 @@ swiper-slide:nth-child(4) {
 		grid-template-columns: repeat(auto-fit, minmax(125px, 2fr));
 		gap: 2rem;
 	}
-	.content-footer{
+	.content-footer {
 		justify-content: center;
 		gap: 3%;
 	}
-	#map{
+	#map {
 		margin-top: 5%;
 	}
 }
