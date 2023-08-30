@@ -41,8 +41,7 @@
   \*-----------------------------------*/
 
 *,
-*::before,
-*::after {
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -129,7 +128,7 @@ body {
  Burger Button 
  */
 .burger-btn {
-	position: absolute;
+	position: fixed;
 	top: 1rem;
 	right: 1rem;
 	display: none;
@@ -214,12 +213,6 @@ body {
 	font-size: 1.75rem;
 	font-weight: 100;
 }
-/* estilos icons botones inicio */
-.btn ion-icon,
-.ri-briefcase-line {
-	font-size: 2rem;
-	padding-right: 2%;
-}
 
 .btn:hover {
 	color: #4834d4;
@@ -229,13 +222,14 @@ body {
 
 .section-subtitle {
 	padding-top: 8%;
-	font-size: 5rem;
+	font-size: 4rem;
 	background-image: var(--gradient-1);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	font-weight: 600;
 	border-bottom: 3px double rebeccapurple;
+	background-color: #0c0e10;
 }
 
 .title {
@@ -256,7 +250,8 @@ body {
 
 .section {
 	padding: 0 10%;
-	height: auto;
+	height: 100%;
+	width: 100%;
 	background-color: #0c0e10;
 }
 .light-theme {
@@ -303,7 +298,7 @@ body {
 	align-items: center;
 	z-index: 4;
 	position: fixed;
-	left: 10%;
+	right: 10%;
 	backdrop-filter: saturate(180%) blur(20px);
 	height: 3em;
 	border-radius: 0 0 8px 8px;
@@ -360,7 +355,6 @@ body {
 	align-items: center;
 	height: 100vh;
 	width: 100%;
-	position: relative;
 }
 
 .rocket {
@@ -386,18 +380,13 @@ body {
 	font-weight: 800;
 	filter: drop-shadow(0 0 0.5rem #0c0e10);
 }
-.containerHero2 {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
 
 .btn-group {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding-block: 2rem;
+	gap: 1rem;
 }
 .btn-group > h4 > code {
 	padding-bottom: 3rem;
@@ -408,22 +397,6 @@ h4 > code {
 	align-items: center;
 	color: rgba(255, 255, 255, 0.3);
 	font-size: 1.5rem;
-}
-
-.btn-group > .btn {
-	width: auto;
-	margin-bottom: 1rem;
-	font-size: 1.75rem;
-	width: 275px;
-	font-weight: 500;
-	background-color: rgba(98, 72, 255, 0.1);
-}
-.btn-group > .btn:hover {
-	background-image: var(--gradient-1);
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	transition: all 0.1s;
 }
 
 .webgl {
@@ -452,15 +425,11 @@ h4 > code {
     #PROJECTS
   \*-----------------------------------*/
 
-.explore {
-	position: relative;
-}
-
 .grid-list {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
-	gap: 2rem;
-	position: relative;
+	grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+	gap: 3rem;
+	width: 100%;
 }
 
 .explore-card {
@@ -632,12 +601,10 @@ h4 > code {
 	right: 0;
 	background-color: transparent;
 	overflow: hidden;
-	backdrop-filter: blur(2px);
-	-webkit-backdrop-filter: blur(2px);
 }
 
 .blur-in {
-	animation: blur-in 0.2s linear both;
+	animation: blur-in 0s linear both;
 }
 @keyframes blur-in {
 	0% {
@@ -650,7 +617,7 @@ h4 > code {
 	}
 }
 .blur-out {
-	animation: blur-out 0.2s linear both;
+	animation: blur-out 0s linear both;
 }
 @keyframes blur-out {
 	0% {
@@ -797,7 +764,10 @@ h4 > code {
 /*-----------------------------------*\
     #Testimonials
   \*-----------------------------------*/
-
+.reviews {
+	width: 100%;
+	position: relative;
+}
 .swiper-container-testimonials {
 	border-radius: var(--radius-8);
 	border: 2px double rebeccapurple;
@@ -807,17 +777,16 @@ h4 > code {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	min-height: 500px;
-	padding: 2% 0;
+	min-height: 450px;
 }
 swiper-container {
 	width: 100%;
 	height: 100%;
-	max-width: 375px;
-	max-height: 375px;
+	max-width: 350px;
+	max-height: 350px;
 }
 .astronaut-container {
-	margin-bottom: 2%;
+	margin-bottom: 2% 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -836,8 +805,8 @@ swiper-slide {
 	font-size: 1.35rem;
 	color: #fff;
 	text-align: center;
-	min-height: 375px;
-	min-width: 375px;
+	min-height: 350px;
+	min-width: 350px;
 	border-radius: 8px;
 }
 .ri-arrow-right-s-line,
@@ -851,7 +820,7 @@ swiper-slide {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 375px;
+	width: 350px;
 	padding: 8px 16px;
 	font-weight: 500;
 	background-color: var(--eerie-black-1);
@@ -870,28 +839,28 @@ border: 8px solid #f9bc60;
  */
 
 swiper-slide:nth-child(1) {
-	border-bottom: 2rem solid #5fd3fa;
+	border-bottom: 3rem solid #5fd3fa;
 	background-image: url("../../images/sandri-linkedinCard.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 swiper-slide:nth-child(2) {
-	border-bottom: 2rem solid #bebee5;
+	border-bottom: 3rem solid #bebee5;
 	background-image: url("../../images/vicent-linkedinCard.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 swiper-slide:nth-child(3) {
-	border-bottom: 2rem solid #05b7b9;
+	border-bottom: 3rem solid #05b7b9;
 	background-image: url(./images/none-linkedinCard.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 swiper-slide:nth-child(4) {
-	border-bottom: 2rem solid #f9bc60;
+	border-bottom: 3rem solid #f9bc60;
 	background-image: url(./images/none-linkedinCard.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -902,13 +871,12 @@ swiper-slide:nth-child(4) {
     #STUDIES
   \*-----------------------------------*/
 
-.studies {
-	position: relative;
-	height: 75vh;
+.swiper-horizontal {
+	height: 350px;
+	width: auto;
 }
-
-.swiper-wrapper {
-	padding-bottom: 5rem;
+.swiper-pagination-bullet {
+	background-color: var(--han-purple);
 }
 
 .swiper-slide {
@@ -920,14 +888,13 @@ swiper-slide:nth-child(4) {
 	display: center;
 	padding: 1rem;
 	min-width: 200px;
-	height: 300px;
-	max-width: 225px;
+	height: 275px;
+	max-width: 200px;
 	margin-block: 1rem;
 	color: white;
 	background-color: var(--eerie-black-1);
 	border: 2px solid #262626;
 	border-radius: var(--radius-8);
-	font-size: 2rem;
 	cursor: grab;
 }
 .swiper-slide-theme {
@@ -1030,8 +997,8 @@ swiper-slide:nth-child(4) {
 	font-size: 3rem;
 	border-radius: var(--radius-8);
 	border: 2px solid #262626;
-	height: 1.5em;
-	width: 1.5em;
+	height: 1.25em;
+	width: 1.25em;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -1080,7 +1047,7 @@ swiper-slide:nth-child(4) {
 
 .copyright-link {
 	background-color: #0c0e10;
-	padding: 8px 16px;
+	padding: 4px 16px;
 	border-radius: 8px;
 	border: 2px solid #262626;
 	font-weight: 600;
@@ -1100,7 +1067,7 @@ swiper-slide:nth-child(4) {
 	border: 2px solid #262626;
 	border-radius: 8px;
 	width: 49%;
-	height: 350px;
+	height: 300px;
 	display: flex;
 	flex-direction: column;
 	padding: 1% 0.5%;
@@ -1123,7 +1090,7 @@ swiper-slide:nth-child(4) {
 	font-size: 1.25rem;
 	border: 1px solid #262626;
 	border-radius: 8px;
-	padding: 1%;
+	padding: 0.5%;
 }
 
 .name-input,
@@ -1181,12 +1148,11 @@ swiper-slide:nth-child(4) {
 	font-size: 1.25rem;
 	cursor: pointer;
 	font-weight: 600;
-	padding: 1% 0;
+	padding: 0.5% 0;
 	margin-top: 2%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 1%;
 }
 .send-button-theme {
 	border: 1px solid rebeccapurple;
@@ -1207,7 +1173,7 @@ swiper-slide:nth-child(4) {
 }
 
 #map {
-	height: 350px;
+	height: 300px;
 	width: 49%;
 	z-index: 100;
 	border-radius: 8px;
@@ -1227,6 +1193,9 @@ swiper-slide:nth-child(4) {
 
 	.section {
 		padding: 0 2%;
+	}
+	.about-me-cards{
+		padding: 0 1%;
 	}
 
 	.burger-btn {
@@ -1318,8 +1287,8 @@ swiper-slide:nth-child(4) {
 	}
 	.grid-list {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(125px, 2fr));
-		gap: 2rem;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		gap: 1rem;
 	}
 	.content-footer {
 		justify-content: center;
