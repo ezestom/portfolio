@@ -441,6 +441,8 @@ h4 > code {
 	padding-bottom: 1rem;
 	min-width: 140px;
 	z-index: 2;
+	will-change: filter;
+	transition: filter 300ms;
 }
 .explore-card-theme {
 	background-color: #29034c;
@@ -449,7 +451,7 @@ h4 > code {
 }
 
 .explore-card:is(:hover, :focus) {
-	filter: drop-shadow(0 0 1em var(--han-purple)) brightness(115%);
+	filter: drop-shadow(0 0 2em var(--han-purple)) brightness(115%);
 	cursor: pointer;
 }
 .article-card-title {
@@ -703,7 +705,7 @@ h4 > code {
 
 .text > p {
 	font-weight: 500;
-	text-wrap: balance;
+	/* text-wrap: balance; */
 }
 .background {
 	background-color: #262626;
@@ -1067,7 +1069,7 @@ swiper-slide:nth-child(4) {
 	border: 2px solid #262626;
 	border-radius: 8px;
 	width: 49%;
-	height: 300px;
+	height: 325px;
 	display: flex;
 	flex-direction: column;
 	padding: 1% 0.5%;
@@ -1173,7 +1175,7 @@ swiper-slide:nth-child(4) {
 }
 
 #map {
-	height: 300px;
+	height: 325px;
 	width: 49%;
 	z-index: 100;
 	border-radius: 8px;
@@ -1194,7 +1196,7 @@ swiper-slide:nth-child(4) {
 	.section {
 		padding: 0 2%;
 	}
-	.about-me-cards{
+	.about-me-cards {
 		padding: 0 1%;
 	}
 
@@ -1287,8 +1289,8 @@ swiper-slide:nth-child(4) {
 	}
 	.grid-list {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-		gap: 1rem;
+		grid-template-columns: repeat(auto-fit, minmax(125px, 2fr));
+		gap: 2rem;
 	}
 	.content-footer {
 		justify-content: center;
