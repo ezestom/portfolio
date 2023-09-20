@@ -67,6 +67,8 @@ const messageInput = document.querySelector(".message-input");
 const sendButton = document.querySelector(".send-button");
 const legend = document.querySelector(".send-message-legend");
 const labels = document.querySelectorAll(".label");
+const aboutCards = document.querySelectorAll(".background");
+const aboutCards2 = document.querySelector(".me-description");
 
 themeBtn.addEventListener("click", function () {
 	if (!this.checked) {
@@ -91,6 +93,10 @@ themeBtn.addEventListener("click", function () {
 			messageInput.classList.toggle("email-input-theme");
 			sendButton.classList.toggle("send-button-theme");
 			legend.classList.toggle("send-message-legend-theme");
+			aboutCards2.classList.toggle("background-active");
+			aboutCards.forEach((card) => {
+				card.classList.toggle("background-active");
+			});
 		});
 	} else {
 		sectionExplore.forEach((section) => {
@@ -114,6 +120,10 @@ themeBtn.addEventListener("click", function () {
 			messageInput.classList.toggle("email-input-theme");
 			sendButton.classList.toggle("send-button-theme");
 			legend.classList.toggle("send-message-legend-theme");
+			aboutCards.forEach((card) => {
+				card.classList.remove("background-active");
+			});
+			aboutCards2.classList.toggle("background-active");
 		});
 	}
 });

@@ -666,9 +666,10 @@ h4 > code {
 	max-width: 65%;
 	filter: grayscale(1);
 }
-.about-eze > p {
+.me-description{
 	font-size: 1.35rem;
 	background-color: #262626;
+	border: 2px solid #262626;
 	border-bottom: 2px solid #4834d4;
 	border-radius: var(--radius-8);
 	font-weight: 500;
@@ -677,6 +678,10 @@ h4 > code {
 	margin-bottom: 1rem;
 	max-width: 75ch;
 }
+.me-description-active{
+	background-color: #29034c;
+	border: 2px solid rebeccapurple;
+}
 .about-me-cards {
 	width: 100%;
 }
@@ -684,12 +689,19 @@ h4 > code {
 .background {
 	display: flex;
 	align-items: center;
+	border: 2px solid #262626;
 	border-bottom: 2px solid #4834d4;
 	width: 100%;
 	border-radius: var(--radius-8);
 	transition: all 0.3s;
 	cursor: crosshair;
 	margin-bottom: 1rem;
+	background-color: #262626;
+	color: white;
+}
+.background-active{
+	border: 2px solid rebeccapurple;
+	background-color: #29034c;
 }
 
 .background img {
@@ -706,10 +718,6 @@ h4 > code {
 .text > p {
 	font-weight: 500;
 	/* text-wrap: balance; */
-}
-.background {
-	background-color: #262626;
-	color: white;
 }
 
 .background-cero:hover,
