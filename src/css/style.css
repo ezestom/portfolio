@@ -334,7 +334,8 @@ body {
 	padding-right: 3%;
 	font-size: medium;
 }
-.navbar-link:hover {
+.navbar-link:hover,
+.btn-header:hover {
 	color: rgba(191, 102, 255, 1);
 }
 
@@ -360,6 +361,7 @@ body {
 .rocket {
 	max-width: 80%;
 	transform: translate(-10%, -5%);
+	filter: drop-shadow(0 0 1rem #87560d);
 }
 .hero-title {
 	font-size: 1.75rem;
@@ -666,7 +668,7 @@ h4 > code {
 	max-width: 65%;
 	filter: grayscale(1);
 }
-.me-description{
+.me-description {
 	font-size: 1.35rem;
 	background-color: #262626;
 	border: 2px solid #262626;
@@ -678,7 +680,7 @@ h4 > code {
 	margin-bottom: 1rem;
 	max-width: 75ch;
 }
-.me-description-active{
+.me-description-active {
 	background-color: #29034c;
 	border: 2px solid rebeccapurple;
 }
@@ -699,7 +701,7 @@ h4 > code {
 	background-color: #262626;
 	color: white;
 }
-.background-active{
+.background-active {
 	border: 2px solid rebeccapurple;
 	background-color: #29034c;
 }
@@ -952,6 +954,7 @@ swiper-slide:nth-child(4) {
 	gap: 5px;
 	font-weight: 600;
 	font-size: 1.25rem;
+	background-color: rgba(255, 255, 255, 0.1);
 }
 
 .btn-card:hover {
@@ -1004,11 +1007,10 @@ swiper-slide:nth-child(4) {
 .social-link {
 	margin: 0 0.5em;
 	background-color: #0c0e10;
-	font-size: 3rem;
+	font-size: 2.5rem;
 	border-radius: var(--radius-8);
 	border: 2px solid #262626;
-	height: 1.25em;
-	width: 1.25em;
+	padding: 0.5rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -1057,12 +1059,13 @@ swiper-slide:nth-child(4) {
 
 .copyright-link {
 	background-color: #0c0e10;
-	padding: 4px 16px;
+	padding: 4px 8px;
 	border-radius: 8px;
 	border: 2px solid #262626;
 	font-weight: 600;
 	margin-bottom: 1rem;
 	transition: all 0.2s ease-in-out;
+	font-size: 1.5rem;
 }
 .copyright-link:hover {
 	transform: scale(1.04);
@@ -1080,7 +1083,7 @@ swiper-slide:nth-child(4) {
 	height: 325px;
 	display: flex;
 	flex-direction: column;
-	padding: 1% 0.5%;
+	padding: 1%;
 	font-size: 1.25rem;
 	min-width: 300px;
 }
@@ -1111,8 +1114,8 @@ swiper-slide:nth-child(4) {
 	background-color: var(--eerie-black-1);
 	border: 1px solid #262626;
 	color: #fff;
-	padding: 2%;
-	font-size: 1.25rem;
+	padding: 1.75rem;
+	font-size: 1.25rem 1rem;
 	border-radius: 8px;
 	margin: 2px;
 	height: 2.5rem;
@@ -1163,10 +1166,12 @@ swiper-slide:nth-child(4) {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: rgba(255, 255, 255, 0.1);
 }
 .send-button-theme {
 	border: 1px solid rebeccapurple;
 	background-color: #29034c;
+	background-color: rgba(255, 255, 255, 0.1);
 }
 
 .send-button:hover {
