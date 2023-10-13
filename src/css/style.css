@@ -289,6 +289,7 @@ body {
   \*-----------------------------------*/
 .header-container {
 	background-color: transparent;
+	width: 96%;
 }
 
 .header {
@@ -299,10 +300,10 @@ body {
 	z-index: 4;
 	position: fixed;
 	right: 10%;
+	top: 1%;
 	backdrop-filter: saturate(180%) blur(20px);
-	height: 3em;
-	border-radius: 0 0 8px 8px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	height: 4em;
+	border-radius: 100px;
 }
 
 .menu-open-btn {
@@ -318,9 +319,9 @@ body {
 }
 .navbar-list {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
-	gap: 16%;
+	width: 100%;
 }
 
 .navbar-link {
@@ -361,7 +362,7 @@ body {
 .rocket {
 	max-width: 80%;
 	transform: translate(-10%, -5%);
-	filter: drop-shadow(0 0 1rem #87560d);
+	filter: drop-shadow(-4em 5em 20rem rebeccapurple);
 }
 .hero-title {
 	font-size: 1.75rem;
@@ -603,8 +604,9 @@ h4 > code {
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: transparent;
+	background-color: rgba(0, 0, 0, 0.5);
 	overflow: hidden;
+	backdrop-filter: blur(2px);
 }
 
 .blur-in {
@@ -785,7 +787,7 @@ h4 > code {
 	border: 2px double rebeccapurple;
 	flex-wrap: wrap;
 	height: 100%;
-	background-image: url("../../images/background-space.jpg");
+	background-image: url("/src/images/background-space.jpg");
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
@@ -795,8 +797,8 @@ h4 > code {
 swiper-container {
 	width: 100%;
 	height: 100%;
-	max-width: 300px;
-	max-height: 300px;
+	max-width: 350px;
+	max-height: 350px;
 }
 .astronaut-container {
 	margin-bottom: 2% 0;
@@ -831,7 +833,7 @@ swiper-slide {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 300px;
+	max-width: 350px;
 	padding: 8px 16px;
 	font-weight: 500;
 	background-color: var(--eerie-black-1);
@@ -850,28 +852,28 @@ border: 8px solid #f9bc60;
  */
 swiper-slide:nth-child(1) {
 	border-bottom: 3rem solid #5fd3fa;
-	background-image: url("../../images/sandri-linkedinCard.jpg");
+	background-image: url("/src/images/sandri-linkedinCard.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 swiper-slide:nth-child(2) {
 	border-bottom: 3rem solid #bebee5;
-	background-image: url("../../images/vicent-linkedinCard.jpg");
+	background-image: url("/src/images/vicent-linkedinCard.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 swiper-slide:nth-child(3) {
 	border-bottom: 3rem solid #05b7b9;
-	background-image: url(./images/none-linkedinCard.jpg);
+	background-image: url(/src/images/none-linkedinCard.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 swiper-slide:nth-child(4) {
 	border-bottom: 3rem solid #f9bc60;
-	background-image: url(./images/none-linkedinCard.jpg);
+	background-image: url(/src/images/none-linkedinCard.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -956,8 +958,78 @@ swiper-slide:nth-child(4) {
 }
 
 .btn-card:hover {
-	border: 1px solid white;
+	border: 1px solid #e0e0e0;
 	background-color: rgba(255, 255, 255, 0.1);
+}
+
+/*-----------------------------------*\
+    #FAQ
+  \*-----------------------------------*/
+.faq {
+	padding: 0 10%;
+	height: 100%;
+	width: 100%;
+}
+
+.article-faq {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	flex-wrap: wrap;
+}
+
+.faq-theme {
+	background-color: #1a1335;
+}
+.figure-rocket {
+	width: 35%;
+	display: grid;
+	place-items: center;
+	min-width: 300px;
+}
+.figure-rocket video {
+	filter: drop-shadow(1em 1em 20rem rebeccapurple);
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+}
+.faq-container {
+	width: 49%;
+	min-width: 300px;
+}
+
+details {
+	border: 2px solid #303030;
+	border-radius: 8px 8px 0 0;
+	margin-bottom: 1rem;
+	font-size: 1.5rem;
+}
+
+details summary {
+	cursor: pointer;
+	padding: 1rem;
+	background-color: var(--eerie-black-1);
+	border-radius: 8px 8px 0 0;
+}
+
+details summary:hover {
+	outline: 2px solid #e0e0e0;
+}
+
+details p {
+	margin: 0;
+	padding: 1rem;
+	display: none;
+	background-color: rgba(255, 255, 255, 0.1);
+	font-size: 1.35rem;
+}
+
+details[open] p {
+	display: block;
+}
+.faq-light-theme{
+	background-color: #29034c;
+	outline: rebeccapurple 2px solid;
 }
 
 /*-----------------------------------*\
@@ -1188,7 +1260,7 @@ swiper-slide:nth-child(4) {
 #map {
 	height: 325px;
 	width: 49%;
-	z-index: 100;
+	z-index: 0;
 	border-radius: 8px;
 	min-width: 300px;
 	border: transparent 2px solid;
@@ -1257,10 +1329,6 @@ swiper-slide:nth-child(4) {
 	/*-----------------------------------*\
      * HEADER
      */
-
-	.header-container {
-		width: 50%;
-	}
 }
 
 @media (max-width: 1200px) {
@@ -1309,5 +1377,29 @@ swiper-slide:nth-child(4) {
 	}
 	#map {
 		margin-top: 5%;
+	}
+}
+@media (width < 639px) {
+	.article-faq {
+		justify-content: center;
+		width: 100%;
+	}
+	.faq-container {
+		width: 100%;
+	}
+	.figure-rocket {
+		width: 100%;
+	}
+}
+@media (width < 840px) {
+	.message-form {
+		width: 100%;
+	}
+	#map {
+		width: 100%;
+	}
+	swiper-container {
+		width: 265px !important;
+		height: 265px!important;
 	}
 }

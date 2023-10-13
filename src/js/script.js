@@ -15,6 +15,7 @@ window.addEventListener("load", function () {
 	const navbar = document.querySelector(".navbar");
 	const navbarLinks = document.querySelectorAll(".navbar-link");
 	const footer = document.querySelector(".footer");
+	const faq = document.querySelector(".faq");
 
 	function hideNavbar() {
 		navbarLinks.forEach((link) => {
@@ -23,6 +24,7 @@ window.addEventListener("load", function () {
 				footer.style.filter = "none";
 				navbar.style.top = "-500%";
 				check.checked = false;
+				faq.style.filter = "none";
 			});
 		});
 	}
@@ -32,11 +34,13 @@ window.addEventListener("load", function () {
 			navbar.style.top = "0";
 			main.style.filter = " brightness(0.3) ";
 			footer.style.filter = " brightness(0.3) ";
+			faq.style.filter = " brightness(0.3) ";
 			hideNavbar();
 		} else if (!check.checked) {
 			main.style.filter = "none";
 			navbar.style.top = "-500%";
 			footer.style.filter = "none";
+			faq.style.filter = "none";
 
 			hideNavbar();
 		}
@@ -69,6 +73,8 @@ const legend = document.querySelector(".send-message-legend");
 const labels = document.querySelectorAll(".label");
 const aboutCards = document.querySelectorAll(".background");
 const aboutCards2 = document.querySelector(".me-description");
+const faq = document.querySelector(".faq");
+const allSummary = document.querySelectorAll("summary");
 
 themeBtn.addEventListener("click", function () {
 	if (!this.checked) {
@@ -97,6 +103,10 @@ themeBtn.addEventListener("click", function () {
 			aboutCards.forEach((card) => {
 				card.classList.toggle("background-active");
 			});
+			faq.classList.toggle("faq-theme");
+			allSummary.forEach((summary) => {
+				summary.classList.toggle("faq-light-theme");
+			});
 		});
 	} else {
 		sectionExplore.forEach((section) => {
@@ -124,6 +134,10 @@ themeBtn.addEventListener("click", function () {
 				card.classList.remove("background-active");
 			});
 			aboutCards2.classList.toggle("background-active");
+			faq.classList.remove("faq-theme");
+			allSummary.forEach((summary) => {
+				summary.classList.remove("faq-light-theme");
+			});
 		});
 	}
 });
@@ -217,15 +231,15 @@ cardExploreElements.forEach((cardExplore) => {
 		}
 
 		// Desactivar el scroll solo si se cumple la regla
-		if (shouldDisableScroll()) {
-			const scrollBarWidth =
-				window.innerWidth - document.documentElement.clientWidth;
-			document.body.style.overflow = "hidden";
-			document.body.style.paddingRight = `${scrollBarWidth}px`;
-		} else {
-			// Reactivar el scroll y restablecer el padding-right
-			document.body.style.overflow = "auto";
-			document.body.style.paddingRight = "0";
-		}
+		// if (shouldDisableScroll()) {
+		// 	const scrollBarWidth =
+		// 		window.innerWidth - document.documentElement.clientWidth;
+		// 	document.body.style.overflow = "hidden";
+		// 	document.body.style.paddingRight = `${scrollBarWidth}px`;
+		// } else {
+		// 	// Reactivar el scroll y restablecer el padding-right
+		// 	document.body.style.overflow = "auto";
+		// 	document.body.style.paddingRight = "0";
+		// }
 	});
 });
