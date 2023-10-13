@@ -3,8 +3,10 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+	<link rel="icon" type="image/png" href="/portfolio/assets/portafolio-person-e3ac2093.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- CSS stylesheets -->
 	
 	
 	
@@ -32,8 +34,8 @@
 	<!--  -->
 
 	<title>Powered by Eze</title>
-  <script type="module" crossorigin src="/portfolio/assets/index-d1d258db.js"></script>
-  <link rel="stylesheet" href="/portfolio/assets/index-57b4b60a.css">
+  <script type="module" crossorigin src="/portfolio/assets/index-9806baeb.js"></script>
+  <link rel="stylesheet" href="/portfolio/assets/index-eabec91d.css">
 </head>
 
 <body id="top">
@@ -66,6 +68,10 @@
 					</li>
 
 					<li>
+						<a href="#faq" class="navbar-link" data-navlink><i class="ri-question-line"></i></i></i>FAQ</a>
+					</li>
+
+					<li>
 						<a href="#contact" class="navbar-link" data-navlink><i class="ri-phone-line"></i>Contact</a>
 					</li>
 					<label class="theme-switch">
@@ -73,7 +79,7 @@
 						<div class="theme-switch__container">
 							<div class="theme-switch__clouds"></div>
 							<div class="theme-switch__stars-container">
-								<img src="./images/toggle.svg" alt="">
+								<img src="/src/images/toggle.svg" alt="">
 							</div>
 							<div class="theme-switch__circle-container">
 								<div class="theme-switch__sun-moon-container">
@@ -518,7 +524,7 @@
 			<article class="article-about-me">
 
 				<figure class="about-eze">
-					<img src="/portfolio/assets/me-portfolio-a7af0d70.png" class="photo" alt="">
+					<img loading="lazy" src="/portfolio/assets/me-portfolio-a7af0d70.png" class="photo" alt="">
 					<p class="me-description">
 						👋Hi there! I'm an enthusiastic <strong>Frontend Dev</strong> specializing in creating dynamic and
 						engaging
@@ -626,14 +632,14 @@
 
 						<figure class="astronaut">
 							<div class="cursor-tracker">
-								<img class="ovni" src="/portfolio/assets/ovni-31d13bfc.png" alt="">
+								<img loading="lazy" class="ovni" src="/portfolio/assets/ovni-31d13bfc.png" alt="">
 
 							</div>
 							<div class="astronaut-container">
 								<img class="astronaut-img" src="/portfolio/assets/astronaut1-8f7be9c6.png" alt="astronaut">
 
 						</figure>
-						<figure class="swiper-container" >
+						<figure class="swiper-container">
 							<swiper-container style="overflow: visible;" class="mySwiper" effect="cards" grab-cursor="true">
 								<swiper-slide>
 								</swiper-slide>
@@ -833,8 +839,72 @@
 		</section>
 	</main>
 
+	<!-- 
+	        - # FAQ
+	       -->
 
 
+	<aside class="section faq" id="faq">
+		<div class="container-faq">
+			<h4 class="section-subtitle">FAQ⚡</h4>
+			<p class="h4 section-title"> And Answers</p>
+		</div>
+
+		<article class="article-faq">
+			<div class="faq-container">
+				<details>
+					<summary>What is your experience in the field of web development?</summary>
+					<p>I have been studying web development for two years, alongside Digital House, Alura Latam, and various
+						other online
+						resources, while looking for my first opportunity in the world of high-level work.</p>
+				</details>
+				<details>
+					<summary>What is your development focus and your specialties?</summary>
+					<p>Frontend is my passion, and I seek to learn as many tools as possible to provide an innovative,
+						creative, and dynamic
+						product.</p>
+				</details>
+				<details>
+					<summary>What is your approach to problem-solving?</summary>
+					<p>Approaching problem-solving involves breaking down the issue, analyzing root causes, brainstorming
+						solutions, and
+						emphasizing clear communication and collaboration for effective resolution.</p>
+				</details>
+				<details>
+					<summary>Do you have any project or achievement you're particularly proud of?</summary>
+					<p>Great pride is taken in our team's journey of collective growth and the successful creation of the
+						OnlyCars website.
+						Working together to overcome challenges, learning and growing step by step, the final result is a
+						testament to our
+						dedication and hard work.</p>
+				</details>
+				<details>
+					<summary>What technologies and tools keep you up to date?</summary>
+					<p>I enjoy working with a range of tools and technologies, including the React library, JavaScript, HTML,
+						CSS, Tailwind,
+						Git, and GitHub, to create robust and efficient developments.
+					</p>
+				</details>
+				<details>
+					<summary>What motivates you to continue working in web development?</summary>
+					<p>Motivation in web development arises from a passion for creating meaningful and innovative digital
+						experiences,
+						alongside excitement for exploring new technologies and embracing continuous learning.</p>
+				</details>
+				<details>
+					<summary>Do you have any interests or hobbies outside of web development?</summary>
+					<p>Passion for traveling and experiencing diverse cultures around the world, cherishing moments with
+						family, and engaging
+						in online video gaming with friends during free time.</p>
+				</details>
+			</div>
+
+			<figure class="figure-rocket">
+				<video loading="lazy" src="/portfolio/assets/animation-rocket-launch-platform-a85e9a0e.webm" autoplay loop muted></video>
+			</figure>
+
+		</article>
+	</aside>
 
 	<!-- 
     - #FOOTER
