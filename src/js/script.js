@@ -229,17 +229,24 @@ cardExploreElements.forEach((cardExplore) => {
 				plusBtn[i].classList.remove(stylesCardIterator.plusBtn);
 			}
 		}
+	});
+});
 
-		// Desactivar el scroll solo si se cumple la regla
-		// if (shouldDisableScroll()) {
-		// 	const scrollBarWidth =
-		// 		window.innerWidth - document.documentElement.clientWidth;
-		// 	document.body.style.overflow = "hidden";
-		// 	document.body.style.paddingRight = `${scrollBarWidth}px`;
-		// } else {
-		// 	// Reactivar el scroll y restablecer el padding-right
-		// 	document.body.style.overflow = "auto";
-		// 	document.body.style.paddingRight = "0";
-		// }
+const backToTop = document.querySelector(".back-to-top");
+
+window.addEventListener("scroll", function () {
+	if (window.scrollY > 100) {
+		backToTop.style.position = "fixed";
+		backToTop.style.display = "grid";
+	} else {
+		backToTop.style.position = "static";
+		backToTop.style.display = "none";
+	}
+});
+
+backToTop.addEventListener("click", function () {
+	window.scrollTo({
+		top: 0.0,
+		behavior: "smooth",
 	});
 });

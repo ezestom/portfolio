@@ -805,11 +805,11 @@ swiper-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
+	width: 230px;
 	height: 100%;
 }
 .astronaut-img {
-	width: 50%;
+	width: 100%;
 }
 
 swiper-slide {
@@ -1027,7 +1027,7 @@ details p {
 details[open] p {
 	display: block;
 }
-.faq-light-theme{
+.faq-light-theme {
 	background-color: #29034c;
 	outline: rebeccapurple 2px solid;
 }
@@ -1037,7 +1037,7 @@ details[open] p {
   \*-----------------------------------*/
 
 .footer-container {
-	background-image: url("../../images/footer-bg.png");
+	background-image: url("../images/footer-bg.png");
 	background-repeat: no-repeat;
 	background-size: contain;
 	z-index: 1;
@@ -1265,6 +1265,29 @@ details[open] p {
 	min-width: 300px;
 	border: transparent 2px solid;
 }
+.back-to-top {
+	display: none;
+	place-items: center;
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	z-index: 10;
+	border-radius: 8px;
+	border: 2px solid #303030;
+	backdrop-filter: saturate(180%) blur(20px);
+	padding: 0.35rem;
+	cursor: pointer;
+}
+.back-to-top > i {
+	font-size: 2rem;
+	color: #303030;
+}
+.back-to-top:hover {
+	border: 2px solid #4834d4;
+}
+.back-to-top:hover > i {
+	color: #4834d4;
+}
 
 /*-----------------------------------*\
     #MEDIA QUERIES
@@ -1400,6 +1423,6 @@ details[open] p {
 	}
 	swiper-container {
 		width: 265px !important;
-		height: 265px!important;
+		height: 265px !important;
 	}
 }
