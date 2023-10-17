@@ -361,12 +361,12 @@ body {
 
 .rocket {
 	max-width: 80%;
-	transform: translate(-10%, -5%);
+	transform: translate(-10%, -10%);
 	filter: drop-shadow(-4em 5em 20rem rebeccapurple);
 }
 .hero-title {
 	font-size: 1.75rem;
-	padding-top: 10%;
+	padding-top: 15%;
 	font-weight: 400;
 }
 .hero-title > h4 {
@@ -390,16 +390,6 @@ body {
 	align-items: center;
 	padding-block: 2rem;
 	gap: 1rem;
-}
-.btn-group > h4 > code {
-	padding-bottom: 3rem;
-}
-h4 > code {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: rgba(255, 255, 255, 0.3);
-	font-size: 1.5rem;
 }
 
 .webgl {
@@ -430,8 +420,8 @@ h4 > code {
 
 .grid-list {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
-	gap: 3rem;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	gap: 2rem;
 	width: 100%;
 }
 
@@ -496,9 +486,13 @@ h4 > code {
 	text-align: center;
 	font-weight: 500;
 }
+.wrapper-item {
+	color: #ccc;
+}
 .ri-close-line {
 	display: none;
 }
+
 .ri-add-line {
 	display: block;
 	cursor: pointer;
@@ -678,7 +672,7 @@ h4 > code {
 	border-radius: var(--radius-8);
 	font-weight: 500;
 	text-align: start;
-	padding: 2% 3%;
+	padding: 2%;
 	margin-bottom: 1rem;
 	max-width: 75ch;
 }
@@ -716,7 +710,7 @@ h4 > code {
 
 .background p {
 	font-size: 1.35rem;
-	padding: 0 2%;
+	padding: 2%;
 }
 
 .text > p {
