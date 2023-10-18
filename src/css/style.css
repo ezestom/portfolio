@@ -388,7 +388,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-block: 2rem;
 	gap: 1rem;
 }
 
@@ -407,6 +406,7 @@ body {
 }
 
 .containerHero2 {
+	padding-top: 5rem;
 	z-index: 2;
 	position: absolute;
 	top: 75%;
@@ -456,7 +456,7 @@ body {
 
 .card-title {
 	padding-top: 0.5rem;
-	font-size: 1.5rem;
+	font-size: 1.75rem;
 	font-weight: 600;
 	text-align: center;
 }
@@ -476,6 +476,7 @@ body {
 	gap: 5px;
 	font-weight: 500;
 	text-align: center;
+	padding-top: 0.5rem;
 }
 .explore-card .card-author > i {
 	font-size: 2rem;
@@ -484,10 +485,10 @@ body {
 .wrapper {
 	font-size: 1.15rem;
 	text-align: center;
-	font-weight: 500;
+	padding-top: 0.5rem;
 }
 .wrapper-item {
-	color: #ccc;
+	opacity: 0.4;
 }
 .ri-close-line {
 	display: none;
@@ -665,7 +666,7 @@ body {
 	filter: grayscale(1);
 }
 .me-description {
-	font-size: 1.35rem;
+	font-size: 1.5rem;
 	background-color: #262626;
 	border: 2px solid #262626;
 	border-bottom: 2px solid #4834d4;
@@ -675,6 +676,7 @@ body {
 	padding: 2%;
 	margin-bottom: 1rem;
 	max-width: 75ch;
+	font-weight: 400;
 }
 .me-description-active {
 	background-color: #29034c;
@@ -709,12 +711,12 @@ body {
 }
 
 .background p {
-	font-size: 1.35rem;
+	font-size: 1.5rem;
 	padding: 2%;
 }
 
 .text > p {
-	font-weight: 500;
+	font-weight: 400;
 	/* text-wrap: balance; */
 }
 
