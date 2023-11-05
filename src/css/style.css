@@ -8,7 +8,7 @@
      */
 
 	--spanish-gray: hsl(0, 0%, 56%);
-	--eerie-black-1: hsl(240, 4%, 11%);
+	--eerie-black-1: #1c1c1c;
 	--raisin-black: hsl(249, 9%, 15%);
 	--han-purple: #4834d4;
 	--gainsboro: hsl(0, 0%, 88%);
@@ -693,7 +693,6 @@ body {
 	border-bottom: 2px solid #4834d4;
 	width: 100%;
 	border-radius: var(--radius-8);
-	transition: all 0.3s;
 	cursor: crosshair;
 	margin-bottom: 1rem;
 	background-color: #262626;
@@ -879,12 +878,25 @@ swiper-slide:nth-child(4) {
     #STUDIES
   \*-----------------------------------*/
 
+.container-swiper {
+	border: 2px solid #262626;
+	border-radius: var(--radius-8);
+	background-image: url(../images/planet.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	min-height: 450px;
+}
 .swiper-horizontal {
-	height: 350px;
+	height: 450px;
 	width: auto;
 }
 .swiper-pagination-bullet {
-	background-color: var(--han-purple);
+	background-color: #303030;
+}
+.swiper-wrapper {
+	display: flex;
+	align-items: center;
 }
 
 .swiper-slide {
@@ -894,23 +906,18 @@ swiper-slide:nth-child(4) {
 	justify-content: space-between;
 	align-items: center;
 	display: center;
-	padding: 1rem;
-	min-width: 200px;
-	height: 275px;
+	padding: 2rem 1rem;
+	max-height: 275px;
 	max-width: 200px;
+	min-width: 250px;
 	margin-block: 1rem;
 	color: white;
-	background-color: var(--eerie-black-1);
-	border: 2px solid #262626;
+	border: 3px solid #262626;
 	border-radius: var(--radius-8);
 	cursor: grab;
-}
-.swiper-slide-theme {
-	background-color: #29034c;
-	border: 2px solid rebeccapurple;
-}
-.swiper-slide:hover {
-	border: 2px solid white;
+	backdrop-filter: blur(10px);
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.2);
 }
 
 .swiper-slide img {
@@ -920,7 +927,7 @@ swiper-slide:nth-child(4) {
 	object-fit: cover;
 }
 .header-card {
-	font-size: 1.5rem;
+	font-size: 1.75rem;
 	font-weight: 500;
 }
 
@@ -940,7 +947,6 @@ swiper-slide:nth-child(4) {
 }
 
 .btn-card {
-	border: 1px solid #262626;
 	padding: 8px 16px;
 	width: 140px;
 	border-radius: var(--radius-8);
@@ -951,11 +957,11 @@ swiper-slide:nth-child(4) {
 	font-weight: 600;
 	font-size: 1.25rem;
 	background-color: rgba(255, 255, 255, 0.1);
+	border: 2px solid #262626;
 }
 
 .btn-card:hover {
-	border: 1px solid #e0e0e0;
-	background-color: rgba(255, 255, 255, 0.1);
+	border: 2px solid #e0e0e0;
 }
 
 /*-----------------------------------*\
@@ -977,21 +983,21 @@ swiper-slide:nth-child(4) {
 .faq-theme {
 	background-color: #1a1335;
 }
-.figure-rocket {
-	width: 35%;
+.faq-container-img {
+	width: 49%;
 	display: grid;
 	place-items: center;
-	min-width: 300px;
+	transform: rotate(10deg);
 }
-.figure-rocket video {
-	filter: drop-shadow(1em 1em 20rem rebeccapurple);
+.faq-container-img > img {
+	max-width: 40%;
+	filter: drop-shadow(0em 0em 25rem #e0e0e0);
 	width: 100%;
 	display: flex;
 	align-items: flex-start;
 }
 .faq-container {
 	width: 49%;
-	min-width: 300px;
 }
 
 details {
@@ -1033,7 +1039,6 @@ details[open] p {
   \*-----------------------------------*/
 
 .footer-container {
-	background-image: url("../images/footer-bg.png");
 	background-repeat: no-repeat;
 	background-size: contain;
 	z-index: 1;
@@ -1261,28 +1266,15 @@ details[open] p {
 	min-width: 300px;
 	border: transparent 2px solid;
 }
-.back-to-top {
+
+#animation-container {
 	display: none;
-	place-items: center;
 	position: fixed;
 	bottom: 1rem;
 	right: 1rem;
 	z-index: 10;
-	border-radius: 8px;
-	border: 2px solid #303030;
-	backdrop-filter: saturate(180%) blur(20px);
-	padding: 0.35rem;
 	cursor: pointer;
-}
-.back-to-top > i {
-	font-size: 2rem;
-	color: #303030;
-}
-.back-to-top:hover {
-	border: 2px solid #4834d4;
-}
-.back-to-top:hover > i {
-	color: #4834d4;
+	max-width: 20px;
 }
 
 /*-----------------------------------*\

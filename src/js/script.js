@@ -232,21 +232,3 @@ cardExploreElements.forEach((cardExplore) => {
 	});
 });
 
-const backToTop = document.querySelector(".back-to-top");
-
-window.addEventListener("scroll", function () {
-	if (window.scrollY > 100) {
-		backToTop.style.position = "fixed";
-		backToTop.style.display = "grid";
-	} else {
-		backToTop.style.position = "static";
-		backToTop.style.display = "none";
-	}
-});
-
-backToTop.addEventListener("click", function () {
-	window.scrollTo({
-		top: 0.0,
-		behavior: "smooth",
-	});
-});
