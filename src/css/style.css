@@ -984,17 +984,35 @@ swiper-slide:nth-child(4) {
 	background-color: #1a1335;
 }
 .faq-container-img {
+	height: 100%;
 	width: 49%;
 	display: grid;
 	place-items: center;
+	filter: drop-shadow(0 0 15rem rebeccapurple);
+}
+.faq-container-img > img:first-child {
 	transform: rotate(10deg);
+	max-width: 30%;
+	display: flex;
+	align-items: flex-end;
+	border-radius: 8px;
+	height: 100%;
 }
 .faq-container-img > img {
-	max-width: 40%;
-	filter: drop-shadow(0em 0em 25rem #e0e0e0);
-	width: 100%;
+	max-width: 20%;
 	display: flex;
-	align-items: flex-start;
+	align-items: flex-end;
+	border-radius: 8px;
+	height: 100%;
+}
+
+.faq-container-img > img:last-child {
+	transform: rotate(-10deg);
+	max-width: 10%;
+	display: flex;
+	align-items: flex-end;
+	border-radius: 8px;
+	height: 100%;
 }
 .faq-container {
 	width: 49%;
