@@ -86,7 +86,7 @@ themeBtn.addEventListener("click", function () {
 			allCardTheme2.forEach((card) => {
 				card.classList.toggle("swiper-slide-theme");
 			});
-			messageForm.classList.toggle("message-theme");
+			messageForm.classList.toggle("message-form-theme");
 			nameInput.classList.toggle("message-theme");
 			emailInput.classList.toggle("message-theme");
 			messageInput.classList.toggle("message-theme");
@@ -94,6 +94,7 @@ themeBtn.addEventListener("click", function () {
 			labels.forEach((label) => {
 				label.classList.add("message-theme");
 			});
+
 			nameInput.classList.toggle("message-input-theme");
 			emailInput.classList.toggle("name-input-theme");
 			messageInput.classList.toggle("email-input-theme");
@@ -117,7 +118,7 @@ themeBtn.addEventListener("click", function () {
 			allCardTheme2.forEach((card) => {
 				card.classList.toggle("swiper-slide-theme");
 			});
-			messageForm.classList.toggle("message-theme");
+			messageForm.classList.toggle("message-form-theme");
 			nameInput.classList.toggle("message-theme");
 			emailInput.classList.toggle("message-theme");
 			messageInput.classList.toggle("message-theme");
@@ -231,4 +232,3 @@ cardExploreElements.forEach((cardExplore) => {
 		}
 	});
 });
-

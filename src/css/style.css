@@ -697,6 +697,7 @@ body {
 	margin-bottom: 1rem;
 	background-color: #262626;
 	color: white;
+	transition: all 0.2s;
 }
 .background-active {
 	border: 2px solid rebeccapurple;
@@ -724,7 +725,7 @@ body {
 .background-four:hover {
 	filter: brightness(110%);
 	transform: scale(1.05) rotate(1.5deg);
-	transition: all 0.3s;
+
 	background-color: #262626;
 	color: white;
 	border-bottom: 2px solid var(--han-purple);
@@ -900,23 +901,23 @@ swiper-slide:nth-child(4) {
 }
 
 .swiper-slide {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 1rem;
-    max-height: 275px;
-    max-width: 200px;
-    min-width: 250px;
-    margin-block: 1rem;
-    color: #fff;
-    border: 3px solid #262626;
-    border-radius: var(--radius-8);
-    cursor: grab;
-    backdrop-filter: blur(10px);
-    position: relative;
-    background-color: #0003;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 1rem;
+	max-height: 275px;
+	max-width: 200px;
+	min-width: 250px;
+	margin-block: 1rem;
+	color: #fff;
+	border: 3px solid #262626;
+	border-radius: var(--radius-8);
+	cursor: grab;
+	backdrop-filter: blur(10px);
+	position: relative;
+	background-color: #0003;
 }
 
 .swiper-slide img {
@@ -1183,15 +1184,13 @@ details[open] p {
 
 .label {
 	color: #fff;
-	padding: 1%;
+	padding: 1% 0 0 1%;
 }
 .send-message-legend {
 	color: #fff;
 	text-align: center;
-	font-size: 1.25rem;
-	border: 1px solid #262626;
-	border-radius: 8px;
-	padding: 0.5%;
+	font-size: 1.75rem;
+	font-weight: bold;
 }
 
 .name-input,
@@ -1200,7 +1199,7 @@ details[open] p {
 	justify-content: center;
 	align-items: center;
 	background-color: var(--eerie-black-1);
-	border: 1px solid #262626;
+	border: 2px solid #262626;
 	color: #fff;
 	padding: 1.75rem;
 	font-size: 1.25rem 1rem;
@@ -1218,17 +1217,22 @@ details[open] p {
 	overflow-y: scroll;
 	word-wrap: break-word;
 	background-color: var(--eerie-black-1);
-	display: inline-block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
-	border: #262626 1px solid;
+	border: #262626 2px solid;
 	border-radius: 8px;
 }
 
-.send-message-legend-theme,
+.send-message-legend-theme {
+	background-color: #29034c;
+}
 .message-input-theme,
 .name-input-theme,
 .email-input-theme {
-	border: 1px solid rebeccapurple;
+	border: 2px solid rebeccapurple;
+	background-color: #29034c;
 }
 
 .name-input:focus,
@@ -1267,9 +1271,10 @@ details[open] p {
 	border: 1px solid #4834d4;
 	background-color: rgba(98, 72, 255, 0.1);
 }
-.message-theme {
+.message-form-theme {
 	background: #29034c;
 	color: white;
+	border: 2px solid rebeccapurple;
 }
 .message-theme:focus {
 	outline: #007aff 1px solid;
