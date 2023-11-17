@@ -253,9 +253,14 @@ body {
 	height: 100%;
 	width: 100%;
 	background-color: #0c0e10;
+	background-image: url("../images/stars.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 .light-theme {
-	background-color: #1a1335;
+	/* background-color: #1a1335 ; */
+	background-color: #29034c;
 }
 
 .btn-link {
@@ -374,12 +379,13 @@ body {
 }
 .hero-title > h2 {
 	padding-top: 1rem;
-	font-size: 5rem;
-	font-weight: 600;
+	font-size: 6rem;
+	font-weight: 800;
+	line-height: 1;
 }
 
 .title-dev {
-	font-size: 7rem;
+	font-size: 8rem;
 	font-weight: 800;
 	filter: drop-shadow(0 0 0.5rem #0c0e10);
 }
@@ -848,28 +854,28 @@ border: 8px solid #f9bc60;
  */
 swiper-slide:nth-child(1) {
 	border-bottom: 3rem solid #5fd3fa;
-	background-image: url("/src/images/sandri-linkedinCard.jpg");
+	background-image: url("/src/images/linkedinCard-sandri.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 swiper-slide:nth-child(2) {
 	border-bottom: 3rem solid #bebee5;
-	background-image: url("/src/images/vicent-linkedinCard.jpg");
+	background-image: url("/src/images/linkedinCard-vicent.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 swiper-slide:nth-child(3) {
 	border-bottom: 3rem solid #05b7b9;
-	background-image: url(/src/images/none-linkedinCard.jpg);
+	background-image: url("/src/images/linkedinCard-dani.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 swiper-slide:nth-child(4) {
 	border-bottom: 3rem solid #f9bc60;
-	background-image: url(/src/images/none-linkedinCard.jpg);
+	background-image: url("/src/images/linkedinCard-none.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -900,31 +906,21 @@ swiper-slide:nth-child(4) {
 	align-items: center;
 }
 
-.swiper-slide {
-	text-align: center;
+div > .swiper-slide {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: space-between;
+	text-align: center;
 	padding: 2rem 1rem;
-	max-height: 275px;
+	max-height: 300px;
 	max-width: 200px;
-	min-width: 250px;
-	margin-block: 1rem;
-	color: #fff;
 	border: 3px solid #262626;
 	border-radius: var(--radius-8);
 	cursor: grab;
 	backdrop-filter: blur(10px);
-	position: relative;
 	background-color: #0003;
-}
-
-.swiper-slide img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+	position: relative;
 }
 .header-card {
 	font-size: 1.75rem;
@@ -936,7 +932,7 @@ swiper-slide:nth-child(4) {
 	font-size: 1.75rem;
 	border-bottom: #262626 1px solid;
 	border-top: #262626 1px solid;
-	padding: 1rem 0;
+	padding: 2rem 0;
 	width: 100%;
 }
 
@@ -948,7 +944,6 @@ swiper-slide:nth-child(4) {
 
 .btn-card {
 	padding: 8px 16px;
-	width: 140px;
 	border-radius: var(--radius-8);
 	display: flex;
 	justify-content: center;
@@ -958,6 +953,7 @@ swiper-slide:nth-child(4) {
 	font-size: 1.25rem;
 	background-color: rgba(255, 255, 255, 0.1);
 	border: 2px solid #262626;
+	width: 90%;
 }
 
 .btn-card:hover {
@@ -981,7 +977,7 @@ swiper-slide:nth-child(4) {
 }
 
 .faq-theme {
-	background-color: #1a1335;
+	background-color: #29034c;
 }
 .faq-container-img {
 	height: 100%;
@@ -1057,8 +1053,6 @@ details[open] p {
   \*-----------------------------------*/
 
 .footer-container {
-	background-repeat: no-repeat;
-	background-size: contain;
 	z-index: 1;
 	display: flex;
 	justify-content: center;
