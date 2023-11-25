@@ -253,14 +253,13 @@ body {
 	height: 100%;
 	width: 100%;
 	background-color: #0c0e10;
-	background-image: url("../images/stars.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
+
 .light-theme {
-	/* background-color: #1a1335 ; */
-	background-color: #29034c;
+	background-color: #3b2e58;
 }
 
 .btn-link {
@@ -292,23 +291,41 @@ body {
 /*-----------------------------------*\
     #HEADER
   \*-----------------------------------*/
+#progress {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 0%;
+	background: var(--gradient-1);
+	height: 0.5em;
+	animation: progress-grow auto linear;
+	animation-timeline: scroll(root block);
+}
+
+@keyframes progress-grow {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
+}
 .header-container {
-	background-color: transparent;
 	width: 96%;
+	background-color: transparent !important;
 }
 
 .header {
-	width: 80%;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	z-index: 4;
 	position: fixed;
-	right: 10%;
-	top: 1%;
+	top: 0;
 	backdrop-filter: saturate(180%) blur(20px);
 	height: 4em;
-	border-radius: 100px;
+	padding: 0;
 }
 
 .menu-open-btn {
@@ -326,7 +343,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 100%;
+	background-color: none !important;
 }
 
 .navbar-link {
@@ -362,12 +379,12 @@ body {
 	align-items: center;
 	height: 100vh;
 	width: 100%;
+	/* background-image: url("../images/stars.jpg"); */
 }
 
 .rocket {
-	max-width: 80%;
-	transform: translate(-10%, -10%);
-	filter: drop-shadow(-4em 5em 20rem rebeccapurple);
+	max-width: 50%;
+	filter: drop-shadow(-7em 8em 15rem #303030);
 }
 .hero-title {
 	font-size: 1.75rem;
@@ -977,14 +994,14 @@ div > .swiper-slide {
 }
 
 .faq-theme {
-	background-color: #29034c;
+	background-color: #3b2e58;
 }
 .faq-container-img {
 	height: 100%;
-	width: 49%;
+	width: 39%;
 	display: grid;
 	place-items: center;
-	filter: drop-shadow(0 0 15rem rebeccapurple);
+	filter: drop-shadow(0 0 1rem rebeccapurple) brightness(150%);
 }
 .faq-container-img > img:first-child {
 	transform: rotate(10deg);
@@ -1011,7 +1028,7 @@ div > .swiper-slide {
 	height: 100%;
 }
 .faq-container {
-	width: 49%;
+	width: 59%;
 }
 
 details {

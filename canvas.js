@@ -2,21 +2,35 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import gsap from "gsap";
 
+// Theme Button
+const themeBtn = document.querySelector(".theme-switch__checkbox");
+
 // Scene
 const scene = new THREE.Scene();
 
 // Fondo
-const backgroundTexture = new THREE.TextureLoader().load(
-	"./src/images/stars.jpg"
-);
-scene.background = backgroundTexture;
+const background2 = new THREE.Color("#3b2e58");
+const background = new THREE.Color("#0c0e10");
+
+// Función para cambiar el fondo de la escena
+function changeBackground() {
+    scene.background = themeBtn.checked ? background : background2;
+}
+
+// Llamar a la función para establecer el fondo inicial
+changeBackground();
+
+// Agregar un escuchador de eventos al botón
+themeBtn.addEventListener("click", changeBackground);
+
+// create a background texture
 
 // Create our sphere
 const geometry = new THREE.SphereGeometry(5, 64, 64);
 geometry.scale(1, 1, 1);
 
 const material = new THREE.MeshStandardMaterial({
-	color: " #e3e3d0",
+	color: "#e3e3d0",
 	roughness: 0.5,
 	side: THREE.DoubleSide,
 	castShadow: true,
@@ -25,9 +39,19 @@ const material = new THREE.MeshStandardMaterial({
 
 // Load earth texture
 const textureLoader = new THREE.TextureLoader();
-const earthTexture = textureLoader.load("./src/images/moon.jpg");
+const textureMoon = textureLoader.load("./src/images/moon.jpg");
+const textureSun = textureLoader.load("./src/images/jupiter.jpg");
+material.map = textureMoon;
 
-material.map = earthTexture;
+// Theme color
+
+themeBtn.addEventListener("click", function () {
+	if (!this.checked) {
+		material.map = textureSun;
+	} else {
+		material.map = textureMoon;
+	}
+});
 
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
@@ -40,14 +64,14 @@ const sizes = {
 
 // Light
 const light = new THREE.PointLight(0xffffff, 1, 1000);
-light.position.set(10, 25, 45);
-light.intensity = 1;
+light.position.set(-25, 10, 50);
+light.intensity = 1.5;
 light.castShadow = true;
 scene.add(light);
 
 // Camera
 const camera = new THREE.PerspectiveCamera(
-	35,
+	40,
 	sizes.width / sizes.height,
 	0.1,
 	100
@@ -59,7 +83,7 @@ scene.add(camera);
 const canvas = document.querySelector(".webgl");
 const renderer = new THREE.WebGLRenderer({ canvas });
 renderer.setSize(sizes.width, sizes.height);
-renderer.setPixelRatio(1);
+renderer.setPixelRatio(7);
 
 // Habilitar sombras en el renderer
 renderer.shadowMap.enabled = true;
@@ -67,17 +91,6 @@ renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
 renderer.render(scene, camera);
 renderer.setClearColor("#0c0e10");
-
-// Theme color
-const themeBtn = document.querySelector(".theme-switch__checkbox");
-
-themeBtn.addEventListener("click", function () {
-	if (!this.checked) {
-		renderer.setClearColor("#29034c");
-	} else {
-		renderer.setClearColor("#0c0e10");
-	}
-});
 
 // Controls
 const controls = new OrbitControls(camera, canvas);
