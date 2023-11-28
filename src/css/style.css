@@ -253,6 +253,7 @@ body {
 	height: 100%;
 	width: 100%;
 	background-color: #0c0e10;
+	background-image: url("../images/stars2.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -260,6 +261,7 @@ body {
 
 .light-theme {
 	background-color: #3b2e58;
+	background-image: none;
 }
 
 .btn-link {
@@ -377,34 +379,71 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 100vh;
 	width: 100%;
-	/* background-image: url("../images/stars.jpg"); */
+	height: 100vh;
+	background-color: #0c0e10;
+	background-image: url("../images/lost.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	transition: all 0.3s ease-in-out;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%; /* Inicia el degradado desde la mitad hacia abajo */
+		left: 0;
+		width: 100%;
+		height: 50%; /* La mitad inferior */
+		background: linear-gradient(to bottom, rgba(12, 14, 16, 0), black);
+		/* Degradado transparente a fondo de color */
+		pointer-events: none;
+	}
+}
+.light-theme-header {
+	background-image: url("../images/planetDay.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%; /* Inicia el degradado desde la mitad hacia abajo */
+		left: 0;
+		width: 100%;
+		height: 50%; /* La mitad inferior */
+		background: linear-gradient(to bottom, rgba(12, 14, 16, 0), #3b2e58);
+		/* Degradado transparente a fondo de color */
+		pointer-events: none;
+	}
+}
+/* #3b2e58 */
+.hero-title h1 {
+	background-image: var(--gradient-1);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
-.rocket {
-	max-width: 50%;
-	filter: drop-shadow(-7em 8em 15rem #303030);
-}
-.hero-title {
-	font-size: 1.75rem;
-	padding-top: 15%;
-	font-weight: 400;
-}
-.hero-title > h4 {
-	padding-top: 2rem;
-}
-.hero-title > h2 {
-	padding-top: 1rem;
-	font-size: 6rem;
+.hero-title > h1 {
 	font-weight: 800;
+	padding-bottom: 1rem;
+	font-size: 3.5rem;
+	letter-spacing: 0.75px;
 	line-height: 1;
 }
-
-.title-dev {
-	font-size: 8rem;
-	font-weight: 800;
-	filter: drop-shadow(0 0 0.5rem #0c0e10);
+.hero-title > h2 {
+	font-weight: 600;
+	font-size: 1.75rem;
+	letter-spacing: 4.5px;
+	line-height: 1;
+}
+.containerHero2 {
+	z-index: 2;
+	position: absolute;
+	bottom: 5rem;
+	text-align: center;
+	max-width: 100%;
 }
 
 .btn-group {
@@ -413,29 +452,20 @@ body {
 	align-items: center;
 	gap: 1rem;
 }
-
+/* 
 .webgl {
 	z-index: 1;
 	max-width: 100%;
 	background-color: #0c0e10;
 	width: 100vw;
 	height: 100vh;
-}
+} */
 
-.containerHero1 {
+/* .containerHero1 {
 	z-index: 2;
-	position: absolute;
+	position: relative;
 	text-align: center;
-}
-
-.containerHero2 {
-	padding-top: 5rem;
-	z-index: 2;
-	position: absolute;
-	top: 75%;
-	text-align: center;
-	max-width: 100%;
-}
+} */
 
 /*-----------------------------------*\
     #PROJECTS
@@ -989,12 +1019,16 @@ div > .swiper-slide {
 .article-faq {
 	display: flex;
 	justify-content: space-between;
-	align-items: start;
+	align-items: center;
 	flex-wrap: wrap;
 }
 
 .faq-theme {
+	background-image: none;
 	background-color: #3b2e58;
+}
+.faq-container{
+	width: 59%;
 }
 .faq-container-img {
 	height: 100%;
@@ -1003,32 +1037,11 @@ div > .swiper-slide {
 	place-items: center;
 	filter: drop-shadow(0 0 1rem rebeccapurple) brightness(150%);
 }
-.faq-container-img > img:first-child {
-	transform: rotate(10deg);
-	max-width: 30%;
-	display: flex;
-	align-items: flex-end;
+.faq-container-img > img:first-child,
+.faq-container-img > p{
+	transform: rotate(15deg);
+	max-width: 35%;	
 	border-radius: 8px;
-	height: 100%;
-}
-.faq-container-img > img {
-	max-width: 20%;
-	display: flex;
-	align-items: flex-end;
-	border-radius: 8px;
-	height: 100%;
-}
-
-.faq-container-img > img:last-child {
-	transform: rotate(-10deg);
-	max-width: 10%;
-	display: flex;
-	align-items: flex-end;
-	border-radius: 8px;
-	height: 100%;
-}
-.faq-container {
-	width: 59%;
 }
 
 details {
@@ -1378,19 +1391,6 @@ details[open] p {
 @media (max-width: 1200px) {
 	.btn-group {
 		padding-block: 0rem;
-	}
-	.hero-title {
-		padding-top: 15%;
-		line-height: 4rem;
-	}
-	.hero-title > h2 {
-		font-size: 3rem;
-	}
-	.title-dev {
-		font-size: 5rem;
-	}
-	.btn-group > h4 > code {
-		padding-bottom: 3rem;
 	}
 	.navbar-link {
 		justify-content: center;

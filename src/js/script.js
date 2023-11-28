@@ -59,7 +59,8 @@ botonEnviar.addEventListener("click", function () {
 // change color theme
 const navbarList = document.querySelector(".navbar-list");
 const themeBtn = document.querySelector(".theme-switch__checkbox");
-const canvas = document.querySelector(".webgl");
+// const canvas = document.querySelector(".webgl");
+const hero = document.querySelector(".hero");
 
 const allCardTheme = document.querySelectorAll(".card");
 const allCardTheme2 = document.querySelectorAll(".swiper-slide");
@@ -91,6 +92,7 @@ themeBtn.addEventListener("click", function () {
 			emailInput.classList.toggle("message-theme");
 			messageInput.classList.toggle("message-theme");
 			legend.classList.add("message-theme");
+			hero.classList.add("light-theme-header");
 			labels.forEach((label) => {
 				label.classList.add("message-theme");
 			});
@@ -123,6 +125,7 @@ themeBtn.addEventListener("click", function () {
 			emailInput.classList.toggle("message-theme");
 			messageInput.classList.toggle("message-theme");
 			legend.classList.remove("message-theme");
+			hero.classList.toggle("light-theme-header");
 			labels.forEach((label) => {
 				label.classList.remove("message-theme");
 			});
