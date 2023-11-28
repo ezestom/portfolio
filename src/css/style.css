@@ -1027,7 +1027,7 @@ div > .swiper-slide {
 	background-image: none;
 	background-color: #3b2e58;
 }
-.faq-container{
+.faq-container {
 	width: 59%;
 }
 .faq-container-img {
@@ -1038,9 +1038,9 @@ div > .swiper-slide {
 	filter: drop-shadow(0 0 1rem rebeccapurple) brightness(150%);
 }
 .faq-container-img > img:first-child,
-.faq-container-img > p{
+.faq-container-img > p {
 	transform: rotate(15deg);
-	max-width: 35%;	
+	max-width: 35%;
 	border-radius: 8px;
 }
 
