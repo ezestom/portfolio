@@ -260,8 +260,11 @@ body {
 }
 
 .light-theme {
-	background-color: #3b2e58;
-	background-image: none;
+	/* background-color: #3b2e58; */
+	background-image: url("../images/background.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 .btn-link {
@@ -314,6 +317,7 @@ body {
 }
 .header-container {
 	width: 96%;
+	background-image: none !important;
 	background-color: transparent !important;
 }
 
