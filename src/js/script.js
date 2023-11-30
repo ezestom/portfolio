@@ -38,7 +38,7 @@ window.addEventListener("load", function () {
 			hideNavbar();
 		} else if (!check.checked) {
 			main.style.filter = "none";
-			navbar.style.top = "-500%";
+			navbar.style.top = "-1000%";
 			footer.style.filter = "none";
 			faq.style.filter = "none";
 
