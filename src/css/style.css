@@ -498,8 +498,8 @@ body {
 
 .grid-list {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-	gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+	gap: 5rem;
 	width: 100%;
 }
 
@@ -512,6 +512,7 @@ body {
 	padding-bottom: 1rem;
 	min-width: 140px;
 	z-index: 2;
+	padding: 0.5rem;
 	will-change: filter;
 	transition: filter 300ms;
 }
@@ -533,8 +534,8 @@ body {
 }
 
 .card-title {
-	padding-top: 0.5rem;
-	font-size: 1.75rem;
+	padding-top: 2rem;
+	font-size: 2.25rem;
 	font-weight: 600;
 	text-align: center;
 }
@@ -563,7 +564,7 @@ body {
 .wrapper {
 	font-size: 1.15rem;
 	text-align: center;
-	padding-top: 0.5rem;
+	padding: 1rem 0;
 }
 .wrapper-item {
 	opacity: 0.4;
@@ -592,7 +593,7 @@ body {
 .btn-box-active {
 	display: flex;
 	padding: 0.5rem 0 1rem 0;
-	width: 375px;
+	width: 400px;
 	background-color: var(--eerie-black-1);
 	border-radius: 0 0 8px 8px;
 	border-right: 4px solid #262626;
@@ -612,21 +613,21 @@ body {
 .card-title-active {
 	font-size: 2rem;
 	background-color: var(--eerie-black-1);
-	width: 375px;
+	width: 400px;
 	border-right: 3px solid #262626;
 	border-left: 3px solid #262626;
 }
 .card-author-active {
 	font-size: 1.5rem;
 	background-color: var(--eerie-black-1);
-	width: 375px;
+	width: 400px;
 	border-right: 3px solid #262626;
 	border-left: 3px solid #262626;
 }
 .wrapper-active {
 	font-size: 1.5rem;
 	background-color: var(--eerie-black-1);
-	width: 375px;
+	width: 400px;
 	border-left: 3px solid #262626;
 	border-right: 3px solid #262626;
 }
@@ -641,13 +642,13 @@ body {
 	background-color: rgba(98, 72, 255, 0.1);
 }
 .img-cover-active {
-	max-width: 375px;
-	border-left: 3px solid #262626;
-	border-right: 3px solid #262626;
+	max-width: 400px;
+	border-left: 0.5rem solid #262626;
+	border-right: 0.5rem solid #262626;
 }
 .card-theme {
 	background-color: #f1f6f5;
-	border: 3px solid #262626;
+	border: 0.5rem solid #262626;
 }
 .ri-close-line-active {
 	display: block;
@@ -655,10 +656,10 @@ body {
 	font-size: 3rem;
 	cursor: pointer;
 	background-color: var(--eerie-black-1);
-	width: 375px;
+	width: 400px;
 	border-radius: 8px 8px 0 0;
 	text-align: center;
-	border: 3px solid #262626;
+	border: 0.5rem solid #262626;
 	border-bottom: none;
 }
 .ri-close-line:hover {
@@ -1434,8 +1435,8 @@ details[open] p {
 	}
 	.grid-list {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(125px, 2fr));
-		gap: 2rem;
+		grid-template-columns: repeat(auto-fit, minmax(175px, 2fr));
+		gap: 1rem;
 	}
 	.content-footer {
 		justify-content: center;
