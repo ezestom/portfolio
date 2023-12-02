@@ -338,7 +338,7 @@ body {
 	margin: auto;
 	background-color: rgba(0, 0, 0, 0.3);
 	backdrop-filter: saturate(180%) blur(20px);
-
+	/* header scroll animation  with css  */
 	animation: enhance-header linear both;
 	animation-timeline: scroll(root);
 	animation-range: 0 400px;
@@ -477,20 +477,6 @@ body {
 	align-items: center;
 	gap: 1rem;
 }
-/* 
-.webgl {
-	z-index: 1;
-	max-width: 100%;
-	background-color: #0c0e10;
-	width: 100vw;
-	height: 100vh;
-} */
-
-/* .containerHero1 {
-	z-index: 2;
-	position: relative;
-	text-align: center;
-} */
 
 /*-----------------------------------*\
     #PROJECTS
@@ -501,6 +487,18 @@ body {
 	grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
 	gap: 5rem;
 	width: 100%;
+}
+/* animatin cards explore  */
+@keyframes reveal {
+	from {
+		opacity: 0;
+		transform: scale(0.9) translate(0, 100px);
+		translate: 0 50px;
+	}
+	to {
+		opacity: 1;
+		transform: scale(1) translate(0, 0);
+	}
 }
 
 .explore-card {
@@ -515,6 +513,10 @@ body {
 	padding: 0.5rem;
 	will-change: filter;
 	transition: filter 300ms;
+	/* animation super midu */
+	animation: reveal linear both;
+	animation-timeline: view();
+	animation-range: entry 20% cover 40%;
 }
 .explore-card-theme {
 	background-color: #29034c;
@@ -582,7 +584,6 @@ body {
 	color: #4834d4;
 }
 /* active card explore */
-
 .btn-box {
 	display: none;
 	justify-content: center;
@@ -683,6 +684,7 @@ body {
 	backdrop-filter: blur(2px);
 }
 
+/* animation click projects cards */
 .blur-in {
 	animation: blur-in 0s linear both;
 }
@@ -707,11 +709,6 @@ body {
 		filter: blur(5px);
 		opacity: 25;
 	}
-}
-.card-explore-active-theme {
-	background-color: #f1f6f5;
-	border: 4px solid #f1f6f5;
-	color: black;
 }
 
 /*-----------------------------------*\
@@ -777,6 +774,10 @@ body {
 	background-color: #262626;
 	color: white;
 	transition: all 0.2s;
+	/* animation super midu */
+	animation: reveal linear both;
+	animation-timeline: view();
+	animation-range: entry 20% cover 30%;
 }
 .background-active {
 	border: 2px solid rebeccapurple;
@@ -798,56 +799,32 @@ body {
 	font-weight: 400;
 	/* text-wrap: balance; */
 }
-
-.background-cero:hover,
-.background-two:hover,
-.background-four:hover {
-	filter: brightness(110%);
-	transform: scale(1.05) rotate(1.5deg);
-
-	background-color: #262626;
-	color: white;
-	border-bottom: 2px solid var(--han-purple);
-}
-.background-one:hover,
-.background-three:hover,
-.background-five:hover {
-	filter: brightness(110%);
-	transform: scale(1.05) rotate(-1.5deg);
-	transition: all 0.3s;
-	background-color: #262626;
-	color: white;
-	border-bottom: 2px solid var(--han-purple);
+.background:hover {
+	color: #303030;
 }
 
 .background-cero:hover {
 	background-color: #05b7b9;
-	color: #242424;
 }
 
 .background-one:hover {
 	background-color: #eebbc3;
-	color: #242424;
 }
 
 .background-two:hover {
 	background-color: #fbdd74;
-	color: #242424;
 }
 
 .background-three:hover {
 	background-color: #b8c1ec;
-	color: #242424;
 }
 
 .background-four:hover {
 	background-color: #c3f0ca;
-	color: #242424;
 }
 
 .background-five:hover {
 	background-color: #5fd3fa;
-	color: #242424;
 }
 
 /*-----------------------------------*\
@@ -868,6 +845,9 @@ body {
 	align-items: center;
 	min-height: 450px;
 	z-index: 0;
+	animation: reveal linear both;
+	animation-timeline: view();
+	animation-range: entry 20% cover 30%;
 }
 swiper-container {
 	width: 100%;
@@ -966,6 +946,9 @@ swiper-slide:nth-child(4) {
 	background-position: center;
 	background-size: cover;
 	min-height: 450px;
+	animation: reveal linear both;
+	animation-timeline: view();
+	animation-range: entry 20% cover 30%;
 }
 .swiper-horizontal {
 	height: 450px;
@@ -1074,6 +1057,9 @@ details {
 	border-radius: 8px 8px 0 0;
 	margin-bottom: 1rem;
 	font-size: 1.75rem;
+	animation: reveal linear both;
+	animation-timeline: view();
+	animation-range: entry 20% cover 30%;
 }
 
 details summary {
@@ -1126,6 +1112,9 @@ details[open] p {
 	width: 100%;
 	padding: 2% 0;
 	flex-wrap: wrap;
+	animation: reveal linear both;
+	animation-timeline: view();
+	animation-range: entry 20% cover 30%;
 }
 
 .social-list {
