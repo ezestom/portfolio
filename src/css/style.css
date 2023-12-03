@@ -1050,6 +1050,8 @@ div > .swiper-slide {
 	transform: rotate(15deg);
 	max-width: 35%;
 	border-radius: 8px;
+	max-height: 40vh;
+	-webkit-box-reflect: below -2px linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2));
 }
 
 details {
