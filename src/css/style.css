@@ -843,7 +843,7 @@ body {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	min-height: 450px;
+	min-height: 500px;
 	z-index: 0;
 	animation: reveal linear both;
 	animation-timeline: view();
@@ -945,7 +945,7 @@ swiper-slide:nth-child(4) {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	min-height: 450px;
+	min-height: 500px;
 	animation: reveal linear both;
 	animation-timeline: view();
 	animation-range: entry 20% cover 30%;
@@ -1110,13 +1110,14 @@ details[open] p {
 .content-footer {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	width: 100%;
 	padding: 2% 0;
 	flex-wrap: wrap;
 	animation: reveal linear both;
 	animation-timeline: view();
 	animation-range: entry 20% cover 30%;
+	min-height: 700px;
 }
 
 .social-list {
@@ -1197,7 +1198,6 @@ details[open] p {
 	transform: scale(1.04);
 	color: #f2eb0f;
 	transition: all 0.2s;
-
 	border: 2px solid #f2eb0f;
 }
 
@@ -1205,13 +1205,14 @@ details[open] p {
 	background-color: var(--eerie-black-1);
 	border: 2px solid #262626;
 	border-radius: 8px;
-	width: 49%;
-	height: 325px;
+	width: 40%;
+	height: 400px;
 	display: flex;
 	flex-direction: column;
 	padding: 1%;
 	font-size: 1.25rem;
 	min-width: 300px;
+	align-self: flex-start;
 }
 
 .send-message {
@@ -1318,12 +1319,13 @@ details[open] p {
 }
 
 #map {
-	height: 325px;
-	width: 49%;
+	height: 400px;
+	width: 40%;
 	z-index: 0;
 	border-radius: 8px;
 	min-width: 300px;
 	border: transparent 2px solid;
+	align-self: flex-end;
 }
 
 #animation-container {
