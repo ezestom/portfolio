@@ -222,7 +222,7 @@ body {
 
 .section-subtitle {
 	padding-top: 8%;
-	font-size: 4rem;
+	font-size: 6rem;
 	background-image: var(--gradient-1);
 	background-clip: text;
 	-webkit-background-clip: text;
@@ -230,6 +230,7 @@ body {
 	font-weight: 600;
 	border-bottom: 3px double rebeccapurple;
 	background-color: #0c0e10;
+	overflow-x: hidden;
 }
 
 .title {
