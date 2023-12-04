@@ -469,7 +469,7 @@ body {
 .containerHero2 {
 	z-index: 2;
 	position: absolute;
-	bottom: 3rem;
+	bottom: 5rem;
 	text-align: center;
 	max-width: 100%;
 }
@@ -1406,7 +1406,7 @@ details[open] p {
 		backdrop-filter: saturate(180%) blur(20px);
 		border-bottom: 1px solid #0c0e10;
 		position: fixed;
-		top: -450px;
+		top: -550px;
 		width: 100%;
 		height: auto;
 		z-index: 2;
@@ -1445,9 +1445,8 @@ details[open] p {
 }
 
 @media (max-width: 1200px) {
-	.btn-group {
-		padding-block: 0rem;
-	}
+
+	
 	.navbar-link {
 		justify-content: center;
 	}
