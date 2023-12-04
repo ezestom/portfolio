@@ -1,5 +1,7 @@
 let previousTitle = document.title;
 
+// Change title when window is not focused
+
 window.addEventListener("blur", () => {
 	previousTitle = document.title;
 	document.title = "Don't go away, come back!";
@@ -7,6 +9,7 @@ window.addEventListener("blur", () => {
 window.addEventListener("focus", () => {
 	document.title = previousTitle;
 });
+// mobile navbar
 
 window.addEventListener("load", function () {
 	const header = document.querySelector(".header");
@@ -59,11 +62,11 @@ botonEnviar.addEventListener("click", function () {
 // change color theme
 const navbarList = document.querySelector(".navbar-list");
 const themeBtn = document.querySelector(".theme-switch__checkbox");
-// const canvas = document.querySelector(".webgl");
 const hero = document.querySelector(".hero");
 
 const allCardTheme = document.querySelectorAll(".card");
 const allCardTheme2 = document.querySelectorAll(".swiper-slide");
+const youtubeSection = document.querySelector(".youtube-section");
 
 const messageForm = document.querySelector(".message-form");
 const nameInput = document.querySelector(".name-input");
@@ -96,6 +99,7 @@ themeBtn.addEventListener("click", function () {
 			labels.forEach((label) => {
 				label.classList.add("message-theme");
 			});
+			youtubeSection.classList.toggle("youtube-section-light-theme");
 
 			nameInput.classList.toggle("message-input-theme");
 			emailInput.classList.toggle("name-input-theme");
@@ -120,6 +124,7 @@ themeBtn.addEventListener("click", function () {
 			allCardTheme2.forEach((card) => {
 				card.classList.toggle("swiper-slide-theme");
 			});
+			youtubeSection.classList.toggle("youtube-section-light-theme");
 			messageForm.classList.toggle("message-form-theme");
 			nameInput.classList.toggle("message-theme");
 			emailInput.classList.toggle("message-theme");
