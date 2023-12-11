@@ -494,13 +494,9 @@ body {
 /* animatin cards explore  */
 @keyframes reveal {
 	from {
-		opacity: 0;
-		transform: scale(0.9) translate(0, 100px);
-		translate: 0 100px;
-	}
-	to {
-		opacity: 1;
-		transform: scale(1) translate(0, 0);
+		opacity: 0.2;
+		scale: 0.8;
+		translate: 0 10%;
 	}
 }
 
@@ -517,6 +513,7 @@ body {
 	will-change: filter;
 	transition: filter 300ms;
 	/* animation super midu */
+
 	animation: reveal linear both;
 	animation-timeline: view();
 	animation-range: entry 20% cover 40%;
@@ -1056,14 +1053,16 @@ div > .swiper-slide {
 /*-----------------------------------*\
     #FAQ
   \*-----------------------------------*/
+
 .faq {
-	padding: 0 10%;
+	/* padding: 0 10%; */
 	height: 100%;
 	width: 100%;
 }
 
 .article-faq {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
@@ -1074,26 +1073,24 @@ div > .swiper-slide {
 	background-color: #3b2e58;
 }
 .faq-container {
-	width: 59%;
+	width: 60%;
 }
 .faq-container-img {
-	height: 100%;
-	width: 39%;
+	transform: translate(175%, -30%);
 	display: grid;
 	place-items: center;
 	filter: drop-shadow(0 0 1rem rebeccapurple) brightness(150%);
 }
 .faq-container-img > img:first-child {
 	transform: rotate(15deg);
-	max-width: 35%;
+	max-width: 45%;
 	border-radius: 8px;
 	max-height: 40vh;
 	-webkit-box-reflect: below -2px linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2));
 }
 
 details {
-	border: 2px solid #303030;
-	border-radius: 8px 8px 0 0;
+	border-radius: 8px;
 	margin-bottom: 1rem;
 	font-size: 1.75rem;
 	animation: reveal linear both;
@@ -1102,19 +1099,21 @@ details {
 }
 
 details summary {
+	outline: #303030 2px solid;
 	cursor: pointer;
 	padding: 1rem;
 	background-color: var(--eerie-black-1);
-	border-radius: 8px 8px 0 0;
+	border-radius: 8px;
 }
 
 details p {
-	margin: 0;
+	margin-top: 2px;
 	padding: 1rem;
 	display: none;
 	font-size: 1.5rem;
 	backdrop-filter: blur(20px) saturate(180%);
 	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 8px;
 }
 
 details[open] p {
@@ -1325,10 +1324,10 @@ details[open] p {
 	border: 1px solid #262626;
 	border-radius: 8px;
 	color: #fff;
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 	cursor: pointer;
 	font-weight: 600;
-	padding: 0.5% 0;
+	padding: 1.5% 0;
 	margin-top: 2%;
 	display: flex;
 	justify-content: center;
@@ -1445,8 +1444,6 @@ details[open] p {
 }
 
 @media (max-width: 1200px) {
-
-	
 	.navbar-link {
 		justify-content: center;
 	}
