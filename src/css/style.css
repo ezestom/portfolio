@@ -255,9 +255,8 @@ body {
 	width: 100%;
 	background-color: #0c0e10;
 	background-image: url("../images/stars2.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+	background-repeat: repeat;
+	background-position: top;
 }
 
 .light-theme {
@@ -1058,6 +1057,7 @@ div > .swiper-slide {
 	/* padding: 0 10%; */
 	height: 100%;
 	width: 100%;
+	background-size: cover;
 }
 
 .article-faq {
