@@ -18,7 +18,6 @@ window.addEventListener("load", function () {
 	const navbar = document.querySelector(".navbar");
 	const navbarLinks = document.querySelectorAll(".navbar-link");
 	const footer = document.querySelector(".footer");
-	const faq = document.querySelector(".faq");
 
 	function hideNavbar() {
 		navbarLinks.forEach((link) => {
@@ -111,9 +110,6 @@ themeBtn.addEventListener("click", function () {
 				card.classList.toggle("background-active");
 			});
 			faq.classList.toggle("faq-theme");
-			allSummary.forEach((summary) => {
-				summary.classList.toggle("faq-light-theme");
-			});
 		});
 	} else {
 		sectionExplore.forEach((section) => {

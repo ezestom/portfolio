@@ -1055,15 +1055,15 @@ div > .swiper-slide {
 
 .faq {
 	/* padding: 0 10%; */
-	height: 100%;
+	height: 95vh;
 	width: 100%;
 	background-size: cover;
+	position: relative;
 }
 
 .article-faq {
 	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
 }
@@ -1076,10 +1076,10 @@ div > .swiper-slide {
 	width: 60%;
 }
 .faq-container-img {
-	transform: translate(175%, -30%);
-	display: grid;
-	place-items: center;
 	filter: drop-shadow(0 0 1rem rebeccapurple) brightness(150%);
+	position: absolute;
+	top: 50%;
+	right: 0;
 }
 .faq-container-img > img:first-child {
 	transform: rotate(15deg);
@@ -1091,39 +1091,39 @@ div > .swiper-slide {
 
 details {
 	border-radius: 8px;
-	margin-bottom: 1rem;
-	font-size: 1.75rem;
+	margin-bottom: 0.5rem;
+	font-size: 1.5rem;
 	animation: reveal linear both;
 	animation-timeline: view();
 	animation-range: entry 20% cover 30%;
 }
 
 details summary {
-	outline: #303030 2px solid;
 	cursor: pointer;
-	padding: 1rem;
-	background-color: var(--eerie-black-1);
+	padding: 1.5rem;
+	background-color: #262626;
 	border-radius: 8px;
-}
-
-details p {
-	margin-top: 2px;
-	padding: 1rem;
-	display: none;
 	font-size: 1.5rem;
 	backdrop-filter: blur(20px) saturate(180%);
-	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 8px;
 }
+summary + p {
+	padding: 1.5rem;
+	font-weight: 500;
+}
 
-details[open] p {
+details[open] {
 	display: block;
-}
-.faq-light-theme {
-	background-color: #29034c;
-	outline: rebeccapurple 2px solid;
+	border-radius: 8px;
+	background-color: #262626;
 }
 
+.faq-theme details[open] {
+	background-color: #29034c;
+}
+.faq-theme details summary {
+	background-color: #29034c;
+}
 /*-----------------------------------*\
     #FOOTER
   \*-----------------------------------*/
