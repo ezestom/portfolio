@@ -1055,7 +1055,7 @@ div > .swiper-slide {
 
 .faq {
 	/* padding: 0 10%; */
-	height: 95vh;
+	height: 100vh;
 	width: 100%;
 	background-size: cover;
 	position: relative;
@@ -1064,7 +1064,6 @@ div > .swiper-slide {
 .article-faq {
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	flex-wrap: wrap;
 }
 
@@ -1078,7 +1077,7 @@ div > .swiper-slide {
 .faq-container-img {
 	filter: drop-shadow(0 0 1rem rebeccapurple) brightness(150%);
 	position: absolute;
-	top: 50%;
+	top: 75%;
 	right: 0;
 }
 .faq-container-img > img:first-child {
