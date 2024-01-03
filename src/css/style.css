@@ -740,7 +740,7 @@ body {
 	filter: grayscale(1);
 }
 .me-description {
-	font-size: 1.5rem;
+	font-size: 1.75rem;
 	background-color: #262626;
 	border: 2px solid #262626;
 	border-bottom: 2px solid #4834d4;
@@ -751,6 +751,7 @@ body {
 	margin-bottom: 1rem;
 	max-width: 75ch;
 	font-weight: 400;
+	text-wrap: pretty;
 }
 .me-description-active {
 	background-color: #29034c;
@@ -789,13 +790,13 @@ body {
 }
 
 .background p {
-	font-size: 1.5rem;
+	font-size: 1.75rem;
 	padding: 2%;
 }
 
 .text > p {
 	font-weight: 400;
-	/* text-wrap: balance; */
+	text-wrap: pretty;
 }
 .background:hover {
 	color: #303030;
@@ -1101,7 +1102,6 @@ details summary {
 	backdrop-filter: blur(20px) saturate(180%);
 	border-radius: 8px;
 	font-weight: 500;
-	
 }
 summary + p {
 	padding: 1.5rem;
@@ -1482,7 +1482,7 @@ details[open] {
 	.faq-container {
 		width: 100%;
 	}
-	.faq-container-img{
+	.faq-container-img {
 		display: none;
 	}
 	.figure-rocket {
