@@ -474,7 +474,7 @@ body {
 }
 @keyframes scale-up {
 	to {
-		scale: 2;
+		scale: 1.5;
 	}
 }
 @keyframes fade-away {
@@ -1092,6 +1092,17 @@ div > .swiper-slide {
 .faq-container {
 	width: 60%;
 }
+@keyframes translate {
+	to {
+		transform: translateX(30rem);
+		transform: translateY(30rem);
+		rotate: 0deg;
+	}
+}
+
+#faq {
+	view-timeline: --scroll3;
+}
 .faq-container-img {
 	filter: drop-shadow(0 0 1rem rebeccapurple) brightness(150%);
 	position: absolute;
@@ -1099,11 +1110,14 @@ div > .swiper-slide {
 	right: 0;
 }
 .faq-container-img > img:first-child {
-	transform: rotate(15deg);
-	max-width: 45%;
+	transform: rotate(25deg);
+	max-width: 50%;
 	border-radius: 8px;
-	max-height: 40vh;
+	max-height: 50vh;
 	-webkit-box-reflect: below -2px linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2));
+	animation: translate both ease-in-out, fade-away both linear;
+	animation-timeline: --scroll3;
+	animation-range: exit 0% exit 100%, exit 50% exit 70%;
 }
 
 details {
