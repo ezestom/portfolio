@@ -472,6 +472,26 @@ body {
 	text-align: center;
 	max-width: 100%;
 }
+@keyframes scale-up {
+	to {
+		scale: 2;
+	}
+}
+@keyframes fade-away {
+	to {
+		opacity: 0;
+	}
+}
+
+.hero {
+	view-timeline: --scroll;
+}
+
+.containerHero2 {
+	animation: scale-up both ease-in-out, fade-away both linear;
+	animation-timeline: --scroll;
+	animation-range: exit 0% exit 100%, exit 50% exit 70%;
+}
 
 .btn-group {
 	display: flex;
