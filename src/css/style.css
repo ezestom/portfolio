@@ -975,15 +975,16 @@ swiper-slide:nth-child(2) {
 	background-size: cover;
 }
 swiper-slide:nth-child(3) {
-	border-bottom: 3rem solid #05b7b9;
-	background-image: url("/src/images/linkedinCard-dani.png");
+	border-bottom: 3rem solid #f9bc60;
+	background-image: url("/src/images/linkedinCard-fer.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
+
 swiper-slide:nth-child(4) {
-	border-bottom: 3rem solid #f9bc60;
-	background-image: url("/src/images/linkedinCard-none.jpg");
+	border-bottom: 3rem solid #05b7b9;
+	background-image: url("/src/images/linkedinCard-dani.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -1094,8 +1095,8 @@ div > .swiper-slide {
 }
 @keyframes translate {
 	to {
-		transform: translateX(30rem);
-		transform: translateY(30rem);
+		transform: translate(30rem, -50rem);
+
 		rotate: 0deg;
 	}
 }
@@ -1104,20 +1105,20 @@ div > .swiper-slide {
 	view-timeline: --scroll3;
 }
 .faq-container-img {
-	filter: drop-shadow(0 0 1rem rebeccapurple) brightness(150%);
+	filter: drop-shadow(0 0 1rem rebeccapurple) brightness(200%);
 	position: absolute;
-	top: 75%;
-	right: 0;
+	top: 85%;
+	right: 5%;
 }
 .faq-container-img > img:first-child {
 	transform: rotate(25deg);
-	max-width: 50%;
+	max-width: 60%;
 	border-radius: 8px;
 	max-height: 50vh;
 	-webkit-box-reflect: below -2px linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2));
-	animation: translate both ease-in-out, fade-away both linear;
+	animation: translate both ease-in-out, both linear;
 	animation-timeline: --scroll3;
-	animation-range: exit 0% exit 100%, exit 50% exit 70%;
+	animation-range: exit 0% exit 100%, exit 10% exit 50%;
 }
 
 details {
