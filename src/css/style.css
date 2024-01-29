@@ -874,7 +874,6 @@ body {
 .youtube {
 	border: none;
 	aspect-ratio: 16/9;
-	height: 75%;
 	width: 75%;
 	border-radius: var(--radius-8);
 	animation: reveal linear both;
@@ -1536,5 +1535,8 @@ details[open] {
 	swiper-container {
 		width: 265px !important;
 		height: 265px !important;
+	}
+	.youtube {
+		width: 100%;
 	}
 }
