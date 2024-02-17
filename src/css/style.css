@@ -1111,13 +1111,13 @@ div > .swiper-slide {
 }
 .faq-container-img > img:first-child {
 	transform: rotate(25deg);
-	max-width: 5in0%;
+	max-width: 50%;
 	border-radius: 8px;
 	max-height: 50vh;
 	-webkit-box-reflect: below -2px linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2));
 	animation: translate both ease-in-out, both linear;
 	animation-timeline: --scroll3;
-	animation-range: exit 0% exit 100%, exit 10% exit 50%;
+	animation-range: exit -20% exit 100%, exit 0% exit 0%;
 }
 
 details {
