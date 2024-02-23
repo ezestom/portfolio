@@ -988,6 +988,13 @@ swiper-slide:nth-child(4) {
 	background-position: center;
 	background-size: cover;
 }
+swiper-slide:nth-child(5) {
+	border-bottom: 3rem solid #5865f2;
+	background-image: url("/src/images/linkedinCard-glenda.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
 
 /*-----------------------------------*\
     #STUDIES
