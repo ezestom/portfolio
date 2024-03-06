@@ -982,15 +982,15 @@ swiper-slide:nth-child(3) {
 }
 
 swiper-slide:nth-child(4) {
-	border-bottom: 3rem solid #05b7b9;
-	background-image: url("/src/images/linkedinCard-dani.png");
+	border-bottom: 3rem solid #5865f2;
+	background-image: url("/src/images/linkedinCard-glenda.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 swiper-slide:nth-child(5) {
-	border-bottom: 3rem solid #5865f2;
-	background-image: url("/src/images/linkedinCard-glenda.jpg");
+	border-bottom: 3rem solid #05b7b9;
+	background-image: url("/src/images/linkedinCard-dani.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
