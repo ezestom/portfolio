@@ -1168,9 +1168,6 @@ details[open] {
 }
 
 .content-footer {
-	/* display: flex;
-	align-items: center;
-	justify-content: space-evenly; */
 	display: grid;
 	grid:
 		"sec1 sec1 sec1 sec2 sec2 sec2" 1fr
@@ -1181,7 +1178,6 @@ details[open] {
 		"sec3 sec3 sec3 sec4 sec4 sec4" 1fr
 		/ 1fr 1fr 1fr 1fr 1fr 1fr;
 	gap: 5rem;
-
 	width: 100%;
 	padding: 2% 0;
 	flex-wrap: wrap;
@@ -1204,7 +1200,6 @@ details[open] {
 .sec4 {
 	border-radius: 8px;
 	height: 100%;
-	background-color: red;
 	filter: grayscale(0.25);
 	transition: hover, scale 0.3s ease-in-out;
 }
@@ -1525,12 +1520,20 @@ details[open] {
 		grid-template-columns: repeat(auto-fit, minmax(175px, 2fr));
 		gap: 1rem;
 	}
-	.content-footer {
-		justify-content: center;
-		gap: 3%;
+	.footer-container {
+		padding-top: 10rem;
 	}
+	.content-footer {
+		display: none;
+		display: flex;
+		gap: 1rem;
+		width: 100%;
+		max-height: 100%;
+	}
+
 	#map {
-		margin-top: 5%;
+		height: 130px;
+		width: 100%;
 	}
 }
 @media (width < 639px) {
@@ -1551,10 +1554,9 @@ details[open] {
 @media (width < 840px) {
 	.message-form {
 		width: 100%;
+		max-height: 350px;
 	}
-	#map {
-		width: 100%;
-	}
+
 	swiper-container {
 		width: 265px !important;
 		height: 265px !important;
