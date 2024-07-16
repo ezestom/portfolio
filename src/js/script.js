@@ -12,7 +12,6 @@ window.addEventListener("focus", () => {
 // mobile navbar
 
 window.addEventListener("load", function () {
-	const header = document.querySelector(".header");
 	const check = document.querySelector("#checkbox");
 	const main = document.querySelector("main");
 	const navbar = document.querySelector(".navbar");
@@ -22,7 +21,7 @@ window.addEventListener("load", function () {
 	function hideNavbar() {
 		navbarLinks.forEach((link) => {
 			link.addEventListener("click", function () {
-				main.style.filter = "none";
+				// main.style.filter = "none";
 				footer.style.filter = "none";
 				navbar.style.top = "-500%";
 				check.checked = false;
@@ -34,12 +33,10 @@ window.addEventListener("load", function () {
 	check.addEventListener("change", function () {
 		if (check.checked) {
 			navbar.style.top = "0";
-			main.style.filter = " brightness(0.3) ";
 			footer.style.filter = " brightness(0.3) ";
 			faq.style.filter = " brightness(0.3) ";
 			hideNavbar();
 		} else if (!check.checked) {
-			main.style.filter = "none";
 			navbar.style.top = "-1000%";
 			footer.style.filter = "none";
 			faq.style.filter = "none";
@@ -57,95 +54,6 @@ botonEnviar.addEventListener("click", function () {
 		encodeURIComponent(mensaje);
 	window.location.href = correo;
 });
-
-// change color theme
-// const navbarList = document.querySelector(".navbar-list");
-// const themeBtn = document.querySelector(".theme-switch__checkbox");
-// const hero = document.querySelector(".hero");
-
-// const allCardTheme = document.querySelectorAll(".card");
-// const allCardTheme2 = document.querySelectorAll(".swiper-slide");
-// const youtubeSection = document.querySelector(".youtube-section");
-
-// const messageForm = document.querySelector(".message-form");
-// const nameInput = document.querySelector(".name-input");
-// const emailInput = document.querySelector(".email-input");
-// const messageInput = document.querySelector(".message-input");
-// const sendButton = document.querySelector(".send-button");
-// const legend = document.querySelector(".send-message-legend");
-// const labels = document.querySelectorAll(".label");
-// const aboutCards = document.querySelectorAll(".background");
-// const aboutCards2 = document.querySelector(".me-description");
-// const faq = document.querySelector(".faq");
-// const allSummary = document.querySelectorAll("summary");
-
-// themeBtn.addEventListener("click", function () {
-// 	if (!this.checked) {
-// 		sectionExplore.forEach((section) => {
-// 			section.classList.toggle("light-theme");
-// 			allCardTheme.forEach((card) => {
-// 				card.classList.toggle("explore-card-theme");
-// 			});
-// 			allCardTheme2.forEach((card) => {
-// 				card.classList.toggle("swiper-slide-theme");
-// 			});
-// 			messageForm.classList.toggle("message-form-theme");
-// 			nameInput.classList.toggle("message-theme");
-// 			emailInput.classList.toggle("message-theme");
-// 			messageInput.classList.toggle("message-theme");
-// 			legend.classList.add("message-theme");
-// 			hero.classList.add("light-theme-header");
-// 			labels.forEach((label) => {
-// 				label.classList.add("message-theme");
-// 			});
-// 			youtubeSection.classList.toggle("youtube-section-light-theme");
-
-// 			nameInput.classList.toggle("message-input-theme");
-// 			emailInput.classList.toggle("name-input-theme");
-// 			messageInput.classList.toggle("email-input-theme");
-// 			sendButton.classList.toggle("send-button-theme");
-// 			legend.classList.toggle("send-message-legend-theme");
-// 			aboutCards2.classList.toggle("background-active");
-// 			aboutCards.forEach((card) => {
-// 				card.classList.toggle("background-active");
-// 			});
-// 			faq.classList.toggle("faq-theme");
-// 		});
-// 	} else {
-// 		sectionExplore.forEach((section) => {
-// 			section.classList.toggle("light-theme");
-// 			allCardTheme.forEach((card) => {
-// 				card.classList.toggle("explore-card-theme");
-// 			});
-// 			allCardTheme2.forEach((card) => {
-// 				card.classList.toggle("swiper-slide-theme");
-// 			});
-// 			youtubeSection.classList.toggle("youtube-section-light-theme");
-// 			messageForm.classList.toggle("message-form-theme");
-// 			nameInput.classList.toggle("message-theme");
-// 			emailInput.classList.toggle("message-theme");
-// 			messageInput.classList.toggle("message-theme");
-// 			legend.classList.remove("message-theme");
-// 			hero.classList.toggle("light-theme-header");
-// 			labels.forEach((label) => {
-// 				label.classList.remove("message-theme");
-// 			});
-// 			nameInput.classList.toggle("message-input-theme");
-// 			emailInput.classList.toggle("name-input-theme");
-// 			messageInput.classList.toggle("email-input-theme");
-// 			sendButton.classList.toggle("send-button-theme");
-// 			legend.classList.toggle("send-message-legend-theme");
-// 			aboutCards.forEach((card) => {
-// 				card.classList.remove("background-active");
-// 			});
-// 			aboutCards2.classList.toggle("background-active");
-// 			faq.classList.remove("faq-theme");
-// 			allSummary.forEach((summary) => {
-// 				summary.classList.remove("faq-light-theme");
-// 			});
-// 		});
-// 	}
-// });
 
 // primera posicion de cursor en textarea
 const textarea = document.querySelector("textarea");
