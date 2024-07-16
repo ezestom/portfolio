@@ -17,6 +17,8 @@
 	--indigo: hsl(277, 94%, 28%);
 	--white: hsl(0, 0%, 100%);
 	--black: hsl(0, 0%, 0%);
+	--white: hsl(0, 0%, 100%);
+
 
 	--gradient-1: linear-gradient(
 		141deg,
@@ -34,6 +36,13 @@
      * border radius
      */
 	--radius-8: 8px;
+
+	--transition-2: 0.5s ease;
+	--gradient-2: linear-gradient(
+		to right,
+		transparent 50%,
+		var(--white_30) 100%
+	);
 }
 
 /*-----------------------------------*\
@@ -383,7 +392,6 @@ body {
 	display: none;
 	margin: auto;
 	height: 75%;
-	padding-top: 10rem;
 }
 @media (width < 760px) {
 	.stormtroopocat-image {
@@ -553,9 +561,54 @@ body {
 	border-bottom: 2px solid white;
 	border: 2px solid rebeccapurple;
 }
+/* shine check !!! */
+
+.explore-card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.hover\:shine .explore-card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: var(--transition-2);
+}
+
+.hover\:shine:is(:hover, :focus) .explore-card {
+	transform: scale(1.15);
+}
+
+.hover\:shine::before {
+	top: 0;
+	left: -140%;
+	bottom: 0;
+	width: 100%;
+	background-image: var(--gradient-2);
+	transform: skewX(-25deg);
+	transition: var(--transition-2);
+	z-index: 1;
+}
+
+.hover\:shine:is(:hover, :focus-within)::before {
+	animation: shine 1s ease forwards;
+}
+
+@keyframes shine {
+	0% {
+		transform: skewX(-25deg) translateX(0);
+	}
+	100% {
+		transform: skewX(-25deg) translateX(250%);
+	}
+}
+/* shine check !!! */
 
 .explore-card:is(:hover, :focus) {
-	filter: drop-shadow(0 0 2em var(--han-purple)) brightness(115%);
+	filter: drop-shadow(0 0 1em var(--han-purple)) brightness(115%);
 	cursor: pointer;
 }
 .article-card-title {
@@ -567,7 +620,7 @@ body {
 
 .card-title {
 	padding-top: 2rem;
-	font-size: 2.25rem;
+	font-size: 2rem;
 	font-weight: 600;
 	text-align: center;
 }
