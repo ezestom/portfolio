@@ -406,7 +406,7 @@ body {
 
 @keyframes fadeOut {
 	to {
-		opacity: 0;
+		opacity: 10%;
 		z-index: 0;
 	}
 }
@@ -1013,7 +1013,7 @@ body {
   \*-----------------------------------*/
 .reviews {
 	width: 100%;
-	position: relative;
+	/* position: relative; */
 }
 .swiper-container-testimonials {
 	border-radius: var(--radius-8);
@@ -1214,6 +1214,7 @@ div > .swiper-slide {
 	width: 100%;
 	background-size: cover;
 	position: relative;
+	background-color: transparent;
 }
 
 .article-faq {
