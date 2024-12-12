@@ -19,7 +19,6 @@
 	--black: hsl(0, 0%, 0%);
 	--white: hsl(0, 0%, 100%);
 
-
 	--gradient-1: linear-gradient(
 		141deg,
 		rgba(191, 102, 255, 1) 0%,
@@ -564,18 +563,18 @@ body {
 /* shine check !!! */
 
 .explore-card {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 .hover\:shine .explore-card {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    transition: var(--transition-2);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	transition: var(--transition-2);
 }
 
 .hover\:shine:is(:hover, :focus) .explore-card {
